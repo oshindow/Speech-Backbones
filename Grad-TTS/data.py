@@ -142,7 +142,7 @@ class TextMelSpeakerDataset(torch.utils.data.Dataset):
         text = self.get_text(text, add_blank=self.add_blank)
         mel = self.get_mel(filepath)
         speaker = self.get_speaker(speaker)
-        return (text, mel, speaker)
+        return (text, mel, speaker, filepath)
 
     def get_mel(self, filepath):
         audio, sr = ta.load(filepath)
@@ -166,8 +166,10 @@ class TextMelSpeakerDataset(torch.utils.data.Dataset):
         return speaker
 
     def __getitem__(self, index):
-        text, mel, speaker = self.get_triplet(self.filelist[index])
-        item = {'y': mel, 'x': text, 'spk': speaker}
+        text, mel, speaker, filepath = self.get_triplet(self.filelist[index])
+        item = {'y': mel, 'x': text, 'spk': speaker, 'filepath': filepath}
+        # print(self.filelist[index])
+        # print(item['y'].shape)
         return item
 
     def __len__(self):
@@ -195,7 +197,7 @@ class TextMelSpeakerBatchCollate(object):
         spk = []
 
         for i, item in enumerate(batch):
-            y_, x_, spk_ = item['y'], item['x'], item['spk']
+            y_, x_, spk_ = item['y'], item['x'], item['spk'], 
             y_lengths.append(y_.shape[-1])
             x_lengths.append(x_.shape[-1])
             y[i, :, :y_.shape[-1]] = y_
@@ -205,4 +207,4 @@ class TextMelSpeakerBatchCollate(object):
         y_lengths = torch.LongTensor(y_lengths)
         x_lengths = torch.LongTensor(x_lengths)
         spk = torch.cat(spk, dim=0)
-        return {'x': x, 'x_lengths': x_lengths, 'y': y, 'y_lengths': y_lengths, 'spk': spk}
+        return {'x': x, 'x_lengths': x_lengths, 'y': y, 'y_lengths': y_lengths, 'spk': spk, 'filepath': item['filepath']}

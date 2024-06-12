@@ -113,6 +113,7 @@ class GradTTS(BaseModule):
             out_size (int, optional): length (in mel's sampling rate) of segment to cut, on which decoder will be trained.
                 Should be divisible by 2^{num of UNet downsamplings}. Needed to increase batch size.
         """
+        # print('gradtts loss')
         x, x_lengths, y, y_lengths = self.relocate_input([x, x_lengths, y, y_lengths])
 
         if self.n_spks > 1:
@@ -143,7 +144,8 @@ class GradTTS(BaseModule):
         dur_loss = duration_loss(logw, logw_, x_lengths)
 
         # Cut a small segment of mel-spectrogram in order to increase batch size
-        if not isinstance(out_size, type(None)):
+        if y_max_length > out_size:
+        # if not isinstance(out_size, type(None)): # out_size = 128?
             max_offset = (y_lengths - out_size).clamp(0)
             offset_ranges = list(zip([0] * max_offset.shape[0], max_offset.cpu().numpy()))
             out_offset = torch.LongTensor([

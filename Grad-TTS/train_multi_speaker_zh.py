@@ -30,7 +30,7 @@ spk_emb_dim = params.spk_emb_dim
 
 log_dir = '/data2/xintong/gradtts/logs/new_exp_sg'
 n_epochs = params.n_epochs
-batch_size = params.batch_size
+batch_size = 16
 out_size = params.out_size
 learning_rate = params.learning_rate
 random_seed = params.seed
@@ -137,7 +137,9 @@ if __name__ == "__main__":
                 x, x_lengths = batch['x'].cuda(), batch['x_lengths'].cuda()
                 y, y_lengths = batch['y'].cuda(), batch['y_lengths'].cuda()
                 spk = batch['spk'].cuda()
-                dur_loss, prior_loss, diff_loss = model.compute_loss(x, x_lengths,
+                file = batch['filepath']
+                # print(file, x.shape, x_lengths, y.shape, y_lengths) # y: mel, y_lengths: even number (% 2 == 0)
+                dur_loss, prior_loss, diff_loss = model.compute_loss(x, x_lengths, # go gradtts compute loss
                                                                      y, y_lengths,
                                                                      spk=spk, out_size=out_size)
                 loss = sum([dur_loss, prior_loss, diff_loss])
@@ -160,7 +162,7 @@ if __name__ == "__main__":
                 logger.add_scalar('training/decoder_grad_norm', dec_grad_norm,
                                 global_step=iteration)
                 
-                msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}'
+                msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, filepath: {file}'
                 progress_bar.set_description(msg)
                 
                 dur_losses.append(dur_loss.item())
