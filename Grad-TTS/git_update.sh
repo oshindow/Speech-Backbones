@@ -1,5 +1,5 @@
-version=1.0
-message="initial commit"
+version=1.1
+message="zh magichub sg"
 
 git add /home/xintong/Speech-Backbones
 

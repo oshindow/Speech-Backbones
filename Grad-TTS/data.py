@@ -13,7 +13,7 @@ import torch
 import torchaudio as ta
 import librosa
 
-from text import text_to_sequence, cmudict
+from text import text_to_sequence, text_to_sequence_zh, cmudict, zhdict
 from text.symbols import symbols
 from utils import parse_filelist, intersperse
 from model.utils import fix_len_compatibility
@@ -21,15 +21,19 @@ from params import seed as random_seed
 
 import sys
 sys.path.insert(0, 'hifi-gan')
-from meldataset import mel_spectrogram
+from meldataset import mel_spectrogram, mel_spectrogram_align
 
 
 class TextMelDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
                  n_fft=1024, n_mels=80, sample_rate=22050,
-                 hop_length=256, win_length=1024, f_min=0., f_max=8000):
+                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None):
         self.filepaths_and_text = parse_filelist(filelist_path)
         self.cmudict = cmudict.CMUDict(cmudict_path)
+        if zh_path is not None:
+            self.zhdict = zhdict.ZHDict(zh_path)
+        else:
+            self.zhdict = None
         self.add_blank = add_blank
         self.n_fft = n_fft
         self.n_mels = n_mels
@@ -44,6 +48,7 @@ class TextMelDataset(torch.utils.data.Dataset):
     def get_pair(self, filepath_and_text):
         filepath, text = filepath_and_text[0], filepath_and_text[1]
         text = self.get_text(text, add_blank=self.add_blank)
+        print("text:", text)
         mel = self.get_mel(filepath)
         return (text, mel)
 
@@ -54,13 +59,19 @@ class TextMelDataset(torch.utils.data.Dataset):
         audio = torch.from_numpy(audio).unsqueeze(0)
         assert sr == self.sample_rate
         mel = mel_spectrogram(audio, self.n_fft, self.n_mels, self.sample_rate, self.hop_length,
-                              self.win_length, self.f_min, self.f_max, center=False).squeeze()
+                              self.win_length, self.f_min, self.f_max, center=True).squeeze()
         return mel
 
     def get_text(self, text, add_blank=True):
-        text_norm = text_to_sequence(text, dictionary=self.cmudict)
+        if self.zhdict is not None:
+            text_norm = text_to_sequence_zh(text, dictionary=self.zhdict)
+        else:
+            text_norm = text_to_sequence(text, dictionary=self.cmudict)
+        print("text norm:", text_norm)
         if self.add_blank:
+            print(self.add_blank)
             text_norm = intersperse(text_norm, len(symbols))  # add a blank token, whose id number is len(symbols)
+            print("after norm:", text_norm)
         text_norm = torch.IntTensor(text_norm)
         return text_norm
 
@@ -107,10 +118,14 @@ class TextMelBatchCollate(object):
 class TextMelSpeakerDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
                  n_fft=1024, n_mels=80, sample_rate=22050,
-                 hop_length=256, win_length=1024, f_min=0., f_max=8000):
+                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None):
         super().__init__()
         self.filelist = parse_filelist(filelist_path, split_char='|')
         self.cmudict = cmudict.CMUDict(cmudict_path)
+        if zh_path is not None:
+            self.zhdict = zhdict.ZHDict(zh_path)
+        else:
+            self.zhdict = None
         self.n_fft = n_fft
         self.n_mels = n_mels
         self.sample_rate = sample_rate
@@ -132,12 +147,15 @@ class TextMelSpeakerDataset(torch.utils.data.Dataset):
     def get_mel(self, filepath):
         audio, sr = ta.load(filepath)
         assert sr == self.sample_rate
-        mel = mel_spectrogram(audio, self.n_fft, self.n_mels, self.sample_rate, self.hop_length,
+        mel = mel_spectrogram_align(audio, self.n_fft, self.n_mels, self.sample_rate, self.hop_length,
                               self.win_length, self.f_min, self.f_max, center=False).squeeze()
         return mel
 
     def get_text(self, text, add_blank=True):
-        text_norm = text_to_sequence(text, dictionary=self.cmudict)
+        if self.zhdict is not None:
+            text_norm = text_to_sequence_zh(text, dictionary=self.zhdict)
+        else:
+            text_norm = text_to_sequence(text, dictionary=self.cmudict)
         if self.add_blank:
             text_norm = intersperse(text_norm, len(symbols))  # add a blank token, whose id number is len(symbols)
         text_norm = torch.LongTensor(text_norm)
