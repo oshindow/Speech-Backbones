@@ -26,7 +26,7 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"], dictionary=None):
     in it. For example, "Turn left on {HH AW1 S S T AH0 N} Street."
 
     Args:
-      text: string to convert to a sequence
+      text: string to convert to a sequence. Example: 'as is shown by the report of the Commissioners to inquire into the state of the municipal corporations in eighteen thirty-five.'
       cleaner_names: names of the cleaner functions to run the text through
       dictionary: arpabet class with arpabet dictionary
 
@@ -34,7 +34,7 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"], dictionary=None):
       List of integers corresponding to the symbols in the text
     '''
     sequence = []
-    space = _symbols_to_sequence(' ')
+    space = _symbols_to_sequence(' ') # 11
     # Check for curly braces and treat their contents as ARPAbet:
     while len(text):
         m = _curly_re.match(text)
@@ -61,6 +61,44 @@ def text_to_sequence(text, cleaner_names=["english_cleaners"], dictionary=None):
         sequence = sequence[:-1] if sequence[-1] == space[0] else sequence
     return sequence
 
+def text_to_sequence_zh(text, cleaner_names=["english_cleaners"], dictionary=None):
+    '''Converts a string of text to a sequence of IDs corresponding to the symbols in the text.
+
+    The text can optionally have ARPAbet sequences enclosed in curly braces embedded
+    in it. For example, "Turn left on {HH AW1 S S T AH0 N} Street."
+
+    Args:
+      text: phoneme sequence. Example: ''
+      cleaner_names: names of the cleaner functions to run the text through
+      dictionary: arpabet class with arpabet dictionary
+
+    Returns:
+      List of integers corresponding to the symbols in the text
+    '''
+    sequence = []
+    # space = [dictionary[' ']]
+    text = text.split(' ')
+    for i in range(len(text)):
+        
+        sequence += [dictionary.lookup(text[i])]
+        # if i and i % 2 == 0:
+            # sequence += space
+
+    # if dictionary is not None:
+    #     sequence = sequence[:-1] if sequence[-1] == space[0] else sequence
+    
+    return sequence
+
+
+def sequence_to_text_zh(sequence, dictionary=None):
+    '''Converts a sequence of IDs back to a string'''
+    result = ''
+    for symbol_id in sequence:
+        if symbol_id in dictionary:
+            s = dictionary[symbol_id]
+            # Enclose ARPAbet back in curly braces:
+            result += s
+    return result
 
 def sequence_to_text(sequence):
     '''Converts a sequence of IDs back to a string'''
