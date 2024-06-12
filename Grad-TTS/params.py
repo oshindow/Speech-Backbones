@@ -20,11 +20,11 @@ n_spks = 1  # 247 for Libri-TTS filelist and 1 for LJSpeech
 spk_emb_dim = 64
 n_feats = 80
 n_fft = 1024
-sample_rate = 22050
+sample_rate = 16000
 hop_length = 256
 win_length = 1024
-f_min = 0
-f_max = 8000
+f_min = 80
+f_max = 7600
 
 # encoder parameters
 n_enc_channels = 192
@@ -43,11 +43,11 @@ beta_max = 20.0
 pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 
 # training parameters
-log_dir = 'logs/new_exp'
+log_dir = '/data2/xintong/gradtts/logs/new_exp'
 test_size = 4
 n_epochs = 10000
 batch_size = 16
 learning_rate = 1e-4
 seed = 37
 save_every = 1
-out_size = fix_len_compatibility(2*22050//256)
+out_size = fix_len_compatibility(2*16000//256)

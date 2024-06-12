@@ -19,6 +19,8 @@ from data import TextMelDataset, TextMelBatchCollate
 from utils import plot_tensor, save_plot
 from text.symbols import symbols
 
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 train_filelist_path = params.train_filelist_path
 valid_filelist_path = params.valid_filelist_path
