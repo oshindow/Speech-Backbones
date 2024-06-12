@@ -8,4 +8,4 @@ git commit -m "$message Version $version"
 git tag -a v$version -m "verison $version of the model"
 
 git push origin v$version
-git push origin master
+git push origin main
