@@ -288,6 +288,7 @@ class Diffusion(BaseModule):
         return loss, xt
 
     def compute_loss(self, x0, mask, mu, spk=None, offset=1e-5):
+        # print('diffusion loss')
         t = torch.rand(x0.shape[0], dtype=x0.dtype, device=x0.device,
                        requires_grad=False)
         t = torch.clamp(t, offset, 1.0 - offset)

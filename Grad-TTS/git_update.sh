@@ -1,5 +1,5 @@
-version=1.1
-message="zh magichub sg"
+version=1.2
+message="zh magichub sg out_size"
 
 git add /home/xintong/Speech-Backbones
 
