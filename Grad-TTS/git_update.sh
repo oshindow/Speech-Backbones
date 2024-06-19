@@ -1,5 +1,5 @@
-version=1.2
-message="zh magichub sg out_size"
+version=1.4
+message="zh all accent emb"
 
 git add /home/xintong/Speech-Backbones
 

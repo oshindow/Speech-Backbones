@@ -25,7 +25,8 @@ valid_filelist_path = 'resources/filelists/magichub_sg/valid.txt'
 cmudict_path = params.cmudict_path
 zhdict_path = params.zhdict_path
 add_blank = False
-n_spks = 4
+n_spks = 222
+n_accents = 4
 spk_emb_dim = params.spk_emb_dim
 
 log_dir = '/data2/xintong/gradtts/logs/new_exp_sg'
@@ -82,7 +83,7 @@ if __name__ == "__main__":
     model = GradTTS(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
-                    n_feats, dec_dim, beta_min, beta_max, pe_scale).cuda()
+                    n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents).cuda()
     print('Number of encoder parameters = %.2fm' % (model.encoder.nparams/1e6))
     print('Number of decoder parameters = %.2fm' % (model.decoder.nparams/1e6))
 
