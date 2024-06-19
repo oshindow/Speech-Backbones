@@ -309,14 +309,16 @@ class TextEncoder(BaseModule):
         self.proj_w = DurationPredictor(n_channels + (spk_emb_dim if n_spks > 1 else 0), filter_channels_dp, 
                                         kernel_size, p_dropout)
 
-    def forward(self, x, x_lengths, spk=None):
+    def forward(self, x, x_lengths, spk=None, acc=None):
         x = self.emb(x) * math.sqrt(self.n_channels)
         x = torch.transpose(x, 1, -1)
         x_mask = torch.unsqueeze(sequence_mask(x_lengths, x.size(2)), 1).to(x.dtype)
 
         x = self.prenet(x, x_mask)
         if self.n_spks > 1:
+            print("encoder not concate spk embedding")
             x = torch.cat([x, spk.unsqueeze(-1).repeat(1, 1, x.shape[-1])], dim=1)
+        
         x = self.encoder(x, x_mask)
         mu = self.proj_m(x) * x_mask
 

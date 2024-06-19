@@ -14,3 +14,4 @@ A0001_S005_0_G0001_segment_0046|d ui4 d ui4 sil d ui4|0
 A0001_S006_0_G0001_segment_0173|ii ian2 l i4 sil d uo1 l e5 j iu4 sh ix4 sil x ing2 uu ui4 sil sh ang4 l a5 ii ian2 l i4 sil d uo1 l e5 sil x ian4 z ai4 l ao3 sh ix1 b i3 j iao4 sil f ang4 sil s ong1 sil|0
 A0001_S005_0_G0001_segment_0238|k an4 d e5 ch u1 uu uo3 m en5 sil|0
 A0001_S001_0_G0001_segment_0151|sh en4 zh ix4 sh ix4 x i1 uu uang4 sil ii iu2 q i2 sh ix4 x ian4 z ai4 d e5 j iang3 h ua4 vv v2 x ing2 sil d ong4 aa a4|0
+test|sh en4 zh ix4 sil l ao3 p o2 sil uu uo3 aa ai4 sil sh ix4 x i1 uu uang4|0
