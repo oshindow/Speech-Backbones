@@ -32,6 +32,7 @@ from sklearn.manifold import TSNE
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
 
+os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 #  2009  python dump_feats_to_GPU4_zh.py -f resources/filelists/synthesis_zh.txt -c logs/new_exp_sg/grad_1053.pt -o logs/new_exp_sg/gen_grad_1053/raw
 #  2010  rsync --info=progress2 /home/xintong/Speech-Backbones/Grad-TTS/logs/new_exp_sg/gen_grad_1053/raw xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/gen_grad_1053/ -r
 # python dump_feats_to_GPU4.py -f resources/filelists/synthesis.txt -c logs/new_exp/grad_1518.pt -o logs/new_exp/gen_grad_1518/raw
@@ -126,4 +127,4 @@ if __name__ == '__main__':
     plt.title('t-SNE visualization of accent embeddings')
     plt.xlabel('t-SNE dimension 1')
     plt.ylabel('t-SNE dimension 2')
-    plt.show()
+    plt.savefig('accent embeddings')

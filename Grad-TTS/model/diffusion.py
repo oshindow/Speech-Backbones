@@ -176,6 +176,7 @@ class GradLogPEstimator2d(BaseModule):
         self.final_conv = torch.nn.Conv2d(dim, 1, 1)
 
     def forward(self, x, mask, mu, t, spk=None, acc=None):
+        # print('GradLogPEstimator2d', spk, acc)
         if not isinstance(spk, type(None)):
             s = self.spk_mlp(spk)
         
@@ -276,7 +277,7 @@ class Diffusion(BaseModule):
             noise_t = get_noise(time, self.beta_min, self.beta_max, 
                                 cumulative=False)
             if stoc:  # adds stochastic term
-                dxt_det = 0.5 * (mu - xt) - self.estimator(xt, mask, mu, t, spk)
+                dxt_det = 0.5 * (mu - xt) - self.estimator(xt, mask, mu, t, spk, acc)
                 dxt_det = dxt_det * noise_t * h
                 dxt_stoc = torch.randn(z.shape, dtype=z.dtype, device=z.device,
                                        requires_grad=False)

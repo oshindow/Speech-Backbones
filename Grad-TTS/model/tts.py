@@ -16,12 +16,12 @@ from model.base import BaseModule
 from model.text_encoder import TextEncoder
 from model.diffusion import Diffusion
 from model.utils import sequence_mask, generate_path, duration_loss, fix_len_compatibility
-
+from model.classifier import ReversalClassifier
 
 class GradTTS(BaseModule):
     def __init__(self, n_vocab, n_spks, spk_emb_dim, n_enc_channels, filter_channels, filter_channels_dp, 
                  n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
-                 n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents=1):
+                 n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents=1, grl=False):
         super(GradTTS, self).__init__()
         self.n_vocab = n_vocab
         self.n_spks = n_spks
@@ -40,6 +40,7 @@ class GradTTS(BaseModule):
         self.beta_min = beta_min
         self.beta_max = beta_max
         self.pe_scale = pe_scale
+        self.grl = grl
 
         if n_spks > 1:
             self.spk_emb = torch.nn.Embedding(n_spks, spk_emb_dim)
@@ -49,7 +50,17 @@ class GradTTS(BaseModule):
                                    filter_channels, filter_channels_dp, n_heads, 
                                    n_enc_layers, enc_kernel, enc_dropout, window_size)
         self.decoder = Diffusion(n_feats, dec_dim, n_spks, n_accents, spk_emb_dim, beta_min, beta_max, pe_scale)
-
+        if self.grl:
+            self.spk_grl = ReversalClassifier(
+                                n_feats,
+                                256,
+                                n_spks,
+                                0.25)
+            self.acc_grl = ReversalClassifier(
+                                n_feats,
+                                256,
+                                n_accents,
+                                0.25)
     @torch.no_grad()
     def forward(self, x, x_lengths, n_timesteps, temperature=1.0, stoc=False, spk=None, acc=None, length_scale=1.0):
         """
@@ -73,9 +84,14 @@ class GradTTS(BaseModule):
         if self.n_spks > 1:
             # Get speaker embedding
             spk = self.spk_emb(spk)
+        else:
+            spk = None
         if self.n_accents > 1:
             # Get speaker embedding
             acc = self.acc_emb(acc)
+        else:
+            acc = None
+        # print('Gradtts forward', self.n_spks, self.n_accents, spk, acc)
         # Get encoder_outputs `mu_x` and log-scaled token durations `logw`
         mu_x, logw, x_mask = self.encoder(x, x_lengths, spk)
 
@@ -123,13 +139,27 @@ class GradTTS(BaseModule):
 
         if self.n_spks > 1:
             # Get speaker embedding
+            spk_id = spk
             spk = self.spk_emb(spk)
-        
+        else:
+            spk = None
         if self.n_accents > 1:
             # Get speaker embedding
+            acc_id = acc
             acc = self.acc_emb(acc)
+        else:
+            acc = None
         # Get encoder_outputs `mu_x` and log-scaled token durations `logw`
         mu_x, logw, x_mask = self.encoder(x, x_lengths, spk, acc)
+        
+        # gradient reversal layers
+        if self.grl:
+            pred_spk = self.spk_grl(mu_x.transpose(1, 2))
+            pred_acc = self.acc_grl(mu_x.transpose(1, 2))
+
+            spk_loss = ReversalClassifier.loss(x_lengths, spk_id, pred_spk)
+            acc_loss = ReversalClassifier.loss(x_lengths, acc_id, pred_acc)
+
         y_max_length = y.shape[-1]
 
         y_mask = sequence_mask(y_lengths, y_max_length).unsqueeze(1).to(x_mask)
@@ -188,4 +218,7 @@ class GradTTS(BaseModule):
         prior_loss = torch.sum(0.5 * ((y - mu_y) ** 2 + math.log(2 * math.pi)) * y_mask)
         prior_loss = prior_loss / (torch.sum(y_mask) * self.n_feats)
         
-        return dur_loss, prior_loss, diff_loss
+        if self.grl:
+            return dur_loss, prior_loss, diff_loss, spk_loss, acc_loss
+        else:
+            return dur_loss, prior_loss, diff_loss
