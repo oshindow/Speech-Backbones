@@ -252,7 +252,9 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
         else:
             text_norm = text_to_sequence(text, dictionary=self.cmudict)
         if self.add_blank:
-            text_norm = intersperse(text_norm, len(symbols))  # add a blank token, whose id number is len(symbols)
+            # print(text_norm)
+            text_norm = intersperse(text_norm, len(self.zhdict))  # add a blank token, whose id number is len(symbols)
+            # print(text_norm)
         text_norm = torch.LongTensor(text_norm)
         return text_norm
 

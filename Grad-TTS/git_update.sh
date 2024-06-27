@@ -1,5 +1,5 @@
-version=1.4
-message="zh all accent emb"
+version=1.5
+message="update 0627"
 
 git add /home/xintong/Speech-Backbones
 
