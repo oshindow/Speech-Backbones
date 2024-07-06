@@ -24,7 +24,8 @@ import sys
 sys.path.append('./hifi-gan/')
 from env import AttrDict
 from models import Generator as HiFiGAN
-
+import librosa
+from meldataset import mel_spectrogram, mel_spectrogram_align
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
@@ -51,15 +52,15 @@ if __name__ == '__main__':
     #     spk = None
     
     print('Initializing Grad-TTS...')
-    params.n_spks = 218
-    n_accents = 1
+    params.n_spks = 222
+    n_accents = 4
     zh_dict = zhdict.ZHDict('./resources/zh_dictionary.json')
     # print(zh_dict.__len__())
     generator = GradTTS(zh_dict.__len__() + 1, params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
-                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents)
+                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents, grl=True)
     generator.load_state_dict(torch.load(args.checkpoint, map_location=lambda loc, storage: loc))
     _ = generator.cuda().eval()
     print(generator)
@@ -96,9 +97,22 @@ if __name__ == '__main__':
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
             spk = torch.LongTensor([spk_ids[i]]).cuda()
             acc = torch.LongTensor([acc_ids[i]]).cuda()
+            # filepath = '/data2/xintong/aishell3/test/wav_16k/' + utt_ids[i][:7] + '/' + utt_ids[i] + '.wav'
+            # # audio, sr = ta.load(filepath)
+            # audio, sr = librosa.load(filepath, sr=16000)
+            # # print(audio, audio_l, sr_l)
+            # audio = torch.from_numpy(audio).unsqueeze(0)
+            # # assert sr == sampling_rate
 
+            # # 1. cancel padding inside mel_spectrogram, 2. set center=True, and 3. np.log10
+            # # then gradtts same as parallel wavegan
+            # mel = mel_spectrogram_align(audio, 1024, 80, 16000, 256,
+            #                         1024, 80, 7600, center=True).squeeze()
+            
+            # print(mel.shape, mel.max(), mel.min())
             t = dt.datetime.now()
             # print(x, spk)
+            print(x, x.shape, x_lengths, spk, acc)
             y_enc, y_dec, attn = generator.forward(x, x_lengths, n_timesteps=args.timesteps, temperature=1.5,
                                                    stoc=False, spk=spk, acc=acc, length_scale=0.91)
             y_dec = y_dec.squeeze(0).transpose(0, 1).cpu().numpy()
@@ -110,10 +124,11 @@ if __name__ == '__main__':
             write_hdf5(
                 os.path.join(args.output_dir, f"{utt_ids[i]}.h5"),
                 "feats",
+                # mel.transpose(0,1).cpu().numpy().astype(np.float32),
                 y_dec.astype(np.float32),
             )
             audio = torch.rand(y_dec.shape[0] * 256)
-            print(torch.max(audio), torch.min(audio))
+            # print(torch.max(audio), torch.min(audio))
             write_hdf5(
                 os.path.join(args.output_dir, f"{utt_ids[i]}.h5"),
                 "wave",
