@@ -22,7 +22,7 @@ from text.zhdict import ZHDict
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
-train_filelist_path = 'resources/filelists/zh_all/train.txt'
+train_filelist_path = 'resources/filelists/zh_all/train_processed.txt'
 valid_filelist_path = 'resources/filelists/zh_all/valid.txt'
 cmudict_path = params.cmudict_path
 zhdict_path = params.zhdict_path
@@ -31,9 +31,9 @@ n_spks = 222
 n_accents = 4
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst'
 n_epochs = params.n_epochs
-batch_size = 16
+batch_size = 8
 out_size = params.out_size
 learning_rate = params.learning_rate
 random_seed = params.seed
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     model = GradTTS(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
-                    n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents, grl=True).cuda()
+                    n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents, grl=False, gst=True).cuda()
     print('Number of encoder parameters = %.2fm' % (model.encoder.nparams/1e6))
     print('Number of decoder parameters = %.2fm' % (model.decoder.nparams/1e6))
 
@@ -110,11 +110,13 @@ if __name__ == "__main__":
             for item in test_batch:
                 x = item['x'].to(torch.long).unsqueeze(0).cuda()
                 x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
+                y, y_lengths = item['y'].unsqueeze(0).cuda(), torch.LongTensor([item['y'].shape[1]]).cuda()
                 spk = item['spk'].to(torch.long).cuda()
                 acc = item['acc'].to(torch.long).cuda()
+                # filepath = item['filepath']
                 i = int(spk.cpu())
                 
-                y_enc, y_dec, attn = model(x, x_lengths, n_timesteps=50, spk=spk, acc=acc)
+                y_enc, y_dec, attn = model(x, x_lengths, y, y_lengths, n_timesteps=50, spk=spk, acc=acc)
                 logger.add_image(f'image_{i}/generated_enc',
                                  plot_tensor(y_enc.squeeze().cpu()),
                                  global_step=iteration, dataformats='HWC')
@@ -132,6 +134,7 @@ if __name__ == "__main__":
                           f'{log_dir}/alignment_{i}.png')
         
         model.train()
+        # print(model)
         dur_losses = []
         prior_losses = []
         diff_losses = []
@@ -145,11 +148,13 @@ if __name__ == "__main__":
                 spk = batch['spk'].cuda()
                 acc = batch['acc'].cuda()
                 file = batch['filepath']
+                # print(x.shape, y.shape)
                 if model.grl:
-                    dur_loss, prior_loss, diff_loss, spk_loss, acc_loss = model.compute_loss(x, x_lengths, # go gradtts compute loss
+                    dur_loss, prior_loss, diff_loss, acc_loss = model.compute_loss(x, x_lengths, # go gradtts compute loss
                                                                         y, y_lengths,
                                                                         spk=spk, acc=acc, out_size=out_size)
-                    loss = sum([dur_loss, prior_loss, diff_loss, spk_loss, acc_loss])
+                    loss = sum([dur_loss, prior_loss, diff_loss, acc_loss])
+                    # loss_domain = sum([spk_loss, acc_loss])
                 # print(file, x.shape, x_lengths, y.shape, y_lengths) # y: mel, y_lengths: even number (% 2 == 0)
                 else:
                     dur_loss, prior_loss, diff_loss = model.compute_loss(x, x_lengths, # go gradtts compute loss
@@ -159,11 +164,22 @@ if __name__ == "__main__":
                 loss.backward()
 
                 enc_grad_norm = torch.nn.utils.clip_grad_norm_(model.encoder.parameters(), 
-                                                            max_norm=1)
+                                                            max_norm=0.25)
                 dec_grad_norm = torch.nn.utils.clip_grad_norm_(model.decoder.parameters(), 
-                                                            max_norm=1)
+                                                            max_norm=0.25) # 0.25 
+                # for name, param in model.named_parameters():
+                #     if param.grad is not None:
+                #         logger.add_histogram(f'{name}.grad', param.grad, epoch)
+        
                 optimizer.step()
-
+                
+                # train domain_classifier
+                # reset gradients
+                # if model.grl:
+                #     model.zero_grad()
+                #     loss_domain.backward()
+                #     optimizer.step()
+                
                 logger.add_scalar('training/duration_loss', dur_loss,
                                 global_step=iteration)
                 logger.add_scalar('training/prior_loss', prior_loss,
@@ -175,31 +191,34 @@ if __name__ == "__main__":
                 logger.add_scalar('training/decoder_grad_norm', dec_grad_norm,
                                 global_step=iteration)
                 if model.grl:
-                    logger.add_scalar('training/spk_loss', spk_loss,
-                                global_step=iteration)
-                    logger.add_scalar('training/accloss', acc_loss,
+                    # logger.add_scalar('training/spk_loss', spk_loss,
+                    #             global_step=iteration)
+                    logger.add_scalar('training/acc_loss', acc_loss,
                                 global_step=iteration)
 
-                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, spk_loss: {spk_loss.item()}, acc_loss: {acc_loss.item()}'
+                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, acc: {acc}, spk: {spk}'
                 else:
                     msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}'
-               
+                
+                # print(msg)
                 progress_bar.set_description(msg)
                 
                 dur_losses.append(dur_loss.item())
                 prior_losses.append(prior_loss.item())
                 diff_losses.append(diff_loss.item())
+
                 if model.grl:
-                    spk_losses.append(spk_loss.item())
+                    # spk_losses.append(spk_loss.item())
                     acc_losses.append(acc_loss.item())
                 iteration += 1
 
         msg = 'Epoch %d: duration loss = %.3f ' % (epoch, np.mean(dur_losses))
         msg += '| prior loss = %.3f ' % np.mean(prior_losses)
-        msg += '| diffusion loss = %.3f\n' % np.mean(diff_losses)
+        msg += '| diffusion loss = %.3f \n' % np.mean(diff_losses)
         if model.grl:
-            msg += '| spk loss = %.3f\n' % np.mean(spk_losses)
+            # msg += '| spk loss = %.3f' % np.mean(spk_losses)
             msg += '| acc loss = %.3f\n' % np.mean(acc_losses)
+
         with open(f'{log_dir}/train.log', 'a') as f:
             f.write(msg)
 

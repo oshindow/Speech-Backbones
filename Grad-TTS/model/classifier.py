@@ -2,6 +2,12 @@ import torch
 from torch.nn import functional as F
 from torch.nn import Dropout, Sequential, Linear, Softmax
 
+
+
+# class Mish(BaseModule):
+#     def forward(self, x):
+#         return x * torch.tanh(torch.nn.functional.softplus(x))
+    
 def get_trueloss(output_len, loss_matrix):
     loss=0
     for i in range(len(output_len)):
@@ -26,6 +32,7 @@ class GradientReversalFunction(torch.autograd.Function):
     def backward(ctx, grad_output):
         # print('gradient range before clamping: ', torch.max(grad_output), torch.min(grad_output))
         grad_output = grad_output.clamp(-ctx.c, ctx.c)
+        # print("GradientReversalFunction backward grad:", grad_output)
         return ctx.l * grad_output.neg(), None, None
 
 
@@ -55,14 +62,16 @@ class ReversalClassifier(torch.nn.Module):
         scale_factor (float, default: 1.0)-- scale multiplier of the reversed gradientts
     """
 
-    def __init__(self, input_dim, hidden_dim, output_dim, gradient_clipping_bounds, scale_factor=0.01):
+    def __init__(self, input_dim, hidden_dim, output_dim, gradient_clipping_bounds, scale_factor=1):
         super(ReversalClassifier, self).__init__()
         self._lambda = scale_factor
-        self._clipping = gradient_clipping_bounds
+        self._clipping = gradient_clipping_bounds # 0.25
         self._output_dim = output_dim
         self._classifier = Sequential(
             Linear(input_dim, hidden_dim),
-            Linear(hidden_dim, output_dim)
+            # Mish(),
+            Linear(hidden_dim, output_dim),
+            # torch.nn.Dropout(0.1)
         )
 
     def forward(self, x):  
@@ -100,8 +109,9 @@ class ReversalClassifier(torch.nn.Module):
         # L2 loss
 
         # cross_entropy utterence level
-        return F.cross_entropy(prediction.transpose(1, 2), target, ignore_index=ignore_index) # prediction: (b,1,2), target: (b,1) 
-
+        loss = F.cross_entropy(prediction.transpose(1, 2), target, ignore_index=ignore_index)
+        return loss * (0.125 / 80 + 2) # prediction: (b,1,2), target: (b,1) 
+        # losses['lang_class'] *= hp.reversal_classifier_w / (hp.num_mels + 2) # ~ 0.0015
 
 class CosineSimilarityClassifier(torch.nn.Module):
     """Cosine similarity-based adversarial classifier.

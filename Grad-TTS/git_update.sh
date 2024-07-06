@@ -1,5 +1,5 @@
-version=1.5
-message="update 0627"
+version=1.6
+message="update gst"
 
 git add /home/xintong/Speech-Backbones
 

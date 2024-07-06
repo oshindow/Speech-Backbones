@@ -46,9 +46,9 @@ pe_scale = 1000  # 1 for `grad-tts-old.pt` checkpoint
 # training parameters
 log_dir = '/data2/xintong/gradtts/logs/new_exp'
 test_size = 4
-n_epochs = 10000
-batch_size = 16
+n_epochs = 500
+batch_size = 1
 learning_rate = 1e-4
 seed = 37
 save_every = 1
-out_size = fix_len_compatibility(2*16000//256)
+out_size = fix_len_compatibility(100 * 2*16000//256)
