@@ -1,4 +1,4 @@
-version=1.6
+version=1.7
 message="update ddp"
 
 git add /home/xintong/Speech-Backbones
