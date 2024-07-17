@@ -20,6 +20,8 @@ from utils import plot_tensor, save_plot
 from text.symbols import symbols
 from text.zhdict import ZHDict
 import os
+from optimizer import ScheduledOptim
+
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
 train_filelist_path = 'resources/filelists/zh_all/train_processed.txt'
@@ -60,7 +62,8 @@ dec_dim = params.dec_dim
 beta_min = params.beta_min
 beta_max = params.beta_max
 pe_scale = params.pe_scale
-
+pretrained_model = ''
+n_warm_up_step = 40000
 
 if __name__ == "__main__":
     torch.manual_seed(random_seed)
@@ -72,7 +75,7 @@ if __name__ == "__main__":
     print('Initializing data loaders...')
     train_dataset = TextMelSpeakerAccentDataset(train_filelist_path, cmudict_path, add_blank,
                                           n_fft, n_feats, sample_rate, hop_length,
-                                          win_length, f_min, f_max, zhdict_path)
+                                          win_length, f_min, f_max, zhdict_path, train=True)
     batch_collate = TextMelSpeakerAccentBatchCollate()
     loader = DataLoader(dataset=train_dataset, batch_size=batch_size,
                         collate_fn=batch_collate, drop_last=True,
@@ -86,12 +89,32 @@ if __name__ == "__main__":
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents, grl=False, gst=True).cuda()
+    
     print('Number of encoder parameters = %.2fm' % (model.encoder.nparams/1e6))
     print('Number of decoder parameters = %.2fm' % (model.decoder.nparams/1e6))
 
     print('Initializing optimizer...')
     optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
 
+    # resume
+    try:
+        checkpoint = torch.load(pretrained_model)
+        
+        # Restore the model and optimizer state
+        model.load_state_dict(checkpoint['model'])
+        optimizer.load_state_dict(checkpoint['optim'])
+
+        # Optionally, restore the epoch and loss if needed
+        start_epoch = checkpoint['epoch']
+        loss = checkpoint['loss']
+        iteration = optimizer.state_dict()['state'][0]['step'].int().item()
+        # iteration = 53495 
+    except:
+        start_epoch = 0
+        iteration = 0
+
+    scheduler = ScheduledOptim(optimizer, n_feats, n_warm_up_step, iteration)
+    lr = scheduler.get_learning_rate()
     print('Logging test batch...')
     test_batch = test_dataset.sample_test_batch(size=params.test_size)
     for item in test_batch:
@@ -102,8 +125,7 @@ if __name__ == "__main__":
         save_plot(mel.squeeze(), f'{log_dir}/original_{i}.png')
 
     print('Start training...')
-    iteration = 0
-    for epoch in range(1, n_epochs + 1):
+    for epoch in range(start_epoch, n_epochs + 1):
         model.eval()
         print('Synthesis...')
         with torch.no_grad():
@@ -171,7 +193,7 @@ if __name__ == "__main__":
                 #     if param.grad is not None:
                 #         logger.add_histogram(f'{name}.grad', param.grad, epoch)
         
-                optimizer.step()
+                # optimizer.step()
                 
                 # train domain_classifier
                 # reset gradients
@@ -190,15 +212,17 @@ if __name__ == "__main__":
                                 global_step=iteration)
                 logger.add_scalar('training/decoder_grad_norm', dec_grad_norm,
                                 global_step=iteration)
+                logger.add_scalar('training/learning_rate', scheduler.get_learning_rate(),
+                                global_step=iteration)
                 if model.grl:
                     # logger.add_scalar('training/spk_loss', spk_loss,
                     #             global_step=iteration)
                     logger.add_scalar('training/acc_loss', acc_loss,
                                 global_step=iteration)
 
-                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, acc: {acc}, spk: {spk}'
+                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, acc: {acc}, spk: {spk}, lr: {scheduler.get_learning_rate()}'
                 else:
-                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}'
+                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, lr: {scheduler.get_learning_rate()}'
                 
                 # print(msg)
                 progress_bar.set_description(msg)
@@ -210,7 +234,9 @@ if __name__ == "__main__":
                 if model.grl:
                     # spk_losses.append(spk_loss.item())
                     acc_losses.append(acc_loss.item())
+
                 iteration += 1
+                scheduler.step_and_update_lr()
 
         msg = 'Epoch %d: duration loss = %.3f ' % (epoch, np.mean(dur_losses))
         msg += '| prior loss = %.3f ' % np.mean(prior_losses)
@@ -225,5 +251,12 @@ if __name__ == "__main__":
         if epoch % params.save_every > 0:
             continue
         
-        ckpt = model.state_dict()
+        ckpt = {
+            'epoch': epoch, 
+            'model': model.state_dict(),
+            'optim': optimizer.state_dict(),
+            # 'loss': loss,
+            # 'lr': scheduler.get_learning_rate()
+        }
+
         torch.save(ckpt, f=f"{log_dir}/grad_{epoch}.pt")

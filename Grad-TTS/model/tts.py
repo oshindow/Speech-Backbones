@@ -119,7 +119,8 @@ class GradTTS(BaseModule):
         if self.gst:
             embedded_gst = self.gst(y, y_lengths)
             embedded_gst = embedded_gst.repeat(1, mu_y.size(2), 1)
-
+            
+        # print("mu_y.shape", mu_y.shape, "embedded_gst.shape", embedded_gst.shape)
         # Sample latent representation from terminal distribution N(mu_y, I)
         z = mu_y + torch.randn_like(mu_y, device=mu_y.device) / temperature
         # Generate sample by performing reverse dynamics

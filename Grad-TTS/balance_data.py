@@ -2,7 +2,7 @@ import random
 from collections import defaultdict
 
 # 读取文件并解析数据
-trainfile = 'resources/filelists/zh_all/train.txt'
+trainfile = 'resources/filelists/zh_all/train.dedup.txt'
 data = []
 
 with open(trainfile, 'r', encoding='utf8') as input_file:
@@ -52,7 +52,7 @@ print(max_spk_count)
 # balanced_data.extend(random.sample(spk_groups[221], max_spk_count))
 
 # 保存处理后的数据
-output_file = 'resources/filelists/zh_all/train_processed.txt'
+output_file = 'resources/filelists/zh_all/train_processed.dedup.txt'
 with open(output_file, 'w', encoding='utf8') as output_file:
     for entry in balanced_data:
         output_file.write('|'.join(map(str, entry)) + '\n')

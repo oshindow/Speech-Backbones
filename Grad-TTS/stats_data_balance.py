@@ -5,7 +5,7 @@ spk_dict = {}
 acc_dict = {}
 
 # 读取文件并统计
-trainfile = 'resources/filelists/zh_all/train_processed.txt'
+trainfile = 'resources/filelists/zh_all/train.dedup.txt'
 with open(trainfile, 'r', encoding='utf8') as input_file:
     for line in input_file:
         uid, text, spk, acc = line.strip().split('|')
@@ -35,4 +35,4 @@ ax2.set_xticklabels(spk_dict.keys(), rotation=45)
 
 # 调整布局
 plt.tight_layout()
-plt.savefig('data_distribution_processed.png')
+plt.savefig('data_distribution_dedup.png')
