@@ -1,5 +1,5 @@
 version=1.6
-message="update gst"
+message="update ddp"
 
 git add /home/xintong/Speech-Backbones
 

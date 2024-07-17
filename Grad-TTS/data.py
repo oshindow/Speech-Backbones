@@ -22,7 +22,7 @@ from params import seed as random_seed
 import sys
 sys.path.insert(0, 'hifi-gan')
 from meldataset import mel_spectrogram, mel_spectrogram_align
-
+import json
 
 class TextMelDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
@@ -212,7 +212,7 @@ class TextMelSpeakerBatchCollate(object):
 class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
                  n_fft=1024, n_mels=80, sample_rate=22050,
-                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None):
+                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None, train=False):
         super().__init__()
         self.filelist = parse_filelist(filelist_path, split_char='|')
         self.cmudict = cmudict.CMUDict(cmudict_path)
@@ -228,8 +228,13 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
         self.f_min = f_min
         self.f_max = f_max
         self.add_blank = add_blank
-        random.seed(random_seed)
-        random.shuffle(self.filelist)
+        # random.seed(random_seed)
+        # random.shuffle(self.filelist)
+        if train:
+            self.lengths_dict = self.get_lengths()
+            # a = self.write_lengths()
+            self.lengths = [self.lengths_dict[key[0]] for key in self.filelist]
+        # self.lengths = self.lengths
 
     def get_triplet(self, line):
         filepath, text, speaker, accent = line[0], line[1], line[2], line[3]
@@ -245,7 +250,33 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
         mel = mel_spectrogram_align(audio, self.n_fft, self.n_mels, self.sample_rate, self.hop_length,
                               self.win_length, self.f_min, self.f_max, center=False).squeeze()
         return mel
+    
+    def write_lengths(self):
+        self.lengths = {}
+        idx = 0
+        self.lengths_max = 0
+        for file in self.filelist:
+            if idx and idx % 1000 == 0:
+                print(idx)
+            mel_path = file[0]
+            mel = self.get_mel(mel_path)
+            length = mel.shape[1]
+            self.lengths_max = max(length, self.lengths_max)
+            self.lengths[mel_path] = length
+            idx += 1
 
+        print(self.lengths_max)
+        with open('lengths.json', 'w', encoding='utf8') as output:
+            json.dump(self.lengths, output, indent=4)
+            
+        return self.lengths
+    
+    def get_lengths(self):
+        with open('lengths.json', 'r', encoding='utf8') as input:
+            self.lengths_dict = json.load(input)
+        self.lengths_max = 683
+        return self.lengths_dict
+    
     def get_text(self, text, add_blank=True):
         if self.zhdict is not None:
             text_norm = text_to_sequence_zh(text, dictionary=self.zhdict)
