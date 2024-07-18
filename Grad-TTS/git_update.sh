@@ -1,5 +1,5 @@
-version=1.7
-message="update ddp"
+version=1.8
+message="update gst loss"
 
 git add /home/xintong/Speech-Backbones
 

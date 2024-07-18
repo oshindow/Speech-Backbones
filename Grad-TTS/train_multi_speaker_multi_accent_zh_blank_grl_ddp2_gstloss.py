@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 import params
-from model import GradTTS
+from model import GradTTSGST
 from data import TextMelSpeakerDataset, TextMelSpeakerBatchCollate, TextMelSpeakerAccentDataset, TextMelSpeakerAccentBatchCollate
 from utils import plot_tensor, save_plot
 from text.symbols import symbols
@@ -29,10 +29,10 @@ cmudict_path = params.cmudict_path
 zhdict_path = params.zhdict_path
 add_blank = True
 n_spks = 222
-n_accents = 4
+n_accents = 1
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_debug'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_gstloss'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
@@ -73,7 +73,7 @@ n_warm_up_step = 40000
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
 
 def main(params):
     """Assume Single Node Multi GPUs Training Only"""
@@ -81,7 +81,7 @@ def main(params):
 
     n_gpus = torch.cuda.device_count()
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '60004'
+    os.environ['MASTER_PORT'] = '60005'
 
     batch_size = params.batch_size // n_gpus
     print('Total batch size:', params.batch_size)
@@ -135,7 +135,7 @@ def run(rank, n_gpus):
                                     pin_memory=False,sampler=test_sampler, collate_fn=TextMelSpeakerAccentBatchCollate())            
 
     print('Initializing model...')
-    model = GradTTS(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
+    model = GradTTSGST(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents, grl=False, gst=True).cuda(rank)
@@ -186,7 +186,7 @@ def run(rank, n_gpus):
                 for i, item in enumerate(test_loader):
                     x = item['x'].to(torch.long).cuda(rank)
                     x_lengths = torch.LongTensor([x.shape[-1]]).cuda(rank)
-                    y, y_lengths = item['y'].cuda(rank), torch.LongTensor([item['y'].shape[1]]).cuda(rank)
+                    y, y_lengths = item['y'].cuda(rank), torch.LongTensor([item['y'].shape[-1]]).cuda(rank)
                     spk = item['spk'].to(torch.long).cuda(rank)
                     acc = item['acc'].to(torch.long).cuda(rank)
                     # filepath = item['filepath']
@@ -215,6 +215,7 @@ def run(rank, n_gpus):
         prior_losses = []
         diff_losses = []
         spk_losses = []
+        gst_losses = []
         acc_losses = []
         for i, batch in enumerate(loader):
                 model.zero_grad()
@@ -232,10 +233,10 @@ def run(rank, n_gpus):
                     # loss_domain = sum([spk_loss, acc_loss])
                 # print(file, x.shape, x_lengths, y.shape, y_lengths) # y: mel, y_lengths: even number (% 2 == 0)
                 else:
-                    dur_loss, prior_loss, diff_loss = model.module.compute_loss(x, x_lengths, # go gradtts compute loss
+                    dur_loss, prior_loss, diff_loss, gst_loss = model.module.compute_loss(x, x_lengths, # go gradtts compute loss
                                                                         y, y_lengths,
                                                                         spk=spk, acc=acc, out_size=out_size)
-                    loss = sum([dur_loss, prior_loss, diff_loss])
+                    loss = sum([dur_loss, prior_loss, diff_loss, gst_loss])
                 loss.backward()
 
                 enc_grad_norm = torch.nn.utils.clip_grad_norm_(model.module.encoder.parameters(), 
@@ -261,6 +262,8 @@ def run(rank, n_gpus):
                                     global_step=iteration)
                     logger.add_scalar('training/diffusion_loss', diff_loss,
                                     global_step=iteration)
+                    logger.add_scalar('training/gst_loss', gst_loss,
+                                    global_step=iteration)
                     logger.add_scalar('training/encoder_grad_norm', enc_grad_norm,
                                     global_step=iteration)
                     logger.add_scalar('training/decoder_grad_norm', dec_grad_norm,
@@ -273,9 +276,9 @@ def run(rank, n_gpus):
                         logger.add_scalar('training/acc_loss', acc_loss,
                                     global_step=iteration)
 
-                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, acc: {acc}, spk: {spk}, lr: {learning_rate}, {file}'
+                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()},gst_loss: {gst_loss}, acc: {acc}, spk: {spk}, lr: {learning_rate}, {file}'
                     else:
-                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, lr: {learning_rate}, {file}'
+                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, gst_loss: {gst_loss}, lr: {learning_rate}, {file}'
                     
                     
                     print(msg)
@@ -283,6 +286,7 @@ def run(rank, n_gpus):
                 dur_losses.append(dur_loss.item())
                 prior_losses.append(prior_loss.item())
                 diff_losses.append(diff_loss.item())
+                gst_losses.append(gst_loss.item())
 
                 if model.module.grl:
                     # spk_losses.append(spk_loss.item())
@@ -294,6 +298,7 @@ def run(rank, n_gpus):
             msg = 'Epoch %d: duration loss = %.3f ' % (epoch, np.mean(dur_losses))
             msg += '| prior loss = %.3f ' % np.mean(prior_losses)
             msg += '| diffusion loss = %.3f\n' % np.mean(diff_losses)
+            msg += '| gst loss = %.3f\n' % np.mean(gst_losses)
             if model.module.grl:
                 # msg += '| spk loss = %.3f' % np.mean(spk_losses)
                 msg += '| acc loss = %.3f\n' % np.mean(acc_losses)

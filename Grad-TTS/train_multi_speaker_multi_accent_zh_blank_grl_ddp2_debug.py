@@ -32,7 +32,7 @@ n_spks = 222
 n_accents = 4
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_debug'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_debug_resume'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
@@ -67,13 +67,13 @@ import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data.distributed import DistributedSampler
 
-pretrained_model = ''
+pretrained_model = 'logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_debug/grad_1.pt'
 n_warm_up_step = 40000
 
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
 
 def main(params):
     """Assume Single Node Multi GPUs Training Only"""
@@ -81,7 +81,7 @@ def main(params):
 
     n_gpus = torch.cuda.device_count()
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '60004'
+    os.environ['MASTER_PORT'] = '60006'
 
     batch_size = params.batch_size // n_gpus
     print('Total batch size:', params.batch_size)
@@ -164,6 +164,7 @@ def run(rank, n_gpus):
     except:
         start_epoch = 0
         iteration = 0
+    print('start epoch:', start_epoch, 'iteration:', iteration)
     # scheduler = ScheduledOptim(optimizer, n_feats, n_warm_up_step, iteration)
     model = DDP(model, device_ids=[rank])
     if rank == 0:
@@ -273,11 +274,12 @@ def run(rank, n_gpus):
                         logger.add_scalar('training/acc_loss', acc_loss,
                                     global_step=iteration)
 
-                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, acc: {acc}, spk: {spk}, lr: {learning_rate}, {file}'
+                        msg = f'Epoch: {epoch}, rank: {rank}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, acc: {acc}, spk: {spk}, lr: {learning_rate}, {file}'
                     else:
-                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, lr: {learning_rate}, {file}'
+                        msg = f'Epoch: {epoch}, rank: {rank}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, lr: {learning_rate}, {file}'
                     
                     
+                # if rank == 0:
                     print(msg)
                 
                 dur_losses.append(dur_loss.item())
