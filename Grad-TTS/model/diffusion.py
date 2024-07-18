@@ -197,9 +197,13 @@ class GradLogPEstimator2d(BaseModule):
         if self.n_spks < 2:
             x = torch.stack([mu, x], 1)
         else:
-            if self.n_accents < 2:
+            if self.n_accents < 2 and gst is None:
                 s = s.unsqueeze(-1).repeat(1, 1, x.shape[-1])
                 x = torch.stack([mu, x, s], 1)
+            elif self.n_accents < 2 and gst is not None:
+                s = s.unsqueeze(-1).repeat(1, 1, x.shape[-1])
+                g = g.transpose(1, 2)
+                x = torch.stack([mu, x, s, g], 1)
             else:
                 if gst is None:
                     s = s.unsqueeze(-1).repeat(1, 1, x.shape[-1])
@@ -318,7 +322,10 @@ class Diffusion(BaseModule):
 
     def compute_loss(self, x0, mask, mu, spk=None, acc=None, gst=None, offset=1e-5):
         # print('diffusion loss')
+        # print(x0.shape)
+        # torch.manual_seed(x0.shape[-1])
         t = torch.rand(x0.shape[0], dtype=x0.dtype, device=x0.device,
                        requires_grad=False)
+        # print(t)
         t = torch.clamp(t, offset, 1.0 - offset)
         return self.loss_t(x0, mask, mu, t, spk, acc, gst)
