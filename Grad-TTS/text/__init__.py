@@ -3,13 +3,15 @@
 import re
 from text import cleaners
 from text.symbols import symbols
-
+import json
 
 _symbol_to_id = {s: i for i, s in enumerate(symbols)}
 _id_to_symbol = {i: s for i, s in enumerate(symbols)}
 
 _curly_re = re.compile(r'(.*?)\{(.+?)\}(.*)')
 
+with open('resources/symbol_to_id_en.json', 'w', encoding='utf8') as output:
+    json.dump(_symbol_to_id, output, indent=4)
 
 def get_arpabet(word, dictionary):
     word_arpabet = dictionary.lookup(word)

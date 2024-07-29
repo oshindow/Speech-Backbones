@@ -14,8 +14,8 @@ from scipy.io.wavfile import write
 from utils import write_hdf5
 import torch
 import os
-import params
-from model import GradTTS
+import params_ori as params
+from model import GradTTSORI
 from text import text_to_sequence, cmudict
 from text.symbols import symbols
 from utils import intersperse
@@ -42,14 +42,14 @@ if __name__ == '__main__':
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
 
-    if not isinstance(args.speaker_id, type(None)):
-        assert params.n_spks > 1, "Ensure you set right number of speakers in `params.py`."
-        spk = torch.LongTensor([args.speaker_id]).cuda()
-    else:
-        spk = None
+    # if not isinstance(args.speaker_id, type(None)):
+    #     assert params.n_spks > 1, "Ensure you set right number of speakers in `params.py`."
+    #     spk = torch.LongTensor([args.speaker_id]).cuda()
+    # else:
+    #     spk = None
     
     print('Initializing Grad-TTS...')
-    generator = GradTTS(len(symbols)+1, params.n_spks, params.spk_emb_dim,
+    generator = GradTTSORI(len(symbols)+1, params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
@@ -67,10 +67,12 @@ if __name__ == '__main__':
     # vocoder.remove_weight_norm()
     texts = []
     utt_ids = []
+    spk_ids = []
     with open(args.file, 'r', encoding='utf-8') as f:
         for line in f:
             texts.append(line.strip().split('|')[1])
             utt_ids.append(line.strip().split('|')[0])
+            spk_ids.append(line.strip().split('|')[2])
 
     cmu = cmudict.CMUDict('./resources/cmu_dictionary')
     print(utt_ids, texts)
@@ -79,8 +81,9 @@ if __name__ == '__main__':
             
             print(f'Synthesizing {i} text...', utt_ids[i], text)
             x = torch.LongTensor(intersperse(text_to_sequence(text, dictionary=cmu), len(symbols))).cuda()[None]
+            print(x)
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
-            
+            spk = torch.LongTensor([int(spk_ids[i])]).cuda()
             t = dt.datetime.now()
             y_enc, y_dec, attn = generator.forward(x, x_lengths, n_timesteps=args.timesteps, temperature=1.5,
                                                    stoc=False, spk=spk, length_scale=0.91)
@@ -104,8 +107,8 @@ if __name__ == '__main__':
             )
             # h5filepath = os.path.join(args.output_dir, f"{utt_ids[i]}.h5")
     
-    cmd = "rsync --info=progress2 " + args.output_dir + ' xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/ -r'
-    print(cmd)
-    os.system(cmd)
+    # cmd = "rsync --info=progress2 " + args.output_dir + ' xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/ -r'
+    # print(cmd)
+    # os.system(cmd)
 
             

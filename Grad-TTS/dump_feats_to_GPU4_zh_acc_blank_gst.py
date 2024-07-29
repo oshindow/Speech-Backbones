@@ -15,11 +15,11 @@ from utils import write_hdf5
 import torch
 import os
 import params
-from model import GradTTS
+from model import GradTTS, GradTTSGST
 from text import text_to_sequence, text_to_sequence_zh, cmudict, zhdict
 from text.symbols import symbols
 from utils import intersperse
-
+import os
 import sys
 sys.path.append('./hifi-gan/')
 from env import AttrDict
@@ -53,17 +53,20 @@ if __name__ == '__main__':
     
     print('Initializing Grad-TTS...')
     params.n_spks = 222
-    n_accents = 4
+    n_accents = 1
     zh_dict = zhdict.ZHDict('./resources/zh_dictionary.json')
     # print(zh_dict.__len__())
-    generator = GradTTS(zh_dict.__len__() + 1, params.n_spks, params.spk_emb_dim,
+    generator = GradTTSGST(zh_dict.__len__() + 1, params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
                         params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents, grl=False, gst=True)
-    generator.load_state_dict(torch.load(args.checkpoint, map_location=lambda loc, storage: loc))
-    _ = generator.cuda().eval()
     print(generator)
+    
+    checkpoint = torch.load(args.checkpoint, map_location=lambda loc, storage: loc)
+    generator.load_state_dict(checkpoint['model'])
+    _ = generator.cuda().eval()
+    # print(generator)
     print(f'Number of parameters: {generator.nparams}')
     
     # print('Initializing HiFi-GAN...')
@@ -97,17 +100,22 @@ if __name__ == '__main__':
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
             spk = torch.LongTensor([spk_ids[i]]).cuda()
             acc = torch.LongTensor([acc_ids[i]]).cuda()
-            if acc_ids[i] == 2:
+            if acc_ids[i] == 3:
                 if spk_ids[i] > 217 and utt_ids[i][:3] != 'SSB':
                     spk_name = utt_ids[i].split('_')[3]
+                    
                     filepath = '/data2/xintong/magichub_singapore/wav_16k/' + spk_name + '/' + utt_ids[i] + '.wav'
+                    if not os.path.isfile(filepath):
+                        filepath = '/data2/xintong/magichub_singapore/wav_16k/G0001/A0001_S006_0_G0001_segment_0173.wav'
                 else:
                     filepath = '/data2/xintong/magichub_singapore/wav_16k/G0001/A0001_S006_0_G0001_segment_0173.wav'
             
-            if acc_ids[i] == 1:
+            if acc_ids[i] < 3:
                 if spk_ids[i] < 217:
                     spk_name = utt_ids[i][:7]
                     filepath = '/data2/xintong/aishell3/test/wav_16k/' + spk_name + '/' + utt_ids[i] + '.wav'
+                    if not os.path.isfile(filepath):
+                        filepath = '/data2/xintong/aishell3/test/wav_16k/SSB0590/SSB05900401.wav'
                 else:
                     filepath = '/data2/xintong/aishell3/test/wav_16k/SSB0590/SSB05900401.wav'
             

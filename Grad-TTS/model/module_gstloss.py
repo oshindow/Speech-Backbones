@@ -88,7 +88,7 @@ class STL(nn.Module):
     '''
     inputs --- [N, token_embedding_size//2]
     '''
-    def __init__(self, token_num=3, token_embedding_size=256, num_heads=8, ref_enc_gru_size=128):
+    def __init__(self, token_num=4, token_embedding_size=256, num_heads=8, ref_enc_gru_size=128):
         super().__init__()
         self.embed = nn.Parameter(torch.FloatTensor(token_num, token_embedding_size // num_heads))
         d_q = ref_enc_gru_size
