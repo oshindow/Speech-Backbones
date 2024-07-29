@@ -14,8 +14,8 @@ from scipy.io.wavfile import write
 
 import torch
 
-import params
-from model import GradTTS
+import params_ori as params
+from model import GradTTSORI
 from text import text_to_sequence, cmudict
 from text.symbols import symbols
 from utils import intersperse
@@ -38,14 +38,14 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--speaker_id', type=int, required=False, default=None, help='speaker id for multispeaker model')
     args = parser.parse_args()
     
-    if not isinstance(args.speaker_id, type(None)):
-        assert params.n_spks > 1, "Ensure you set right number of speakers in `params.py`."
-        spk = torch.LongTensor([args.speaker_id]).cuda()
-    else:
-        spk = None
+    # if not isinstance(args.speaker_id, type(None)):
+    #     assert params.n_spks > 1, "Ensure you set right number of speakers in `params.py`."
+    #     spk = torch.LongTensor([args.speaker_id]).cuda()
+    # else:
+    #     spk = None
     
     print('Initializing Grad-TTS...')
-    generator = GradTTS(len(symbols)+1, params.n_spks, params.spk_emb_dim,
+    generator = GradTTSORI(len(symbols)+1, params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
@@ -62,8 +62,15 @@ if __name__ == '__main__':
     _ = vocoder.cuda().eval()
     vocoder.remove_weight_norm()
     
+    texts = []
+    utt_ids = []
+    spk_ids = []
     with open(args.file, 'r', encoding='utf-8') as f:
-        texts = [line.strip() for line in f.readlines()]
+        for line in f:
+            texts.append(line.strip().split('|')[1])
+            utt_ids.append(line.strip().split('|')[0])
+            spk_ids.append(line.strip().split('|')[2])
+
     cmu = cmudict.CMUDict('./resources/cmu_dictionary')
     
     with torch.no_grad():
@@ -71,11 +78,12 @@ if __name__ == '__main__':
             print(f'Synthesizing {i} text...', end=' ')
             x = torch.LongTensor(intersperse(text_to_sequence(text, dictionary=cmu), len(symbols))).cuda()[None]
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
+            spk = torch.LongTensor([int(spk_ids[i])]).cuda()
             
             t = dt.datetime.now()
             y_enc, y_dec, attn = generator.forward(x, x_lengths, n_timesteps=args.timesteps, temperature=1.5,
                                                    stoc=False, spk=spk, length_scale=0.91)
-            np.save('y_dec.png', y_dec)
+            # np.save('y_dec.png', y_dec)
             t = (dt.datetime.now() - t).total_seconds()
             print(f'Grad-TTS RTF: {t * 22050 / (y_dec.shape[-1] * 256)}')
 

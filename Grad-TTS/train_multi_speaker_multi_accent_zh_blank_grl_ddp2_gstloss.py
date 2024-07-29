@@ -32,11 +32,11 @@ n_spks = 222
 n_accents = 1
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_gstloss'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_grl_gst_ddp2_lrfix_gstloss_1e4'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
-learning_rate = 0.00001
+learning_rate = 0.0001
 random_seed = params.seed
 
 nsymbols = ZHDict(zhdict_path).__len__() + 1 if add_blank == True else ZHDict(zhdict_path).__len__()

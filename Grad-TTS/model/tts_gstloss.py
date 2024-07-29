@@ -55,15 +55,15 @@ class GradTTSGST(BaseModule):
                                    n_enc_layers, enc_kernel, enc_dropout, window_size)
         self.decoder = Diffusion(n_feats, dec_dim, n_spks, n_accents, gst, spk_emb_dim, beta_min, beta_max, pe_scale)
         if self.grl:
-            # self.spk_grl = ReversalClassifier(
-            #                     n_feats,
-            #                     256,
-            #                     n_spks,
-            #                     0.25)
+            self.spk_grl = ReversalClassifier(
+                                n_feats,
+                                256,
+                                n_spks,
+                                0.25)
             self.acc_grl = ReversalClassifier(
                                 n_feats,
                                 256,
-                                n_accents,
+                                4,
                                 0.25) # reversal_gradient_clipping = 0.25
         if self.gst:
             self.gst = GST()
@@ -150,9 +150,10 @@ class GradTTSGST(BaseModule):
         # print('gradtts loss') x: (16, 71), y: (16, 80, 196)
         x, x_lengths, y, y_lengths = self.relocate_input([x, x_lengths, y, y_lengths])
 
+        spk_id = deepcopy(spk)
         if self.n_spks > 1:
             # Get speaker embedding
-            spk_id = spk
+            
             spk = self.spk_emb(spk) # (16, 64)
         else:
             spk = None
@@ -241,6 +242,6 @@ class GradTTSGST(BaseModule):
         prior_loss = prior_loss / (torch.sum(y_mask) * self.n_feats)
         
         if self.grl:
-            return dur_loss, prior_loss, diff_loss, acc_loss
+            return dur_loss, prior_loss, diff_loss, acc_loss, gst_loss
         else:
             return dur_loss, prior_loss, diff_loss, gst_loss

@@ -13,7 +13,7 @@ import torch
 
 from model import monotonic_align
 from model.base import BaseModule
-from model.text_encoder import TextEncoder
+from model.text_encoder import TextEncoder, TextConformerEncoder
 from model.diffusion import Diffusion
 from model.utils import sequence_mask, generate_path, duration_loss, fix_len_compatibility
 from model.classifier import ReversalClassifier
@@ -50,6 +50,10 @@ class GradTTS(BaseModule):
         self.encoder = TextEncoder(n_vocab, n_feats, n_enc_channels, 
                                    filter_channels, filter_channels_dp, n_heads, 
                                    n_enc_layers, enc_kernel, enc_dropout, window_size)
+        # self.encoder = TextConformerEncoder(n_vocab, n_feats, n_enc_channels, 
+        #                            filter_channels, filter_channels_dp, n_heads, 
+        #                            n_enc_layers, enc_kernel, enc_dropout, window_size)
+        
         self.decoder = Diffusion(n_feats, dec_dim, n_spks, n_accents, gst, spk_emb_dim, beta_min, beta_max, pe_scale)
         if self.grl:
             # self.spk_grl = ReversalClassifier(

@@ -8,3 +8,5 @@
 
 from .tts import GradTTS
 from .tts_gstloss import GradTTSGST
+from .tts_conformer import GradTTSConformer
+from .tts_ori import GradTTSORI

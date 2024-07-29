@@ -1,5 +1,5 @@
-version=1.8
-message="update gst loss"
+version=2.0
+message="update conformer"
 
 git add /home/xintong/Speech-Backbones
 
