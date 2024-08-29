@@ -30,5 +30,4 @@ Grad-TTS/logs
 Grad-TTS/nohup.out
 Grad-TTS/__pycache__
 Grad-TTS/out
-Grad-TTS/*.log
-
+Grad-TTS/*.log*
