@@ -1,7 +1,7 @@
 import torch
 from torch.nn import functional as F
 from torch.nn import Dropout, Sequential, Linear, Softmax
-
+from model.module_gstloss import STL
 
 
 # class Mish(BaseModule):
@@ -67,12 +67,14 @@ class ReversalClassifier(torch.nn.Module):
         self._lambda = scale_factor
         self._clipping = gradient_clipping_bounds # 0.25
         self._output_dim = output_dim
-        self._classifier = Sequential(
-            Linear(input_dim, hidden_dim),
-            # Mish(),
-            Linear(hidden_dim, output_dim),
-            # torch.nn.Dropout(0.1)
-        )
+        # self._classifier = Sequential(
+        #     Linear(input_dim, hidden_dim),
+        #     # Mish(),
+        #     Linear(hidden_dim, output_dim),
+        #     # torch.nn.Dropout(0.1)
+        # )
+        
+        self._classifier = STL(token_num=output_dim, token_embedding_size=256, num_heads=8, ref_enc_gru_size=128)
 
     def forward(self, x):  
         x = GradientReversalFunction.apply(x, self._lambda, self._clipping)

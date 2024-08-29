@@ -20,18 +20,18 @@ from utils import plot_tensor, save_plot
 from text.symbols import symbols
 from text.zhdict import ZHDict
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 
-train_filelist_path = 'resources/filelists/aishell3/train.txt'
-valid_filelist_path = 'resources/filelists/aishell3/valid.txt'
+train_filelist_path = 'resources/filelists/zh_all/train.dedup.txt'
+valid_filelist_path = 'resources/filelists/zh_all/valid.txt'
 cmudict_path = params.cmudict_path
 zhdict_path = params.zhdict_path
 add_blank = True
-n_spks = 218
-n_accents = 1
+n_spks = 222
+n_accents = 4
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_E3'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
@@ -110,11 +110,13 @@ if __name__ == "__main__":
             for item in test_batch:
                 x = item['x'].to(torch.long).unsqueeze(0).cuda()
                 x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
+                print(x)
+                y, y_lengths = item['y'].unsqueeze(0).cuda(), torch.LongTensor([item['y'].shape[1]]).cuda()
                 spk = item['spk'].to(torch.long).cuda()
                 acc = item['acc'].to(torch.long).cuda()
                 i = int(spk.cpu())
                 
-                y_enc, y_dec, attn = model(x, x_lengths, n_timesteps=50, spk=spk, acc=acc)
+                y_enc, y_dec, attn = model(x, x_lengths, y, y_lengths, n_timesteps=50, spk=spk, acc=acc)
                 logger.add_image(f'image_{i}/generated_enc',
                                  plot_tensor(y_enc.squeeze().cpu()),
                                  global_step=iteration, dataformats='HWC')

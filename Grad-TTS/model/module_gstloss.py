@@ -26,7 +26,7 @@ import torch
 import torch.nn as nn
 import torch.nn.init as init
 import torch.nn.functional as F
-from model.classifier import ReversalClassifier
+# from model.classifier import ReversalClassifier
 
 class ReferenceEncoder(nn.Module):
     '''

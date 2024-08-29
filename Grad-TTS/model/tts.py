@@ -123,7 +123,8 @@ class GradTTS(BaseModule):
         if self.gst:
             embedded_gst = self.gst(y, y_lengths)
             embedded_gst = embedded_gst.repeat(1, mu_y.size(2), 1)
-            
+        else:
+            embedded_gst = None
         # print("mu_y.shape", mu_y.shape, "embedded_gst.shape", embedded_gst.shape)
         # Sample latent representation from terminal distribution N(mu_y, I)
         z = mu_y + torch.randn_like(mu_y, device=mu_y.device) / temperature
@@ -230,7 +231,8 @@ class GradTTS(BaseModule):
         if self.gst:
             embedded_gst = self.gst(y, y_lengths)
             embedded_gst = embedded_gst.repeat(1, mu_y.size(2), 1)
-
+        else:
+            embedded_gst = None
         # Compute loss of score-based decoder
         # print(y.shape, y_mask.shape, mu_y.shape, spk.shape, acc.shape, embedded_gst.shape)
         diff_loss, xt = self.decoder.compute_loss(y, y_mask, mu_y, spk, acc, embedded_gst)

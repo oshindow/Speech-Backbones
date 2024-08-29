@@ -1,5 +1,5 @@
-version=2.0
-message="update conformer"
+version=2.1
+message="update tts ready for TASLP"
 
 git add /home/xintong/Speech-Backbones
 

@@ -22,12 +22,14 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
     def __init__(self, logger, dataset, batch_size, boundaries, num_replicas=None, rank=None, shuffle=True):
         super().__init__(dataset, num_replicas=num_replicas, rank=rank, shuffle=shuffle)
         self.lengths = dataset.lengths
+        self.accents = dataset.accents
         self.batch_size = batch_size
         self.boundaries = boundaries
         self.logger = logger
   
         self.buckets, self.num_samples_per_bucket = self._create_buckets()
         # print(self.buckets)
+        # self._stats_accent_in_buckets()
         self.total_size = sum(self.num_samples_per_bucket)
         self.num_samples = self.total_size // self.num_replicas
   
@@ -51,7 +53,21 @@ class DistributedBucketSampler(torch.utils.data.distributed.DistributedSampler):
             rem = (total_batch_size - (len_bucket % total_batch_size)) % total_batch_size
             num_samples_per_bucket.append(len_bucket + rem)
         return buckets, num_samples_per_bucket
-  
+    
+    def _stats_accent_in_buckets(self):
+        bucket_accent = {}
+        bucket_idx = 0
+        for bucket in self.buckets:
+            bucket_accent[str(bucket_idx)] = {'zh': 0, 'sg': 0}
+            for item in bucket:
+                acc = self.accents[item]
+                if acc == 3:
+                    bucket_accent[str(bucket_idx)]['sg'] += 1
+                else:
+                    bucket_accent[str(bucket_idx)]['zh'] += 1
+            bucket_idx += 1
+        print(bucket_accent)
+
     def __iter__(self):
       # deterministically shuffle based on epoch
       g = torch.Generator()

@@ -17,14 +17,59 @@ E5: GST loss and grl
 
 
 
+multi-speaker, multi-accent, TTS 
+singaporean accent + AISHELL-3 data augmentation
 
-Blank Symbol Test:
-    E1: AISHELL-3 Grad-tts Conformer with blank (GPU0)
-
-    E2: AISHELL-3 Grad-tts Conformer without blank (GPU1)
+Data Augmentation Test:
+E1: Grad-TTS + spk embedding, SG data only, w/o blank
+    duration 问题
+E2: Grad-TTS + spk/acc embedding, AISHELL-3 + SG data, w/o blank
+    timbre 不像，吞字, prosody
+E3: Grad-TTS + spk/acc embedding, AISHELL-3 + SG data, w/ blank (resume)
     
-    E1: AISHELL-3 Grad-tts Conformer with blank try larger channel (GPU2)
-     
+E4: Grad-TTS + conformer encoder + spk/acc embedding, AISHELL-3 + SG data, w/ blank  (resume)
+
+E6: Grad-TTS + conformer encoder + spk/Global accent token, AISHELL-3 + SG data, w/ blank (resume)
+    train_multi_speaker_multi_accent_zh_blank_con_ddp2_gst.py
+    logs/new_exp_sg_acc_blank_conformer_gst_E5/grad_207.pt
+
+E7: Grad-TTS + conformer encoder + spk/Global accent token + loss, AISHELL-3 + SG data, w/ blank (resume)
+
+E8: Grad-TTS + conformer encoder + spk/Global accent token (Layer normalizaiton) + gstloss, AISHELL-3 + SG data, w/ blank (resume)
+- accent 最好，timber 差
+train_multi_speaker_multi_accent_zh_blank_con_ddp2_gstloss_cln.py
+
+E9: Grad-TTS + conformer encoder + spk/Global accent token (Layer normalizaiton) + gstloss + grlloss, AISHELL-3 + SG data, w/ blank (resume)
+- 差
+
+E10: Grad-TTS + conformer encoder + spk/Global accent token (Layer normalizaiton) + gstloss + grlloss (BEFORE PRED_ACC), AISHELL-3 + SG data, w/ blank (resume) bad
+- timber 比E8 好一点，accent 不好
+
+E11: Grad-TTS + conformer encoder + larger spk emb/Global accent token (Layer normalizaiton) + gstloss + grlloss + larger classifier (BEFORE PRED_ACC), AISHELL-3 + SG data, w/ blank 
+- gst loss很差
+
+E12: Grad-TTS + conformer encoder + larger spk emb/Global accent token (Layer normalizaiton) + gstloss + grlloss + normal classifier focal loss (BEFORE PRED_ACC), AISHELL-3 + SG data, w/ blank 
+- accent 没有E8好，语速偏快，timber 没有E10好
+
+
+E13: Grad-TTS + conformer encoder + larger spk emb/Global accent token (Layer normalizaiton) + gstloss + grlloss + normal classifier focal loss (BEFORE PRED_ACC), AISHELL-3 + SG data, w/ blank (GPU0,1)
+adjust the bucket size
+
+E14: aishell train base version 218 speakers, 3 accents bad
+E15: sg finetuning 4 speakers, 1 accent bad
+
+E16: E8 REMOVE speaker embedding
+
+------------------------
+E12: Grad-TTS larger channel + conformer encoder + spk/Global accent token + loss + grl, AISHELL-3 + SG data, w/ blank, data balance, rm silence token
+
+
+Blank Symbol Test: use blank better, conformer 训练慢
+    E1: AISHELL-3 Grad-tts Conformer with blank (GPU0)
+        logs/new_exp_sg_acc_blank_conformer
+    E2: AISHELL-3 Grad-tts Conformer without blank (GPU1)
+        logs/new_exp_sg_acc_conformer   
+
 Timbre:
     E0: AISHELL-3 Grad-tts with blank
         logs/new_exp_sg_acc_blank/grad_679.pt 
@@ -38,3 +83,6 @@ Timbre:
     
     E3: Libritts Grad-tts (GPU2)
         数据量够，phoneme？silence？loss 差不多
+
+E1: AISHELL-3 Grad-tts Conformer with blank try larger channel (GPU2)
+     

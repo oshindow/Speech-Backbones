@@ -234,7 +234,7 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
             self.lengths_dict = self.get_lengths()
             # a = self.write_lengths()
             self.lengths = [self.lengths_dict[key[0]] for key in self.filelist]
-        # self.lengths = self.lengths
+            self.accents = [int(key[3]) for key in self.filelist ]
 
     def get_triplet(self, line):
         filepath, text, speaker, accent = line[0], line[1], line[2], line[3]

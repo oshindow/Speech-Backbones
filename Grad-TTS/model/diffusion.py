@@ -127,7 +127,7 @@ class SinusoidalPosEmb(BaseModule):
 
 class GradLogPEstimator2d(BaseModule):
     def __init__(self, dim, dim_mults=(1, 2, 4), groups=8,
-                 n_spks=None, n_accents=None, gst=None, spk_emb_dim=64, n_feats=80, pe_scale=1000):
+                 n_spks=None, n_accents=None, gst=None, spk_emb_dim=64, n_feats=80, pe_scale=1000, concat_gst=False):
         super(GradLogPEstimator2d, self).__init__()
         self.dim = dim
         self.dim_mults = dim_mults
@@ -151,7 +151,7 @@ class GradLogPEstimator2d(BaseModule):
         self.mlp = torch.nn.Sequential(torch.nn.Linear(dim, dim * 4), Mish(),
                                        torch.nn.Linear(dim * 4, dim))
 
-        dims = [2 + (1 if n_spks > 1 else 0) + (1 if n_accents > 1 else 0) + (1 if gst else 0), *map(lambda m: dim * m, dim_mults)]
+        dims = [2 + (1 if n_spks > 1 else 0) + (1 if n_accents > 1 else 0) + (1 if concat_gst else 0), *map(lambda m: dim * m, dim_mults)]
         in_out = list(zip(dims[:-1], dims[1:]))
         self.downs = torch.nn.ModuleList([])
         self.ups = torch.nn.ModuleList([])
@@ -259,7 +259,7 @@ def get_noise(t, beta_init, beta_term, cumulative=False):
 class Diffusion(BaseModule):
     def __init__(self, n_feats, dim,
                  n_spks=1, n_accents=1, gst=True, spk_emb_dim=64,
-                 beta_min=0.05, beta_max=20, pe_scale=1000):
+                 beta_min=0.05, beta_max=20, pe_scale=1000, concat_gst=False):
         super(Diffusion, self).__init__()
         self.n_feats = n_feats
         self.dim = dim
@@ -269,10 +269,11 @@ class Diffusion(BaseModule):
         self.beta_min = beta_min
         self.beta_max = beta_max
         self.pe_scale = pe_scale
-        
+        self.concat_gst = concat_gst
+
         self.estimator = GradLogPEstimator2d(dim, n_spks=n_spks, n_accents=n_accents, gst=gst,
                                              spk_emb_dim=spk_emb_dim,
-                                             pe_scale=pe_scale)
+                                             pe_scale=pe_scale, concat_gst=concat_gst)
 
     def forward_diffusion(self, x0, mask, mu, t):
         time = t.unsqueeze(-1).unsqueeze(-1)

@@ -9,4 +9,7 @@
 from .tts import GradTTS
 from .tts_gstloss import GradTTSGST
 from .tts_conformer import GradTTSConformer
+from .tts_conformer_gstloss import GradTTSConformerGST
+from .tts_conformer_gstloss_grl import GradTTSConformerGSTGRL
 from .tts_ori import GradTTSORI
+from .tts_conformer_gstloss_grl_focalloss import GradTTSConformerGSTGRLFL

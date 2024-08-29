@@ -20,18 +20,18 @@ from utils import plot_tensor, save_plot
 from text.symbols import symbols
 from text.zhdict import ZHDict
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '3'
 
-train_filelist_path = 'resources/filelists/aishell3/train.txt'
-valid_filelist_path = 'resources/filelists/aishell3/valid.txt'
+train_filelist_path = 'resources/filelists/zh_all/train.dedup.txt'
+valid_filelist_path = 'resources/filelists/zh_all/valid.txt'
 cmudict_path = params.cmudict_path
 zhdict_path = params.zhdict_path
 add_blank = True
-n_spks = 218
-n_accents = 1
+n_spks = 222
+n_accents = 4
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_E4'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size

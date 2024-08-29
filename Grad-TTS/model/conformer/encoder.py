@@ -28,6 +28,7 @@ from .modules import (
     Linear,
 )
 
+from ..conditional_layer_norm import Condional_LayerNorm
 
 class ConformerBlock(nn.Module):
     """
@@ -64,6 +65,7 @@ class ConformerBlock(nn.Module):
             conv_dropout_p: float = 0.1,
             conv_kernel_size: int = 31,
             half_step_residual: bool = True,
+            cln: bool = False,
     ):
         super(ConformerBlock, self).__init__()
         if half_step_residual:
@@ -103,11 +105,20 @@ class ConformerBlock(nn.Module):
                 ),
                 module_factor=self.feed_forward_residual_factor,
             ),
-            nn.LayerNorm(encoder_dim),
+            # nn.LayerNorm(encoder_dim),
         )
+        self.cln = cln
+        if self.cln:
+            self.ln = Condional_LayerNorm(encoder_dim)
+        else:
+            self.ln = nn.LayerNorm(encoder_dim)
 
-    def forward(self, inputs: Tensor) -> Tensor:
-        return self.sequential(inputs)
+    def forward(self, inputs: Tensor, cond: Tensor) -> Tensor:
+        output = self.sequential(inputs)
+        if self.cln:
+            return self.ln(output, cond)
+        else:
+            return self.ln(output)
 
 
 class ConformerEncoder(nn.Module):

@@ -278,7 +278,7 @@ class Encoder(BaseModule):
 
 class ConformerEncoder(BaseModule):
     def __init__(self, hidden_channels, filter_channels, n_heads, n_layers, 
-                 kernel_size=1, p_dropout=0.0, window_size=None, **kwargs):
+                 kernel_size=1, p_dropout=0.0, window_size=None, cln=False):
         super(ConformerEncoder, self).__init__()
         self.hidden_channels = hidden_channels
         self.filter_channels = filter_channels
@@ -290,28 +290,45 @@ class ConformerEncoder(BaseModule):
 
         self.drop = torch.nn.Dropout(p_dropout)
         self.layers = torch.nn.ModuleList()
-        for _ in range(self.n_layers):
-            self.layers.append(ConformerBlock(
-                encoder_dim=hidden_channels,
-                num_attention_heads=n_heads,
-                feed_forward_expansion_factor=4,
-                conv_expansion_factor=2,
-                feed_forward_dropout_p=0.1,
-                attention_dropout_p=0.1,
-                conv_dropout_p=0.1,
-                conv_kernel_size=31,
-                half_step_residual=True,
-            ))
+        self.cln = cln
 
-    def forward(self, x, x_mask):
+        for i in range(self.n_layers):
+            if self.cln and i == 0:
+                self.layers.append(ConformerBlock(
+                    encoder_dim=hidden_channels,
+                    num_attention_heads=n_heads,
+                    feed_forward_expansion_factor=4,
+                    conv_expansion_factor=2,
+                    feed_forward_dropout_p=0.1,
+                    attention_dropout_p=0.1,
+                    conv_dropout_p=0.1,
+                    conv_kernel_size=31,
+                    half_step_residual=True,
+                    cln=True,
+                ))
+            else:
+                self.layers.append(ConformerBlock(
+                    encoder_dim=hidden_channels,
+                    num_attention_heads=n_heads,
+                    feed_forward_expansion_factor=4,
+                    conv_expansion_factor=2,
+                    feed_forward_dropout_p=0.1,
+                    attention_dropout_p=0.1,
+                    conv_dropout_p=0.1,
+                    conv_kernel_size=31,
+                    half_step_residual=True,
+                    cln=False,
+                ))
+
+    def forward(self, x, x_mask, cond=False):
         # attn_mask = x_mask.unsqueeze(2) * x_mask.unsqueeze(-1)
         # print(x.shape, x_mask.shape)
         
         for layer in self.layers:
             x = x * x_mask
             x = x.transpose(1, 2)
-            # print(x.shape)
-            x = layer(x)
+            # print(x.shape, cond.shape)
+            x = layer(x, cond=cond)
             x = x.transpose(1, 2)
         x = x * x_mask
         return x
@@ -368,7 +385,7 @@ class TextEncoder(BaseModule):
 class TextConformerEncoder(BaseModule):
     def __init__(self, n_vocab, n_feats, n_channels, filter_channels, 
                  filter_channels_dp, n_heads, n_layers, kernel_size, 
-                 p_dropout, window_size=None, spk_emb_dim=64, n_spks=1):
+                 p_dropout, window_size=None, spk_emb_dim=64, n_spks=1, cln=False):
         super(TextConformerEncoder, self).__init__()
         self.n_vocab = n_vocab
         self.n_feats = n_feats
@@ -382,6 +399,7 @@ class TextConformerEncoder(BaseModule):
         self.window_size = window_size
         self.spk_emb_dim = spk_emb_dim
         self.n_spks = n_spks
+        self.cln = cln
 
         self.emb = torch.nn.Embedding(n_vocab, n_channels)
         torch.nn.init.normal_(self.emb.weight, 0.0, n_channels**-0.5)
@@ -390,13 +408,13 @@ class TextConformerEncoder(BaseModule):
                                    kernel_size=5, n_layers=3, p_dropout=0.5)
 
         self.encoder = ConformerEncoder(n_channels + (spk_emb_dim if n_spks > 1 else 0), filter_channels, n_heads, n_layers, 
-                               kernel_size, p_dropout, window_size=window_size)
+                               kernel_size, p_dropout, window_size=window_size, cln=cln)
 
         self.proj_m = torch.nn.Conv1d(n_channels + (spk_emb_dim if n_spks > 1 else 0), n_feats, 1)
         self.proj_w = DurationPredictor(n_channels + (spk_emb_dim if n_spks > 1 else 0), filter_channels_dp, 
                                         kernel_size, p_dropout)
 
-    def forward(self, x, x_lengths, spk=None, acc=None):
+    def forward(self, x, x_lengths, spk=None, acc=None, cond=None):
         x = self.emb(x) * math.sqrt(self.n_channels)
         x = torch.transpose(x, 1, -1)
         x_mask = torch.unsqueeze(sequence_mask(x_lengths, x.size(2)), 1).to(x.dtype)
@@ -406,7 +424,7 @@ class TextConformerEncoder(BaseModule):
             print("encoder not concate spk embedding")
             x = torch.cat([x, spk.unsqueeze(-1).repeat(1, 1, x.shape[-1])], dim=1)
         
-        x = self.encoder(x, x_mask)
+        x = self.encoder(x, x_mask, cond=cond)
         mu = self.proj_m(x) * x_mask
 
         x_dp = torch.detach(x)

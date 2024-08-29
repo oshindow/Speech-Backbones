@@ -24,7 +24,8 @@ import sys
 sys.path.append('./hifi-gan/')
 from env import AttrDict
 from models import Generator as HiFiGAN
-
+import librosa
+from meldataset import mel_spectrogram, mel_spectrogram_align
 
 HIFIGAN_CONFIG = './checkpts/hifigan-config.json'
 HIFIGAN_CHECKPT = './checkpts/hifigan.pt'
@@ -51,10 +52,11 @@ if __name__ == '__main__':
     #     spk = None
     
     print('Initializing Grad-TTS...')
-    params.n_spks = 4
+    params.n_spks = 218
     zh_dict = zhdict.ZHDict('./resources/zh_dictionary.json')
     # print(zh_dict.__len__())
-    generator = GradTTS(zh_dict.__len__(), params.n_spks, params.spk_emb_dim,
+    add_blank = True
+    generator = GradTTS(zh_dict.__len__() + (1 if add_blank else 0), params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
@@ -86,13 +88,30 @@ if __name__ == '__main__':
         for i, text in enumerate(texts):
             
             print(f'Synthesizing {i} text...', utt_ids[i], text, spk_ids[i])
-            x = torch.LongTensor(text_to_sequence_zh(text, dictionary=zh_dict)).cuda()[None]
+            x = text_to_sequence_zh(text, dictionary=zh_dict)
+            x = torch.LongTensor(intersperse(x, len(zh_dict)) if add_blank else x).cuda()[None]
             x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
             spk = torch.LongTensor([spk_ids[i]]).cuda()
 
+            # y & y_length
+            filepath = '/data2/xintong/aishell3/test/wav_16k/SSB0590/SSB05900401.wav'
+            
+            audio, sr = librosa.load(filepath, sr=16000)
+            # print(audio, audio_l, sr_l)
+            audio = torch.from_numpy(audio).unsqueeze(0)
+            # assert sr == sampling_rate
+
+            # 1. cancel padding inside mel_spectrogram, 2. set center=True, and 3. np.log10
+            # then gradtts same as parallel wavegan
+            mel = mel_spectrogram_align(audio, 1024, 80, 16000, 256,
+                                    1024, 80, 7600, center=True).squeeze()
+            
+            # print(mel.shape, mel.max(), mel.min())
+            y = mel.unsqueeze(0).cuda()
+            y_lengths = torch.LongTensor([y.shape[1]]).cuda()
             t = dt.datetime.now()
             print(x, spk)
-            y_enc, y_dec, attn = generator.forward(x, x_lengths, n_timesteps=args.timesteps, temperature=1.5,
+            y_enc, y_dec, attn = generator.forward(x, x_lengths, y,y_lengths, n_timesteps=args.timesteps, temperature=1.5,
                                                    stoc=False, spk=spk, length_scale=0.91)
             y_dec = y_dec.squeeze(0).transpose(0, 1).cpu().numpy()
             # print(y_dec.max(), y_dec.min())
