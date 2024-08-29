@@ -1,4 +1,4 @@
-version=2.2
+version=2.3
 message="update tts ready for TASLP"
 
 git add /home/xintong/Speech-Backbones
