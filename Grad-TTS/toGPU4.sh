@@ -3,10 +3,17 @@
 # rsync --info=progress2 /home/xintong/Speech-Backbones/Grad-TTS/logs/$input_path xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/$output_path -r
 
 ## E8
-python dump_feats_to_GPU4_zh_acc_blank_conformer_gstloss_cln.py -f resources/filelists/synthesis_zh_acc.txt -c logs/new_exp_sg_acc_blank_conformer_gst_E8/grad_400.pt -o logs/new_exp_sg_acc_blank_conformer_gst_E8/gen_grad_400/raw
+# python dump_feats_to_GPU4_zh_acc_blank_conformer_gstloss_cln.py -f resources/filelists/synthesis_zh_acc.txt -c logs/new_exp_sg_acc_blank_conformer_gst_E8/grad_400.pt -o logs/new_exp_sg_acc_blank_conformer_gst_E8/gen_grad_400/raw
 
-input_path=new_exp_sg_acc_blank_conformer_gst_E8/gen_grad_400/raw 
-output_path=gen_grad_400_E8/
+# input_path=new_exp_sg_acc_blank_conformer_gst_E8/gen_grad_400/raw 
+# output_path=gen_grad_400_E8/
+# rsync --info=progress2 /home/xintong/Speech-Backbones/Grad-TTS/logs/$input_path xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/$output_path -r
+
+# E16
+python dump_feats_to_GPU4_zh_acc_blank_conformer_gstloss_cln_grl_E16.py -f resources/filelists/synthesis_zh_acc.txt -c logs/new_exp_sg_acc_blank_conformer_gst_E16/grad_400.pt -o logs/new_exp_sg_acc_blank_conformer_gst_E16/gen_grad_400/raw
+
+input_path=new_exp_sg_acc_blank_conformer_gst_E16/gen_grad_400/raw 
+output_path=gen_grad_400_E16/
 rsync --info=progress2 /home/xintong/Speech-Backbones/Grad-TTS/logs/$input_path xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/$output_path -r
 
 # E10

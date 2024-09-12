@@ -1,5 +1,5 @@
-version=2.4
-message="update tts ready for TASLP"
+version=3.0
+message="update tts ready V1.0 for TASLP"
 
 git add /home/xintong/Speech-Backbones
 
@@ -8,4 +8,4 @@ git commit -m "$message Version $version"
 git tag -a v$version -m "verison $version of the model"
 
 git push origin v$version
-git push origin main --force
+git push origin main
