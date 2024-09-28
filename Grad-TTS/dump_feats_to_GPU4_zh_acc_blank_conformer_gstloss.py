@@ -15,7 +15,7 @@ from utils import write_hdf5
 import torch
 import os
 import params
-from model import GradTTSConformer, GradTTSGST, GradTTSConformerGST
+from model import GradTTSConformer, GradTTSGST, GradTTSConformerGST,GradTTSConformerORIGST
 from text import text_to_sequence, text_to_sequence_zh, cmudict, zhdict
 from text.symbols import symbols
 from utils import intersperse
@@ -56,12 +56,12 @@ if __name__ == '__main__':
     n_accents = 1
     zh_dict = zhdict.ZHDict('./resources/zh_dictionary.json')
     # print(zh_dict.__len__())
-    generator = GradTTSConformerGST(zh_dict.__len__() + 1, params.n_spks, params.spk_emb_dim,
+    generator = GradTTSConformerORIGST(zh_dict.__len__() + 1, params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
-                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents, grl=False, gst=True)
-    print(generator)
+                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents, grl=False, gst=True, concat_gst=True)
+    print(generator.encoder)
     
     checkpoint = torch.load(args.checkpoint, map_location=lambda loc, storage: loc)
     generator.load_state_dict(checkpoint['model'])

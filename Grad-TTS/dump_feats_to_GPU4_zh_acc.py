@@ -82,7 +82,7 @@ if __name__ == '__main__':
             utt_ids.append(line.strip().split('|')[0])
             spk_ids.append(int(line.strip().split('|')[2]))
             acc_ids.append(int(line.strip().split('|')[3]))
-    print(spk_ids, acc_ids)
+    # print(spk_ids, acc_ids)
 
     
     # print(utt_ids, texts)

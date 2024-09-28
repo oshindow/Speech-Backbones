@@ -81,8 +81,12 @@ def text_to_sequence_zh(text, cleaner_names=["english_cleaners"], dictionary=Non
     # space = [dictionary[' ']]
     text = text.split(' ')
     for i in range(len(text)):
-        
+        # print(text)
+        # try:
         sequence += [dictionary.lookup(text[i])]
+        # except Exception as e:
+        #     print(e)
+        #     print(text[i])
         # if i and i % 2 == 0:
             # sequence += space
 

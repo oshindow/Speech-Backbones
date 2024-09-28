@@ -150,7 +150,7 @@ class GradLogPEstimator2d(BaseModule):
         self.time_pos_emb = SinusoidalPosEmb(dim)
         self.mlp = torch.nn.Sequential(torch.nn.Linear(dim, dim * 4), Mish(),
                                        torch.nn.Linear(dim * 4, dim))
-
+        # 2 for E16 (no concat_gst), 3 for E7 in dims
         dims = [2 + (1 if n_spks > 1 else 0) + (1 if n_accents > 1 else 0) + (1 if concat_gst else 0), *map(lambda m: dim * m, dim_mults)]
         in_out = list(zip(dims[:-1], dims[1:]))
         self.downs = torch.nn.ModuleList([])
@@ -195,7 +195,7 @@ class GradLogPEstimator2d(BaseModule):
         t = self.mlp(t)
 
         if self.n_spks < 2:
-            x = torch.stack([mu, x], 1)
+            x = torch.stack([mu, x], 1) # x: mel, mu: 
         else:
             if self.n_accents < 2 and gst is None:
                 s = s.unsqueeze(-1).repeat(1, 1, x.shape[-1])

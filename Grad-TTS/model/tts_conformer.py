@@ -14,6 +14,7 @@ import torch
 from model import monotonic_align
 from model.base import BaseModule
 from model.text_encoder import TextEncoder, TextConformerEncoder
+# from model.text_encoder_conformerori import TextEncoder, TextConformerEncoder
 from model.diffusion import Diffusion
 from model.utils import sequence_mask, generate_path, duration_loss, fix_len_compatibility
 from model.classifier import ReversalClassifier

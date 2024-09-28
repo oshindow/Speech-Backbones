@@ -60,7 +60,7 @@ if __name__ == '__main__':
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
-                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents, grl=True)
+                        params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents, grl=False)
     generator.load_state_dict(torch.load(args.checkpoint, map_location=lambda loc, storage: loc))
     _ = generator.cuda().eval()
     print(generator)

@@ -15,7 +15,7 @@ from utils import write_hdf5
 import torch
 import os
 import params
-from model import GradTTSConformer
+from model import GradTTSConformer, GradTTSConformerORI
 from text import text_to_sequence, text_to_sequence_zh, cmudict, zhdict
 from text.symbols import symbols
 from utils import intersperse
@@ -53,19 +53,20 @@ if __name__ == '__main__':
     #     spk = None
     
     print('Initializing Grad-TTS...')
-    params.n_spks = 218
-    n_accents = 1
+    params.n_spks = 222
+    n_accents = 4
     zh_dict = zhdict.ZHDict('./resources/zh_dictionary.json')
     # print(zh_dict.__len__())
-    add_blank = False
-    generator = GradTTSConformer(zh_dict.__len__() + (1 if add_blank else 0), params.n_spks, params.spk_emb_dim,
+    add_blank = True
+    generator = GradTTSConformerORI(zh_dict.__len__() + (1 if add_blank else 0), params.n_spks, params.spk_emb_dim,
                         params.n_enc_channels, params.filter_channels,
                         params.filter_channels_dp, params.n_heads, params.n_enc_layers,
                         params.enc_kernel, params.enc_dropout, params.window_size,
                         params.n_feats, params.dec_dim, params.beta_min, params.beta_max, params.pe_scale, n_accents)
+    print(generator.encoder)
     generator.load_state_dict(torch.load(args.checkpoint, map_location=lambda loc, storage: loc))
     _ = generator.cuda().eval()
-    print(generator)
+    # print(generator)
     print(f'Number of parameters: {generator.nparams}')
     
     # print('Initializing HiFi-GAN...')
@@ -119,7 +120,7 @@ if __name__ == '__main__':
             t = dt.datetime.now()
             print(x, spk)
             y_enc, y_dec, attn = generator.forward(x, x_lengths,y,y_lengths, n_timesteps=args.timesteps, temperature=1.5,
-                                                   stoc=False, spk=spk, length_scale=0.91)
+                                                   stoc=False, spk=spk, acc=acc, length_scale=0.91)
             y_dec = y_dec.squeeze(0).transpose(0, 1).cpu().numpy()
             # print(y_dec.max(), y_dec.min())
             # y_dec = np.exp(y_dec)

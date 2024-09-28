@@ -1,6 +1,7 @@
 import os
 from pydub import AudioSegment
 import matplotlib.pyplot as plt
+import torchaudio
 
 def get_audio_lengths(folder_path):
     audio_lengths = []
@@ -11,9 +12,14 @@ def get_audio_lengths(folder_path):
             # Check if the file is an audio file
             if file.endswith(('.mp3', '.wav', '.flac', '.aac')):
                 file_path = os.path.join(root, file)
-                audio = AudioSegment.from_file(file_path)
-                length_in_seconds = len(audio) / 1000  # Length in seconds
-                audio_lengths.append(length_in_seconds)
+                waveform, sample_rate = torchaudio.load(file_path)
+
+                # 获取音频的帧数（即采样点数）
+                num_frames = waveform.size(1)
+
+                # 计算音频时长
+                duration = num_frames / sample_rate
+                audio_lengths.append(duration)
 
     return audio_lengths
 
@@ -25,12 +31,13 @@ def plot_audio_lengths(audio_lengths):
     plt.savefig('LJSpeech.png')
 
 # Specify the folder path
-folder_path = '/data2/xintong/tts/LJSpeech-1.1/wavs'
+folder_path = '/data2/xintong/magichub_singapore/wav_16k'
 
 # Get audio lengths
 audio_lengths = get_audio_lengths(folder_path)
-print(len(audio_lengths))
+# print([(length[0], length[1] / 60) for length in audio_lengths])
+print(sum(audio_lengths) / 3600)
 # Plot the lengths
-plot_audio_lengths(audio_lengths)
+# plot_audio_lengths(audio_lengths)
 
 
