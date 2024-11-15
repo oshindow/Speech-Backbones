@@ -89,6 +89,8 @@ if __name__ == "__main__":
     print('Number of encoder parameters = %.2fm' % (model.encoder.nparams/1e6))
     print('Number of decoder parameters = %.2fm' % (model.decoder.nparams/1e6))
 
+    # checkpoint = torch.load('logs/new_exp_sg_acc_blank_E3/grad_36.pt')
+    # model.load_state_dict(checkpoint)
     print('Initializing optimizer...')
     optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
 
@@ -110,13 +112,13 @@ if __name__ == "__main__":
             for item in test_batch:
                 x = item['x'].to(torch.long).unsqueeze(0).cuda()
                 x_lengths = torch.LongTensor([x.shape[-1]]).cuda()
-                print(x)
-                y, y_lengths = item['y'].unsqueeze(0).cuda(), torch.LongTensor([item['y'].shape[1]]).cuda()
+                # print(x)
+                # y, y_lengths = item['y'].unsqueeze(0).cuda(), torch.LongTensor([item['y'].shape[1]]).cuda()
                 spk = item['spk'].to(torch.long).cuda()
                 acc = item['acc'].to(torch.long).cuda()
                 i = int(spk.cpu())
                 
-                y_enc, y_dec, attn = model(x, x_lengths, y, y_lengths, n_timesteps=50, spk=spk, acc=acc)
+                y_enc, y_dec, attn = model(x, x_lengths, n_timesteps=50, spk=spk, acc=acc)
                 logger.add_image(f'image_{i}/generated_enc',
                                  plot_tensor(y_enc.squeeze().cpu()),
                                  global_step=iteration, dataformats='HWC')

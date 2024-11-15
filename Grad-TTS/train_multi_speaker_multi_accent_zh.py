@@ -22,7 +22,7 @@ from text.zhdict import ZHDict
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
-train_filelist_path = 'resources/filelists/zh_all/train.txt'
+train_filelist_path = 'resources/filelists/zh_all/train.dedup.txt'
 valid_filelist_path = 'resources/filelists/zh_all/valid.txt'
 cmudict_path = params.cmudict_path
 zhdict_path = params.zhdict_path
@@ -31,7 +31,7 @@ n_spks = 222
 n_accents = 4
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_1'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
@@ -88,7 +88,8 @@ if __name__ == "__main__":
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents).cuda()
     print('Number of encoder parameters = %.2fm' % (model.encoder.nparams/1e6))
     print('Number of decoder parameters = %.2fm' % (model.decoder.nparams/1e6))
-
+    # checkpoint = torch.load('logs/new_exp_sg_acc/grad_320.pt')
+    # model.load_state_dict(checkpoint)
     print('Initializing optimizer...')
     optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
 

@@ -33,7 +33,7 @@ n_spks = 1
 n_accents = 1
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_E16'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_E16_de'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size

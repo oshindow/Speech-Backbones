@@ -7,7 +7,6 @@ import torch.nn as nn
 from model.base import BaseModule
 from model.utils import sequence_mask, convert_pad_shape
 from model.conformer.encoder import ConformerBlock
-# from model.conformer.encoder_ori import ConformerBlock
 class LayerNorm(BaseModule):
     def __init__(self, channels, eps=1e-4):
         super(LayerNorm, self).__init__()

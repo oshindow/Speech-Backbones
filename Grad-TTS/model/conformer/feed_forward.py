@@ -55,3 +55,42 @@ class FeedForwardModule(nn.Module):
 
     def forward(self, inputs: Tensor) -> Tensor:
         return self.sequential(inputs)
+
+class FeedForwardConvModule(nn.Module):
+    """
+    Conformer Feed Forward Module follow pre-norm residual units and apply layer normalization within the residual unit
+    and on the input before the first linear layer. This module also apply Swish activation and dropout, which helps
+    regularizing the network.
+
+    Args:
+        encoder_dim (int): Dimension of conformer encoder
+        expansion_factor (int): Expansion factor of feed forward module.
+        dropout_p (float): Ratio of dropout
+
+    Inputs: inputs
+        - **inputs** (batch, time, dim): Tensor contains input sequences
+
+    Outputs: outputs
+        - **outputs** (batch, time, dim): Tensor produces by feed forward module.
+    """
+    def __init__(
+            self,
+            encoder_dim: int = 512,
+            expansion_factor: int = 4,
+            dropout_p: float = 0.1,
+    ) -> None:
+        super(FeedForwardConvModule, self).__init__()
+        self.ln = nn.LayerNorm(encoder_dim)
+        self.conv1d_1 = nn.Conv1d(encoder_dim, encoder_dim * expansion_factor, kernel_size=3, stride=1, padding=1)
+        self.activate = Swish()
+        self.drop_1 = nn.Dropout(p=dropout_p)
+        self.conv1d_2 = nn.Conv1d(encoder_dim * expansion_factor, encoder_dim, kernel_size=3, stride=1, padding=1)
+        self.drop_2 = nn.Dropout(p=dropout_p)
+  
+
+    def forward(self, inputs: Tensor) -> Tensor:
+        inputs = self.ln(inputs).transpose(1, 2)
+        inputs = self.drop_1(self.activate(self.conv1d_1(inputs)))
+        outputs = self.drop_2(self.conv1d_2(inputs))
+        return outputs.transpose(1, 2)
+        

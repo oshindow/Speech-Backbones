@@ -25,6 +25,15 @@ E1: Grad-TTS + spk embedding, SG data only, w/o blank
     duration 问题
 E2: Grad-TTS + spk/acc embedding, AISHELL-3 + SG data, w/o blank
     timbre 不像，吞字, prosody
+
+# # % Grad-TTS (spk/acc-SG+MC) & logs/new_exp_sg_acc P2
+# echo "% Grad-TTS (spk/acc-SG+MC) & logs/new_exp_sg_acc P2"
+# python dump_feats_to_GPU4_zh_acc.py -f resources/filelists/synthesis_zh_acc_paper.txt -c logs/new_exp_sg_acc/grad_270.pt -o logs/new_exp_sg_acc/gen_grad_270/raw
+
+# input_path=new_exp_sg_acc/gen_grad_270/raw 
+# output_path=gen_grad_270_P2/
+# rsync --info=progress2 /home/xintong/Speech-Backbones/Grad-TTS/logs/$input_path xintong@smc-gpu4.d2.comp.nus.edu.sg:/home/xintong/ParallelWaveGAN/egs/csmsc/voc1/dump/magichub_sg_16k_gen/eval/$output_path -r
+
 E3: Grad-TTS + spk/acc embedding, AISHELL-3 + SG data, w/ blank (resume)
     
 E4: Grad-TTS + conformer encoder + spk/acc embedding, AISHELL-3 + SG data, w/ blank  (resume)
@@ -85,4 +94,11 @@ Timbre:
         数据量够，phoneme？silence？loss 差不多
 
 E1: AISHELL-3 Grad-tts Conformer with blank try larger channel (GPU2)
-     
+    
+
+retrain
+
+ 1943  nohup python3 train_multi_speaker_multi_accent_zh.py > new_exp_sg_acc_1.log &
+ 1947  nohup python3 train_multi_speaker_multi_accent_zh.py > new_exp_sg_acc_1.log &
+ 1950  nohup python3 train_multi_speaker_multi_accent_zh_blank.py > new_exp_sg_acc_blank_E3.log &
+ 1955  nohup python3 train_multi_speaker_multi_accent_zh_blank_conformer.py > new_exp_sg_acc_blank_conformer_E4.log &

@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 import params
-from model import GradTTS, GradTTSConformer
+from model import GradTTS, GradTTSConformer, GradTTSConformerORI
 from data import TextMelSpeakerDataset, TextMelSpeakerBatchCollate, TextMelSpeakerAccentDataset, TextMelSpeakerAccentBatchCollate
 from utils import plot_tensor, save_plot
 from text.symbols import symbols
@@ -82,13 +82,17 @@ if __name__ == "__main__":
                                          win_length, f_min, f_max, zhdict_path)
 
     print('Initializing model...')
-    model = GradTTSConformer(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
+    model = GradTTSConformerORI(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents).cuda()
     print('Number of encoder parameters = %.2fm' % (model.encoder.nparams/1e6))
     print('Number of decoder parameters = %.2fm' % (model.decoder.nparams/1e6))
 
+    # print(model)
+    # checkpoint = torch.load('logs/new_exp_sg_acc_blank_conformer_E4/grad_28.pt')
+    # model.load_state_dict(checkpoint)
+    
     print('Initializing optimizer...')
     optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
 

@@ -219,6 +219,7 @@ class GradLogPEstimator2d(BaseModule):
 
         hiddens = []
         masks = [mask]
+        # print(x.shape, mask.shape)
         for resnet1, resnet2, attn, downsample in self.downs:
             mask_down = masks[-1]
             x = resnet1(x, mask_down, t)
