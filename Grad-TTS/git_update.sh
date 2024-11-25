@@ -1,5 +1,5 @@
-version=5.0
-message="update E18"
+version=6.0
+message="update inference"
 
 git add /home/xintong/Speech-Backbones
 

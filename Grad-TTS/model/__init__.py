@@ -8,11 +8,13 @@
 
 from .tts import GradTTS
 from .tts_gstloss import GradTTSGST
+from .tts_transformer_gstloss import GradTTSTransformerGST
 from .tts_conformer import GradTTSConformer
 from .tts_conformer_ori import GradTTSConformerORI
 from .tts_conformer_ori_conv import GradTTSConformerORIConv
 from .tts_conformer_gstloss import GradTTSConformerGST
 from .tts_conformer_gstloss_conv import GradTTSConformerConvGST
+from .tts_conformer_gstloss_conv_frame import GradTTSConformerConvGSTFrame
 from .tts_conformer_ori_gstloss import GradTTSConformerORIGST
 from .tts_conformer_gstloss_grl import GradTTSConformerGSTGRL
 from .tts_ori import GradTTSORI

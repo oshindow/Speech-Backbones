@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 import params
-from model import GradTTSGST, GradTTSConformer, GradTTSConformerGST
+from model import GradTTSGST, GradTTSConformer, GradTTSConformerConvGST
 from data import TextMelSpeakerDataset, TextMelSpeakerBatchCollate, TextMelSpeakerAccentDataset, TextMelSpeakerAccentBatchCollate
 from utils import plot_tensor, save_plot
 from text.symbols import symbols
@@ -33,7 +33,7 @@ n_spks = 1
 n_accents = 1
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_E18'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_E19'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
@@ -68,13 +68,13 @@ import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data.distributed import DistributedSampler
 
-pretrained_model = ''
+pretrained_model = 'logs/new_exp_sg_acc_blank_conformer_gst_E19/grad_96.pt'
 n_warm_up_step = 40000
 
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
 
 def main(params):
     """Assume Single Node Multi GPUs Training Only"""
@@ -82,7 +82,7 @@ def main(params):
 
     n_gpus = torch.cuda.device_count()
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '60001'
+    os.environ['MASTER_PORT'] = '60002'
 
     batch_size = params.batch_size // n_gpus
     print('Total batch size:', params.batch_size)
@@ -136,7 +136,7 @@ def run(rank, n_gpus):
                                     pin_memory=False,sampler=test_sampler, collate_fn=TextMelSpeakerAccentBatchCollate())            
 
     print('Initializing model...')
-    model = GradTTSConformerGST(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
+    model = GradTTSConformerConvGST(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, n_accents, grl=False, gst=True, cln=True).cuda(rank)

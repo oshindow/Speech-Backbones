@@ -33,7 +33,7 @@ n_spks = 1
 n_accents = 1
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_E18'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_E20'
 n_epochs = params.n_epochs
 batch_size = 16
 out_size = params.out_size
@@ -41,7 +41,7 @@ learning_rate = 0.0001
 random_seed = params.seed
 
 nsymbols = ZHDict(zhdict_path).__len__() + 1 if add_blank == True else ZHDict(zhdict_path).__len__()
-n_enc_channels = 256
+n_enc_channels = 192
 filter_channels = params.filter_channels
 filter_channels_dp = params.filter_channels_dp
 n_enc_layers = params.n_enc_layers
