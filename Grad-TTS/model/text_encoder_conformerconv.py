@@ -332,6 +332,63 @@ class ConformerEncoder(BaseModule):
         x = x * x_mask
         return x
 
+class ConformerEncoderFullCLN(BaseModule):
+    def __init__(self, hidden_channels, filter_channels, n_heads, n_layers, 
+                 kernel_size=1, p_dropout=0.0, window_size=None, cln=False):
+        super(ConformerEncoderFullCLN, self).__init__()
+        self.hidden_channels = hidden_channels
+        self.filter_channels = filter_channels
+        self.n_heads = n_heads
+        self.n_layers = n_layers
+        self.kernel_size = kernel_size
+        self.p_dropout = p_dropout
+        self.window_size = window_size
+
+        self.drop = torch.nn.Dropout(p_dropout)
+        self.layers = torch.nn.ModuleList()
+        self.cln = cln
+
+        for i in range(self.n_layers):
+            if self.cln:
+                self.layers.append(ConformerBlock(
+                    encoder_dim=hidden_channels,
+                    num_attention_heads=n_heads,
+                    feed_forward_expansion_factor=4,
+                    conv_expansion_factor=2,
+                    feed_forward_dropout_p=0.1,
+                    attention_dropout_p=0.1,
+                    conv_dropout_p=0.1,
+                    conv_kernel_size=31,
+                    half_step_residual=True,
+                    cln=True,
+                ))
+            # else:
+            #     self.layers.append(ConformerBlock(
+            #         encoder_dim=hidden_channels,
+            #         num_attention_heads=n_heads,
+            #         feed_forward_expansion_factor=4,
+            #         conv_expansion_factor=2,
+            #         feed_forward_dropout_p=0.1,
+            #         attention_dropout_p=0.1,
+            #         conv_dropout_p=0.1,
+            #         conv_kernel_size=31,
+            #         half_step_residual=True,
+            #         cln=False,
+            #     ))
+
+    def forward(self, x, x_mask, cond=False):
+        # attn_mask = x_mask.unsqueeze(2) * x_mask.unsqueeze(-1)
+        # print(x.shape, x_mask.shape)
+        
+        for layer in self.layers:
+            x = x * x_mask
+            x = x.transpose(1, 2)
+            # print(x.shape, cond.shape)
+            x = layer(x, cond=cond)
+            x = x.transpose(1, 2)
+        x = x * x_mask
+        return x
+    
 class TextEncoder(BaseModule):
     def __init__(self, n_vocab, n_feats, n_channels, filter_channels, 
                  filter_channels_dp, n_heads, n_layers, kernel_size, 
@@ -407,6 +464,56 @@ class TextConformerEncoder(BaseModule):
                                    kernel_size=5, n_layers=3, p_dropout=0.5)
 
         self.encoder = ConformerEncoder(n_channels + (spk_emb_dim if n_spks > 1 else 0), filter_channels, n_heads, n_layers, 
+                               kernel_size, p_dropout, window_size=window_size, cln=cln)
+
+        self.proj_m = torch.nn.Conv1d(n_channels + (spk_emb_dim if n_spks > 1 else 0), n_feats, 1)
+        self.proj_w = DurationPredictor(n_channels + (spk_emb_dim if n_spks > 1 else 0), filter_channels_dp, 
+                                        kernel_size, p_dropout)
+
+    def forward(self, x, x_lengths, spk=None, acc=None, cond=None):
+        x = self.emb(x) * math.sqrt(self.n_channels)
+        x = torch.transpose(x, 1, -1)
+        x_mask = torch.unsqueeze(sequence_mask(x_lengths, x.size(2)), 1).to(x.dtype)
+
+        x = self.prenet(x, x_mask)
+        if self.n_spks > 1:
+            print("encoder not concate spk embedding")
+            x = torch.cat([x, spk.unsqueeze(-1).repeat(1, 1, x.shape[-1])], dim=1)
+        
+        x = self.encoder(x, x_mask, cond=cond)
+        mu = self.proj_m(x) * x_mask
+
+        x_dp = torch.detach(x)
+        logw = self.proj_w(x_dp, x_mask)
+
+        return mu, logw, x_mask
+
+class TextConformerEncoderFullCLN(BaseModule):
+    def __init__(self, n_vocab, n_feats, n_channels, filter_channels, 
+                 filter_channels_dp, n_heads, n_layers, kernel_size, 
+                 p_dropout, window_size=None, spk_emb_dim=64, n_spks=1, cln=False):
+        super(TextConformerEncoderFullCLN, self).__init__()
+        self.n_vocab = n_vocab
+        self.n_feats = n_feats
+        self.n_channels = n_channels
+        self.filter_channels = filter_channels
+        self.filter_channels_dp = filter_channels_dp
+        self.n_heads = n_heads
+        self.n_layers = n_layers
+        self.kernel_size = kernel_size
+        self.p_dropout = p_dropout
+        self.window_size = window_size
+        self.spk_emb_dim = spk_emb_dim
+        self.n_spks = n_spks
+        self.cln = cln
+
+        self.emb = torch.nn.Embedding(n_vocab, n_channels)
+        torch.nn.init.normal_(self.emb.weight, 0.0, n_channels**-0.5)
+
+        self.prenet = ConvReluNorm(n_channels, n_channels, n_channels, 
+                                   kernel_size=5, n_layers=3, p_dropout=0.5)
+
+        self.encoder = ConformerEncoderFullCLN(n_channels + (spk_emb_dim if n_spks > 1 else 0), filter_channels, n_heads, n_layers, 
                                kernel_size, p_dropout, window_size=window_size, cln=cln)
 
         self.proj_m = torch.nn.Conv1d(n_channels + (spk_emb_dim if n_spks > 1 else 0), n_feats, 1)

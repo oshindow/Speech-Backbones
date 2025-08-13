@@ -16,23 +16,25 @@ def get_audio_lengths(file_path):
 
 wavscp = open('wav.scp', 'w', encoding='utf8')
 text = open('text.txt', 'w', encoding='utf8')
+utt2spk = open('utt2spk', 'w', encoding='utf8')
 import json
 content = {}
 with open('/home/xintong/Speech-Backbones/Grad-TTS/resources/filelists/magichub_sg/raw.txt', 'r', encoding='utf8') as input:
     for line in input:
         uid = line.strip().split('|')[0]
         content[uid] = line.strip().split('|')[1]
-with open('phonemes2pinyin.json', 'r', encoding='utf8') as input:
+with open('files/phonemes2pinyin.json', 'r', encoding='utf8') as input:
     phonemes2pinyin = json.load(input)
 
 with open('token_list', 'r', encoding='utf8') as input:
     token_list = [token.strip() for token in input.readlines()]
 
-with open('/home/xintong/Speech-Backbones/Grad-TTS/G0004_part1_label.json', 'r', encoding='utf8') as input:
+with open('/home/xintong/Speech-Backbones/Grad-TTS/G0004_part2_test.json', 'r', encoding='utf8') as input:
     data = json.load(input)
     for file in data.keys():
         
         wavscp.write(file[:-4] + ' /data2/xintong/magichub_singapore/wav_24k/G0004/' + file + '\n') 
+        utt2spk.write(file[:-4] + ' G0004\n')
         phonemes = content[file[:-4]].split(' ')
         pinyins = []
 
@@ -42,20 +44,24 @@ with open('/home/xintong/Speech-Backbones/Grad-TTS/G0004_part1_label.json', 'r',
                 pinyin = 'sil'
                 # pinyin.append('sil')
                 idx += 1
+            elif phonemes[idx] in ['aa', 'ee', 'oo']:
+                pinyin = phonemes[idx+1]
+                idx += 2
             elif " ".join(phonemes[idx:idx+2]) in phonemes2pinyin:
                 pinyin = phonemes2pinyin[" ".join(phonemes[idx:idx+2])]
                 idx += 2
             else:
                 pinyin = "".join(phonemes[idx:idx+2])
                 idx += 2
-
+            if pinyin not in token_list and pinyin != 'sil':
+                print(pinyin)
             pinyins.append(pinyin)
 
-        text.write(file[:-4] + '|' + " ".join(pinyin) + '\n')
+        text.write(file[:-4] + '|' + " ".join(pinyins) + '\n')
 
 text.close()
 wavscp.close()
-
+utt2spk.close()
 def write_text_magichubsg():
     import json
     content = {}

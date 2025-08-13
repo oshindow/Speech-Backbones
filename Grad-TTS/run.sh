@@ -1,0 +1,1 @@
+python3 -u train_multi_speaker_multi_accent_zh_blank_con_ddp2_gstloss_cln.py > train_E8.log

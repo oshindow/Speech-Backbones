@@ -23,6 +23,7 @@ import sys
 sys.path.insert(0, 'hifi-gan')
 from meldataset import mel_spectrogram, mel_spectrogram_align
 import json
+import whisper
 
 class TextMelDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
@@ -60,7 +61,15 @@ class TextMelDataset(torch.utils.data.Dataset):
         assert sr == self.sample_rate
         mel = mel_spectrogram(audio, self.n_fft, self.n_mels, self.sample_rate, self.hop_length,
                               self.win_length, self.f_min, self.f_max, center=True).squeeze()
+                
         return mel
+    def get_mel_whisper(self, filepath):
+        audio, sr = ta.load(audiofile)
+         
+        # print(audio, audio.shape)
+        duration = audio.shape[-1] / 16000
+        audio = whisper.pad_or_trim(audio.flatten())
+        mel = whisper.log_mel_spectrogram(audio, n_mels=self.config.n_mels) # torch.Size([128, 3000])
 
     def get_text(self, text, add_blank=True):
         if self.zhdict is not None:
@@ -118,7 +127,7 @@ class TextMelBatchCollate(object):
 class TextMelSpeakerDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
                  n_fft=1024, n_mels=80, sample_rate=22050,
-                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None):
+                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None, whipser=False):
         super().__init__()
         self.filelist = parse_filelist(filelist_path, split_char='|')
         self.cmudict = cmudict.CMUDict(cmudict_path)
@@ -134,13 +143,14 @@ class TextMelSpeakerDataset(torch.utils.data.Dataset):
         self.f_min = f_min
         self.f_max = f_max
         self.add_blank = add_blank
+        self.whisper = whisper
         random.seed(random_seed)
         random.shuffle(self.filelist)
 
-    def get_triplet(self, line):
+    def get_triplet(self, line, whisper):
         filepath, text, speaker = line[0], line[1], line[2]
         text = self.get_text(text, add_blank=self.add_blank)
-        mel = self.get_mel(filepath)
+        mel = self.get_mel(filepath, whisper=whisper)
         speaker = self.get_speaker(speaker)
         return (text, mel, speaker, filepath)
 
@@ -166,7 +176,7 @@ class TextMelSpeakerDataset(torch.utils.data.Dataset):
         return speaker
 
     def __getitem__(self, index):
-        text, mel, speaker, filepath = self.get_triplet(self.filelist[index])
+        text, mel, speaker, filepath = self.get_triplet(self.filelist[index], self.whisper)
         item = {'y': mel, 'x': text, 'spk': speaker, 'filepath': filepath}
         # print(self.filelist[index])
         # print(item['y'].shape)
@@ -212,7 +222,7 @@ class TextMelSpeakerBatchCollate(object):
 class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
     def __init__(self, filelist_path, cmudict_path, add_blank=True,
                  n_fft=1024, n_mels=80, sample_rate=22050,
-                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None, train=False):
+                 hop_length=256, win_length=1024, f_min=0., f_max=8000, zh_path=None, train=False, whisper_flag=False):
         super().__init__()
         self.filelist = parse_filelist(filelist_path, split_char='|')
         self.cmudict = cmudict.CMUDict(cmudict_path)
@@ -228,6 +238,7 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
         self.f_min = f_min
         self.f_max = f_max
         self.add_blank = add_blank
+        self.whisper_flag = whisper_flag
         # random.seed(random_seed)
         # random.shuffle(self.filelist)
         if train:
@@ -236,22 +247,27 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
             self.lengths = [self.lengths_dict[key[0]] for key in self.filelist]
             self.accents = [int(key[3]) for key in self.filelist ]
 
-    def get_triplet(self, line):
+    def get_triplet(self, line, whisper):
         filepath, text, speaker, accent = line[0], line[1], line[2], line[3]
         text = self.get_text(text, add_blank=self.add_blank)
-        mel = self.get_mel(filepath)
+        mel, mel_whisper = self.get_mel(filepath, whisper)
         speaker = self.get_speaker(speaker)
         accent = self.get_accent(accent)
-        return (text, mel, speaker, accent, filepath)
+        return (text, mel, mel_whisper, speaker, accent, filepath)
 
-    def get_mel(self, filepath):
+    def get_mel(self, filepath, whisper_flag=False):
         audio, sr = ta.load(filepath)
         assert sr == self.sample_rate
         mel = mel_spectrogram_align(audio, self.n_fft, self.n_mels, self.sample_rate, self.hop_length,
                               self.win_length, self.f_min, self.f_max, center=False).squeeze()
-        return mel
+        if whisper_flag:
+            # print("whisper mel")
+            audio = whisper.pad_or_trim(audio.flatten())
+            mel_whisper = whisper.log_mel_spectrogram(audio, n_mels=self.n_mels) # torch.Size([128, 3000])
+
+        return mel, mel_whisper
     
-    def write_lengths(self):
+    def write_lengths(self, whisper_flag):
         self.lengths = {}
         idx = 0
         self.lengths_max = 0
@@ -259,7 +275,7 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
             if idx and idx % 1000 == 0:
                 print(idx)
             mel_path = file[0]
-            mel = self.get_mel(mel_path)
+            mel = self.get_mel(mel_path, whisper_flag)
             length = mel.shape[1]
             self.lengths_max = max(length, self.lengths_max)
             self.lengths[mel_path] = length
@@ -298,8 +314,8 @@ class TextMelSpeakerAccentDataset(torch.utils.data.Dataset):
         return accent
     
     def __getitem__(self, index):
-        text, mel, speaker, accent, filepath = self.get_triplet(self.filelist[index])
-        item = {'y': mel, 'x': text, 'spk': speaker, 'acc': accent, 'filepath': filepath}
+        text, mel, mel_whisper, speaker, accent, filepath = self.get_triplet(self.filelist[index], self.whisper_flag)
+        item = {'y': mel, 'y_prompt': mel_whisper, 'x': text, 'spk': speaker, 'acc': accent, 'filepath': filepath}
         # print(self.filelist[index])
         # print(item['y'].shape)
         return item
@@ -328,16 +344,18 @@ class TextMelSpeakerAccentBatchCollate(object):
         y_lengths, x_lengths = [], []
         spk = []
         acc = []
+        y_prompt = torch.zeros((B, n_feats, 3000), dtype=torch.float32)
         for i, item in enumerate(batch):
-            y_, x_, spk_, acc_ = item['y'], item['x'], item['spk'], item["acc"]
+            y_, x_, spk_, acc_, y_prompt_ = item['y'], item['x'], item['spk'], item["acc"], item['y_prompt']
             y_lengths.append(y_.shape[-1])
             x_lengths.append(x_.shape[-1])
             y[i, :, :y_.shape[-1]] = y_
             x[i, :x_.shape[-1]] = x_
+            y_prompt[i, :, :y_prompt_.shape[-1]] = y_prompt_
             spk.append(spk_)
             acc.append(acc_)
         y_lengths = torch.LongTensor(y_lengths)
         x_lengths = torch.LongTensor(x_lengths)
         spk = torch.cat(spk, dim=0)
         acc = torch.cat(acc, dim=0)
-        return {'x': x, 'x_lengths': x_lengths, 'y': y, 'y_lengths': y_lengths, 'spk': spk, 'acc': acc, 'filepath': item['filepath']}
+        return {'x': x, 'x_lengths': x_lengths, 'y': y, 'y_lengths': y_lengths, 'y_prompt': y_prompt, 'spk': spk, 'acc': acc, 'filepath': item['filepath']}

@@ -18,7 +18,7 @@ zhdict_path = 'resources/zh_dictionary.json'
 add_blank = True
 n_feats = 80
 n_spks = 1  # 247 for Libri-TTS filelist and 1 for LJSpeech
-spk_emb_dim = 64
+spk_emb_dim = 64 # 64
 n_feats = 80
 n_fft = 1024
 sample_rate = 16000
@@ -52,3 +52,17 @@ learning_rate = 1e-4
 seed = 37
 save_every = 1
 out_size = fix_len_compatibility(100 * 2*16000//256)
+
+
+
+# whisper_related
+n_mels = 80
+n_audio_ctx = 1500
+n_audio_state = 768
+n_audio_head = 12
+n_audio_layer = 12
+acc_layers = 2
+spk_layers = 2
+n_acc = 4
+n_spk = 222
+model_name = "small" # "tiny", "base", "small", "medium", "large"

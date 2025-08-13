@@ -31,4 +31,5 @@ Grad-TTS/nohup.out
 Grad-TTS/__pycache__
 Grad-TTS/out
 Grad-TTS/*.log*
+Grad-TTS/train_logs_v1
 # Grad-TTS/sg_acc.blank.conformer.gst.E6.log.2

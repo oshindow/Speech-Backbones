@@ -9,7 +9,7 @@ class Condional_LayerNorm(nn.Module):
         super(Condional_LayerNorm, self).__init__()
         if isinstance(normal_shape, int):
             self.normal_shape = normal_shape
-        self.speaker_embedding_dim = 256
+        self.speaker_embedding_dim = 256 # 768 for whisper
         self.epsilon = epsilon
         self.W_scale = nn.Linear(self.speaker_embedding_dim, self.normal_shape)
         self.W_bias = nn.Linear(self.speaker_embedding_dim, self.normal_shape)

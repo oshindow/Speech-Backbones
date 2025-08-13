@@ -1,1065 +1,373 @@
-A0002_S003_0_G0004_segment_0263|sil jiu4 shi4 sil dui4 ya5 yao4 yao4 kan4 ni3 sil zi4 sil ji3 lo5 sil
-A0002_S006_0_G0004_segment_0100|sil e4 sil bi3 sil jiao4 sil
-A0002_S005_0_G0004_segment_0175|sil jue2 sil de5 sil
-A0002_S001_0_G0004_segment_0131|sil ran2 hou4 sil shui2 lai2 yan3 zhe4 sil ge4 hui4 sil fei1 sil chang2 sil
-A0002_S003_0_G0004_segment_0013|sil en1 sil
-A0002_S004_0_G0004_segment_0009|e4 sil
-A0002_S003_0_G0004_segment_0220|sil en1 sil
-A0002_S005_0_G0004_segment_0227|sil ni3 zhi1 dao4 sil tang2 niao4 sil bing4 you3 shi2 ta1 men5 hui4 sil ju1 diao4 na1 ge4 sil jue2 a5 shen2 me5 sil de5 sil suo3 yi3 sil
-A0002_S005_0_G0004_segment_0163|sil hai2 sil shi4 ju2 sil bu4 sil
-A0002_S002_0_G0004_segment_0131|sil ta1 qi2 shi2 shi4 sil dang4 sil di4 ren2 sil dui4 sil
-A0002_S004_0_G0004_segment_0106|sil en1 sil
-A0002_S004_0_G0004_segment_0182|sil mo4 you3 yin1 wei4 you3 xie1 ren2 jiu4 hui4 sil hao3 xiang4 ni3 shuo1 de5 sil
-A0002_S004_0_G0004_segment_0123|sil dui4 ma3 sil
-A0002_S002_0_G0004_segment_0002|sil e4 sil
-A0002_S003_0_G0004_segment_0107|sil dui4 ya5 sil suo3 yi3 qi2 shi2 sil
-A0002_S004_0_G0004_segment_0077|sil en1 sil
-A0002_S004_0_G0004_segment_0137|sil dai4 jia1 sil du1 sil
-A0002_S005_0_G0004_segment_0107|sil e4 jiu4 shi4 sil
-A0002_S003_0_G0004_segment_0135|sil zhe4 xie1 xue2 sheng1 zhen1 de5 sil shi4 sil ye3 shi4 sil
-A0002_S002_0_G0004_segment_0084|sil ooo5 sil
-A0002_S002_0_G0004_segment_0089|sil bu2 shi4 zai4 han2 guo2 dan4 shi4 sil
-A0002_S001_0_G0004_segment_0102|sil en1 sil ni3 ne5 ni3 you3 sil kan4 ma3 sil
-A0002_S005_0_G0004_segment_0145|sil ni3 kan1 na3 li3 sil
-A0002_S001_0_G0004_segment_0082|sil hai2 you3 sil
-A0002_S001_0_G0004_segment_0200|sil dui4 qi2 sil shi2 yi3 qian2 de5 nei4 xie1 sil gang3 sil ju4 hai2 man2 sil jing1 sil dian3 sil de5 wo3 shi4 sil
-A0002_S006_0_G0004_segment_0075|sil e4 na1 sil ge4 sil ji1 sil qi4 sil dan4 shi4 sil
-A0002_S006_0_G0004_segment_0039|sil shi4 wo3 shi4 zai4 yin1 wei4 wo3 hen3 re4 wo3 zai4 kai1 dan4 shi4 ru2 guo3 wo3 kai1 le5 you4 shi4 sil
-A0002_S006_0_G0004_segment_0081|sil dang1 ran2 sil
-A0002_S002_0_G0004_segment_0034|sil dui4 jiu4 xue2 xiao4 de5 ma5 ran2 hou4 sil
-A0002_S003_0_G0004_segment_0062|sil you3 hao3 you3 bu4 hao3 ba5 xin1 jia1 po1 de5 sil jiu4 sil shi4 sil jiao4 yu4 zhi4 sil du4 sil jiu4 sil shi4 sil
-A0002_S002_0_G0004_segment_0212|sil you3 sil fei1 sil fei1 zhou1 you3 shen2 me5 ya4 zhou1 sil cheng2 sil shi4 ma5 wo3 ye3 bu2 zhi1 dao4 sil
-A0002_S001_0_G0004_segment_0228|sil yin1 wei2 ru2 guo3 shi4 sil
-A0002_S006_0_G0004_segment_0195|sil ying1 gai1 ye3 shi4 zhong1 xue2 sil di2 shi2 sil hou4 ba5 sil
-A0002_S005_0_G0004_segment_0248|ta1 sil men5 sil jiang3 shui4 sil
-A0002_S005_0_G0004_segment_0073|er2 sil qie3 yi1 yuan4 you3 sil hen3 duo1 bi3 jiao4 sil
-A0002_S002_0_G0004_segment_0159|sil wo3 hai2 wo3 sil bi3 jiao4 sil xi3 huan1 sil
-A0002_S002_0_G0004_segment_0199|sil wo3 bu2 zhi1 dao4 sil yin1 wei4 you3 xie1 ren2 wo3 sil wo3 sil wo3 zai4 wang3 shang4 you3 sil kan4 nei4 sil xie1 sil
-A0002_S001_0_G0004_segment_0238|sil e2 na4 hen3 duo1 eeei2 sil
-A0002_S006_0_G0004_segment_0014|sil dian4 nao3 ye3 sil shi4 yin1 wei2 sil xian4 zai4 sil dian4 nao3 you3 hen3 sil duo1 de5 sil jiu4 shi4 liao2 sil tian1 sil gong1 sil ju4 sil
-A0002_S003_0_G0004_segment_0052|sil wo3 shi4 zhi1 shi4 hao4 qi2 ni3 shi4 bi3 jiao4 xi3 huan1 zhe4 sil yang4 sil zi5 sil de5 ma5 sil
-A0002_S002_0_G0004_segment_0056|sil en1 heng1 sil
-A0002_S005_0_G0004_segment_0096|wo3 sil dao4 shi4 mei3 ci4 qu4 sil tan4 wang4 de5 shi2 hou4 ran2 hou4 ru2 guo3 sil gang1 hao3 shi4 sil
-A0002_S004_0_G0004_segment_0005|sil nei4 ni3 yao1 xian1 sil liao2 nei4 zai4 hai2 shi4 wai4 zai4 sil ne5 sil
-A0002_S003_0_G0004_segment_0114|sil e4 sil ke3 neng2 you3 yi1 ge4 liang2 hao3 de5 yi1 sil ge4 sil
-A0002_S004_0_G0004_segment_0152|sil qi2 shi2 yi1 ge4 ren2 de5 sil qi4 zhi4 sil ta1 men5 jiang3 de5 qi4 zhi4 huo4 sil zhi1 ti3 yu3 yan2 jiu4 sil shi4 sil
-A0002_S004_0_G0004_segment_0094|sil en1 sil
-A0002_S004_0_G0004_segment_0031|en1 sil
-A0002_S003_0_G0004_segment_0132|sil suo3 yi3 sil
-A0002_S006_0_G0004_segment_0055|sil ta1 men5 sil sheng3 dian4 guo4 du4 sil
-A0002_S005_0_G0004_segment_0105|sil shi4 you3 shen2 me5 wen4 ti2 ma5 suo3 yi3 wo3 sil
-A0002_S004_0_G0004_segment_0030|sil jiu4 shui4 ni3 shen1 bian1 bi3 sil he2 ni3 bi3 jiao4 sil shu2 de5 peng2 you3 ta1 men5 sil dou1 hui4 sil zen3 me5 yang4 sil xing2 rong2 ni3 ne5 sil
-A0002_S001_0_G0004_segment_0234|sil dui4 sil
-A0002_S002_0_G0004_segment_0186|sil suo3 yi3 sil
-A0002_S001_0_G0004_segment_0233|sil en1 sil
-A0002_S005_0_G0004_segment_0236|sil en1 sil
-A0002_S004_0_G0004_segment_0014|e4 sil fang1 mian4 sil yi1 ge4 sil shi4 sil
-A0002_S004_0_G0004_segment_0135|sil jue2 de5 shi4 shuo1 dang1 ran2 li3 sil xiang3 zhong1 sil
-A0002_S002_0_G0004_segment_0195|sil bei3 sil chao2 xian3 kan4 guo4 sil
-A0002_S003_0_G0004_segment_0257|sil zen3 ma2 yang4 sil dou1 shi4 xuan3 yi1 sil ge4 sil
-A0002_S005_0_G0004_segment_0239|sil dang1 ran2 wo3 jue2 de5 ye3 shi4 e4 shen4 zang4 ye3 shi4 yi1 ge4 sil
-A0002_S005_0_G0004_segment_0044|sil ta1 men5 jiu4 hui4 rang4 ni3 yao4 yong4 ni3 de5 sil deng1 sil ji4 sil
-A0002_S004_0_G0004_segment_0006|sil hao4 di1 sil
-A0002_S004_0_G0004_segment_0076|sil en1 sil ying1 gai1 shi4 sil
-A0002_S002_0_G0004_segment_0087|sil en1 sil
-A0002_S006_0_G0004_segment_0146|sil dan4 sil shi4 wo3 jue2 dei3 hai2 you3 yi1 ge4 jiu4 shi4 xin1 jia1 sil po1 di1 sil nei4 sil ge4 sil
-A0002_S003_0_G0004_segment_0276|sil jiu4 hao3 xiang4 nei4 xie1 bi3 jiao4 chuan2 tong3 sil hua1 ren2 sil xue2 xiao4 hao3 xiang4 sil dao4 nan2 na5 zhe4 zhi1 sil lei4 di4 sil
-A0002_S003_0_G0004_segment_0071|sil e4 ke1 sil mu4 ye3 hao3 ran2 hou4 sil
-A0002_S005_0_G0004_segment_0077|sil xin1 jia1 po1 de5 nei4 ge4 yi1 liao2 she4 bei4 mei2 you3 sil hao3 xiang4 ni3 shuo1 de5 sil
-A0002_S001_0_G0004_segment_0043|sil dan4 shi4 hen3 sil
-A0002_S001_0_G0004_segment_0062|sil suo3 yi3 ta1 men5 xian4 zai4 zai4 sil
-A0002_S005_0_G0004_segment_0016|e4 sil qi2 shi2 dui4 sil suo3 yi3 xin1 jia1 po1 de5 zhe4 sil xie1 sil
-A0002_S002_0_G0004_segment_0232|sil na1 zhong4 sil guo2 de5 hua4 ni3 hai2 you3 shen2 me5 sil chu2 le5 bei3 sil jing1 ni3 hai2 yao1 qu4 sil bie2 di4 sil di4 sil fang1 ma3 sil
-A0002_S006_0_G0004_segment_0209|sil xiao3 bian4 da4 sil
-A0002_S003_0_G0004_segment_0256|sil dui4 wo3 jue2 de5 qi2 shi2 ye3 zen3 me5 yang4 sil
-A0002_S003_0_G0004_segment_0109|hui4 you3 na1 me5 duo1 ya1 li4 dan4 shi4 sil
-A0002_S006_0_G0004_segment_0063|sil jia3 de5 wo3 shi4 sil yin3 bie2 ren2 na4 me5 shuo1 sil suo3 yi3 wo3 ye3 sil bu2 sil zhi1 sil dao4 sil
-A0002_S001_0_G0004_segment_0087|sil chen2 ling2 sil shei2 sil
-A0002_S006_0_G0004_segment_0052|sil suo3 yi3 wo3 zhi1 dao4 shuo1 sil
-A0002_S001_0_G0004_segment_0124|sil dian4 ying3 zui4 jin4 bi3 jiao4 sil shao3 zhe4 sil xie1 jiu4 sil shi4 sil zhen1 tan4 lei4 de5 jiu4 sil po4 an4 di2 sil dui4 ma3 sil
-A0002_S006_0_G0004_segment_0026|sil sui2 sui2 bian4 bian4 jiu4 shang4 sil shang4 sil san1 sil shi2 suo3 yi3 sil
-A0002_S004_0_G0004_segment_0100|e2 mei2 you3 sil dan4 shi4 wo3 jue2 de5 shuo1 sil
-A0002_S006_0_G0004_segment_0160|sil dan1 sil xin1 sil shuo1 sil yin1 wei4 sil
-A0002_S005_0_G0004_segment_0178|sil zui4 hao3 hai2 shi4 bu2 yao4 qu4 yi1 yuan4 na5 hai2 shi4 sheng1 sil bing4 zhe4 shi4 zui4 hao3 de5 sil dui4 ma3 sil
-A0002_S003_0_G0004_segment_0167|sil jia1 li3 huan2 sil jing4 sil bu4 hao3 de5 ran2 sil hou4
-A0002_S002_0_G0004_segment_0190|sil en1 sil
-A0002_S001_0_G0004_segment_0170|sil ren2 jia1 shui4 jiao4 de5 shi2 hou4 ta1 jiu4 sil zai4 meng4 li3 sil ba3 na3 ge4 ren2 sil sha1 sil diao4 sil ran2 hou4 nuo2 sil ge4 ren2 jiu4 sil si3 sil diao4 ni3 sil
-A0002_S002_0_G0004_segment_0077|sil zhe4 ming2 zi4 sil ye3 shi4 ye3 shi4 bie2 guo2 jia1 de5 sil
-A0002_S001_0_G0004_segment_0159|sil e4 ta1 men5 shi4 sil zhe4 yi1 lei4 de5 yin1 wei4 jiu4 shi4 bu2 sil tong2 de5 nei4 ge4 wen2 sil hua4 sil ma5 sil bu2 tong2 de5 nei4 sil xie1 sil
-A0002_S003_0_G0004_segment_0188|sil e4 sil
-A0002_S005_0_G0004_segment_0240|sil shen4 zang4 sil
-A0002_S005_0_G0004_segment_0221|sil e4 jiu4 shi4 nei4 sil ge4 e4 sil
-A0002_S002_0_G0004_segment_0202|sil en1 sil
-A0002_S003_0_G0004_segment_0227|sil dui4 sil
-A0002_S005_0_G0004_segment_0072|sil dui4 you2 qi2 shi4 yin1 wei4 you3 yi1 xie1 sil gan3 ran3 qu1 shi4 sil zai4 yi1 yuan4 sil
-A0002_S005_0_G0004_segment_0252|hao4 a1 sil
-A0002_S001_0_G0004_segment_0100|sil jiu4 zhi3 shi4 sil ge1 chang4 bu4 fen4 sil mei2 you3 kan4 ta1 men5 de5 sil
-A0002_S003_0_G0004_segment_0086|sil man4 man4 tui4 xiu1 le5 jiu4 hui4 sil shi1 sil qu4 le5 sil
-A0002_S003_0_G0004_segment_0079|sil zhu3 fan4 de5 shi4 ma5 jiu4 shi4 e4 sil
-A0002_S003_0_G0004_segment_0268|sil dui4 dan4 shi4 sil
-A0002_S006_0_G0004_segment_0110|sil que4 shi2 suo3 sil yi3 sil
-A0002_S002_0_G0004_segment_0152|sil suo3 yi3 jiu4 ke4 sil neng2 sil shi4 xin1 xi1 lan2 ne5 huo4 zhe3 sil shi4 sil
-A0002_S005_0_G0004_segment_0192|sil en1 sil shi2 xing2 de5 hua4 hai2 shi4 yao1 sil yi3
-A0002_S001_0_G0004_segment_0075|sil dui4 ya5 sil
-A0002_S002_0_G0004_segment_0233|sil ooo1 sil
-A0002_S003_0_G0004_segment_0209|sil en1 sil
-A0002_S001_0_G0004_segment_0032|sil en1 sil
-A0002_S003_0_G0004_segment_0237|zai4 wo3 men5 neng2 gou4 zhuan3 xing2 sil na1 ge4 sil dui4 ma3 sil
-A0002_S001_0_G0004_segment_0036|sil jiu3 sil bai3 sil duo1 dan4 shi4 sil
-A0002_S003_0_G0004_segment_0016|sil hen3 jiu3 sil
-A0002_S005_0_G0004_segment_0158|sil e2 nei4 ni3 shi4 zen3 me5 sil kai1 dao1 de5 fei4 yong4 shi4 zen3 me5 yang4 sil
-A0002_S001_0_G0004_segment_0029|sil dui4 aaa4 wo3 jiu4 sil shuo1 le5 zui4 jin4 ye3 wo3 ye3 sil zai4 sil kan4 nei4 sil ge4 hai3 sil zei2 wang2 sil hai2 man2 you3 sil qu4 sil de5 sil yin1 wei2 sil
-A0002_S005_0_G0004_segment_0207|en1 sil
-A0002_S005_0_G0004_segment_0098|sil ran2 hou4 wo3 mei3 ci4 dou1 wen2 dao4 ta1 men5 shi3 wo3 jue2 de5 hen3 sil xiang1 sil
-A0002_S002_0_G0004_segment_0010|hen3 sil shao3 sil qu4 sil zou3 sil
-A0002_S004_0_G0004_segment_0214|sil en4 sil
-A0002_S003_0_G0004_segment_0275|sil shi4 sil
-A0002_S002_0_G0004_segment_0125|sil yu3 yan2 shang4 hai2 hao3 er2 qie3 wo3 men5 sil
-A0002_S002_0_G0004_segment_0095|sil en1 sil
-A0002_S004_0_G0004_segment_0200|sil ni3 sil zi4 sil ji3 sil
-A0002_S005_0_G0004_segment_0062|sil kan4 bing4 ren2 de5 shi2 jian1 zhi3 shi4 hao3 xiang4 sil
-A0002_S005_0_G0004_segment_0150|sil a1 sil
-A0002_S004_0_G0004_segment_0028|sil en1 sil
-A0002_S001_0_G0004_segment_0095|sil ye3 shi4 ye3 sil ye3 shi4 mi4 shi4 da4 tao2 tuo1 ta1 shi4 nei4 ge4 sil
-A0002_S006_0_G0004_segment_0159|sil dui4 dan4 shi4 sil ni3 kuai4 bu4 hui4 you3 nei4 sil ge4 sil
-A0002_S001_0_G0004_segment_0047|sil bu4 tong2 gu4 shi4 ta1 men5 qu4 sil bu2 tong2 de5 sil dao3 sil
-A0002_S001_0_G0004_segment_0225|yin1 sil wei4 you3 xie1 sil
-A0002_S002_0_G0004_segment_0115|sil ran2 hou4 hai2 sil jiu4 hai2 man2 sil hao3 wan2 de5 ran2 hou4 jiu4 shi4 sil
-A0002_S002_0_G0004_segment_0104|sil en1 ye4 shi4 aaa4 sil suan4 sil shi4 sil
-A0002_S005_0_G0004_segment_0194|sil dui4 ma3 sil
-A0002_S006_0_G0004_segment_0189|sil suo3 yi3 sil
-A0002_S002_0_G0004_segment_0096|sil ke3 neng2 sil bi3 jiao4 te4 bie2 jiu4 shi4 qu4 bi3 jiao4 yuan3 de5 wo3 sil dang1 shi2 jiu4 shi4 qu4 e4 bu4 sil la1 sil ge2 sil ba5 sil
-A0002_S001_0_G0004_segment_0008|sil ying1 gai1 ye3 bu2 sil zhi3 ba5 jiu4 shi4 shuo1 ni3 sil xi3 huan1 sil zuo4 sil shen2 me5 sil dou1 sil ke4 yi3 liao2 sil
-A0002_S004_0_G0004_segment_0192|na4 wo3 jue2 de2 xian4 zai4 di2 sil
-A0002_S002_0_G0004_segment_0102|sil ou1 zhou1 sil shi2 er4 yue4 sil e4 sil dou1 hui4 you3 nei4 sil ge4 sil
-A0002_S002_0_G0004_segment_0032|sil e4 sil shi4 suan4 shi4 sil jiao1 liu2 sil ba1 ran2 hou4 qu4 liao3 sil bei3 sil jing1 sil
-A0002_S006_0_G0004_segment_0060|sil en4 sil
-A0002_S004_0_G0004_segment_0103|sil e2 sil
-A0002_S001_0_G0004_segment_0122|qi2 sil shi2
-A0002_S006_0_G0004_segment_0105|sil en4 sil chu2 le5 sil zhe4 ge4 sil ni3 sil jue2 sil de5 sil
-A0002_S002_0_G0004_segment_0071|sil en1 na1 ni3 xi3 huan1 gen1 zhe5 lv3 xing2 sil tuan2 ma3 sil
-A0002_S003_0_G0004_segment_0230|sil e4 sil qu4 sil xue2 dang1 ran2 sil
-A0002_S006_0_G0004_segment_0085|sil kai1 feng1 sil shan4 a1 sil
-A0002_S002_0_G0004_segment_0107|sil ta1 men5 you3 yi1 sil ge4 te2 sil bie2 de5 sil
-A0002_S002_0_G0004_segment_0005|sil ni3 neng2 xian1 sil ni3 xian1 kai1 shi3 ba5 sil
-A0002_S006_0_G0004_segment_0154|sil en4 sil
-A0002_S003_0_G0004_segment_0036|sil suo3 yi3
-A0002_S003_0_G0004_segment_0243|sil hao3 xiang4 ni3 wen4 wo3 xin1 ku3 xin1 ku3 dang1 ran2 hui4 le5 dan4 shi4 jiu4 shi4 shuo1 sil
-A0002_S004_0_G0004_segment_0191|sil e4 sil
-A0002_S004_0_G0004_segment_0132|zen3 me5 shuo1 ne5 sil
-A0002_S003_0_G0004_segment_0105|sil en1 sil
-A0002_S002_0_G0004_segment_0206|fei1 sil zhou1 ne5 sil you3 mo4 you3 xiang3 guo4 yao4 qu4 sil fei1 sil zhou1 sil
-A0002_S005_0_G0004_segment_0040|sil wo3 mei2 you3 sil
-A0002_S001_0_G0004_segment_0240|sil en1 sil
-A0002_S002_0_G0004_segment_0193|sil ni3 you3 mei2 you3 sil
-A0002_S004_0_G0004_segment_0059|sil tian1 ma3 hang2 sil kong1 jiu4 shi4 shuo1 ni3 hui4 sil
-A0002_S006_0_G0004_segment_0109|sil en1 sil
-A0002_S006_0_G0004_segment_0070|sil dui4 ma5 sil
-A0002_S003_0_G0004_segment_0278|sil de5 sil yi1 xie1 mei3 shu4 ke4 aaa2 jiu4 shi4 nei4 xie1 sil bu2 xu1 yao4 kao3 shi4 de5 sil ta1 men5 sil jiu4 hui4 yong4 sil zhong1 wen2 sil jiao4 sil
-A0002_S005_0_G0004_segment_0151|sil na4 hen3 tong4 eeei2 ni3 shi4 yi3 qian2 sil wan2 shen2 me5 sil yun4 sil dong4 huan2 shi4 sil shen2 me5 sil
-A0002_S006_0_G0004_segment_0092|sil you2 qi2 sil shi4 xiao3 hai2 sil zi5 sil
-A0002_S002_0_G0004_segment_0011|sil e2 zhe4 xie1 sil you3 le5 jiu4 shi4 sil bi3 jiao4 sil
-A0002_S006_0_G0004_segment_0041|ye3 shi4 rang4 rang4 zhe4 ge4 kong1 qi4 sil na3 ge4 shi4 jie4 nuan3 hua4 de5 yi1 ge4 yuan2 yin1 suo3 yi3 dao3 sil zhi4 dao4 yi1 dian3 sil
-A0002_S001_0_G0004_segment_0218|sil e4 na1 shi4 sil zhong1 wen2 de5 hai2 shi4 hai2 shi4 sil jiu4 shi4 sil ni3 kai1 che1 de5 shi2 hou4 ma5 hai2 shi4 zai4 sil jia1 sil
-A0002_S005_0_G0004_segment_0001|e4 ni3 hao4 sil
-A0002_S003_0_G0004_segment_0011|sil en1 sil
-A0002_S004_0_G0004_segment_0010|sil liu2 sil xing2 hai2 shi4 sil shi4 sil bi3 jiao4 sil
-A0002_S001_0_G0004_segment_0161|xi2 sil su2 eeen5 sil
-A0002_S001_0_G0004_segment_0243|sil na1 sil e4 zhe4 ci4 ye3 liao2 de5 bu2 sil cuo4 le5 sil
-A0002_S003_0_G0004_segment_0170|sil ran2 hou4 sil ru2 guo3 zhe4 yang4 zi3 de5 hua4 ta1 men5 jin4 le5 xiao3 sil xiao3 xue2 yi1 nian2 ji2 sil ta1 men5 sil
-A0002_S003_0_G0004_segment_0164|sil zhe4 hui4 ye3 hui4 xing2 cheng2 jiu4 shi4 sil she4 hui4 sil
-A0002_S003_0_G0004_segment_0148|sil bu2 zhi3 xiao3 xue2 jiu4 kai1 shi3 sil e4 sil
-A0002_S004_0_G0004_segment_0138|sil zhe4 ge4 shi4 yi1 ge4 kan4 yan2 sil zhi2 de5 she4 sil kuai4 sil
-A0002_S001_0_G0004_segment_0030|sil ta1 gu4 shi4 hai2 mei2 you3 wan2 wo3 zhi1 dao4 huo3 ying3 ren3 zhe3 sil shi4 wan2 sil
-A0002_S001_0_G0004_segment_0182|sil ni3 you3 kan4 ai4 sil qing2 pian1 na1 ni3 shi4 kan4 na5 yi1 sil zhong3 sil
-A0002_S002_0_G0004_segment_0139|sil gen1 dang1 di4 ren2 jie1 sil chu4 she4 hui4 bi3 jiao4 sil ji4 yi4 shen1 ke4 wo3 jue2 dei3 lv3 you2 de5 sil
-A0002_S002_0_G0004_segment_0070|sil e2 yuan2 lai2 ru2 ci3 sil
-A0002_S002_0_G0004_segment_0182|sil bei3 sil ji2 de5 di4 sil fang1 sil
-A0002_S006_0_G0004_segment_0047|sil e4 ye3 shi4 sil you3 yi1 dian3 sil
-A0002_S006_0_G0004_segment_0167|sil ran2 hou4 hai2 you3 sil di4 er4 ge4 jiu4 shi4 yin1 wei4 sil xian4 zai4 zhe4 xie1 shu3 ma3 de5 dong1 xi1 sil
-A0002_S001_0_G0004_segment_0049|sil ran2 hou4 sil
-A0002_S005_0_G0004_segment_0170|e2 yuan2 lai2 ru2 sil ci3 sil
-A0002_S005_0_G0004_segment_0199|sil xi1 ni3 sil ni3 ni3 bu2 yao4 tui4 sil chu1 ni3 bu2 yao4 tui4 chu1 qu4 cha2 ooo5 xian1 sil shuo1 sil
-A0002_S001_0_G0004_segment_0141|sil yi1 ge4 nv3 sheng1 sil
-A0002_S005_0_G0004_segment_0104|sil dan4 sil shi4 ta1 men5 dou1 jiang3 sil bu4 hao3 sil chi1 ran2 hou4 wo3 jiu4 you3 dian3 en1 sil
-A0002_S006_0_G0004_segment_0028|sil mo4 you3 yi3 qian2 sil
-A0002_S002_0_G0004_segment_0161|sil ran2 hou4 ta1 men5 nei4 xie1 sil chang2 jing3 sil
-A0002_S006_0_G0004_segment_0210|sil en1 sil
-A0002_S006_0_G0004_segment_0067|sil mei2 you3 wo3 shi4 bu2 zhi1 dao4 wo3 shi4 zai4 wen4 ni3 yin1 wei4 sil wo3 bu2 zhi1 dao4 ni3 you3 mei2 you3 mai3 guo4 wu3 ge4 gou1 de5 sil nei4 xie1 sil dian4 zi3 sil chan3 sil pin3 sil
-A0002_S002_0_G0004_segment_0176|sil wo3 sil
-A0002_S003_0_G0004_segment_0193|sil hen3 duo1 de5 nei4 sil xie1 sil
-A0002_S005_0_G0004_segment_0247|sil mei2 you3 jiu4 shi4 sil
-A0002_S003_0_G0004_segment_0001|sil ha1 lou2 sil
-A0002_S001_0_G0004_segment_0106|sil ji4 sil de5 e2 sil
-A0002_S006_0_G0004_segment_0107|sil suo3 yi3 ni3 jue2 de5 zhe4 yang4 zi3 de5 hua4 sil
-A0002_S001_0_G0004_segment_0153|e2 wo3 jue2 de5 na4 ge4 sil
-A0002_S006_0_G0004_segment_0214|sil shi4 di2 sil
-A0002_S003_0_G0004_segment_0157|sil yao4 yao1 sil zai4 nei4 ge4 sil
-A0002_S003_0_G0004_segment_0260|wo3 ye3 zhi1 dao4 shuo1 sil you3 yi1 xie1 ren4 shi2 yi1 sil xie1 ren2 ta1 men5 sil
-A0002_S001_0_G0004_segment_0208|sil ooo5 ke4 sil neng2 ba5 ta1 ye3 hen3 sil lao3 le5 ba5 sil
-A0002_S005_0_G0004_segment_0097|sil ta1 men5 chi1 dong1 xi1 de5 shi2 jian1 sil
-A0002_S004_0_G0004_segment_0174|sil e4 sil
-A0002_S002_0_G0004_segment_0043|sil ye3 bu2 suan4 shi4 shi4 sil xie2 sil po1 hai2 shi4 jiu4 shi4 sil you3 yi1 xie1 sil
-A0002_S003_0_G0004_segment_0033|sil dan4 sil shi4 wo3 shi4 yi1 bian1 sil gong1 zuo1 yi1 sil bian1 sil du2 zhe4 ge4 sil
-A0002_S003_0_G0004_segment_0051|sil jiu4 shi4 shang1 ye4 di2 sil ma5 yin1 wei4 wo3 wo3 wo3 ye3 shi4 suan4 shi4 sil du2 sil shang1 ye4 de5 sil suo3 yi3 sil
-A0002_S005_0_G0004_segment_0212|sil eeen5 sil dui4 wo3 jue2 de5 qi2 shi2 sil
-A0002_S002_0_G0004_segment_0134|sil en1 sil
-A0002_S003_0_G0004_segment_0101|sil jiu4 shi4 dang4 ran2 sil zui4 chu1 ming2 jiu4 shi4 sil wo3 men5 zui4 jin4 de5 xin1 wen2 shang4 de5 nei4 yi1 ge4 zhong1 xue2 sheng1 de5 shi4 sil qing2 sil
-A0002_S004_0_G0004_segment_0140|sil tou5 fa4 luan4 bu2 luan4 de5 ran2 hou4 ni3 de5 zhi1 ti3 yu3 yan2 zhe4 sil xie1 dong1 xi1 wo3 jue2 de5 sil
-A0002_S006_0_G0004_segment_0020|sil dui4 que4 sil shi2 sil wo3 jue2 de5 ru2 guo3 mei2 you3 feng1 sil shan1 ran2 hou4 mei2 you3 leng3 qi4 ji1 mei2 you3 kong1 tiao2 sil
-A0002_S004_0_G0004_segment_0096|sil zhe4 yang4 sil zhe4 yang4 de5 hua4 sil zhao4 sil zhao4 li3 shuo1 ying1 gai1 jiu4 shi4 bi3 jiao4 li3 xing4 de5 yi1 ge4 ren2 sil dui4 ma3 sil
-A0002_S002_0_G0004_segment_0075|sil en1 eeen5 sil nei4 ge4 sil
-A0002_S004_0_G0004_segment_0092|sil ma5 sil
-A0002_S003_0_G0004_segment_0004|sil en1 sil
-A0002_S002_0_G0004_segment_0132|sil ta1 shui4 eeei2 sil wo3 ye3 hui4 sil jiang3 zhong1 wen2 ne5 wo3 ye3 hui4 sil shen2 me5 shui4 sil
-A0002_S004_0_G0004_segment_0037|sil en1 le5 sil jie3 liao4 sil jie3 sil
-A0002_S003_0_G0004_segment_0253|sil dui4 sil
-A0002_S003_0_G0004_segment_0056|sil wo3 jue2 dei3 ye3 shi4 shi2 sil jian1 de5 wen4 ti2 yin1 sil wei4 sil
-A0002_S006_0_G0004_segment_0001|sil a1 ni3 hao4 sil
-A0002_S006_0_G0004_segment_0151|sil guan1 zhu4
-A0002_S003_0_G0004_segment_0196|sil you2 hua4 shi4 bi3 jiao4 sil zheng4 tong3 de5 sil
-A0002_S005_0_G0004_segment_0159|sil e2 sil
-A0002_S004_0_G0004_segment_0029|sil suo3 yi3 qi2 shi2 sil ni3 de5 sil peng2 you3 zui4 sil duo1 sil
-A0002_S006_0_G0004_segment_0142|sil ran2 hou4 ni3 sil ting1 yin1 yue4 yao4 sil dai4 ling4 wai4 yi1 ge4 dong1 xi1 sil
-A0002_S001_0_G0004_segment_0213|sil kan4 xin1 qing2 lo5 you3 shi2 hui4 sil ting1 zhong1 wen2 sil ge1 you3 sil shi2 hui4 sil ting1 sil ying1 wen2 sil ge1 sil
-A0002_S003_0_G0004_segment_0229|sil jiu4 shi4 ta1 men5 shi4 gu3 li4 xin1 jia1 po1 ren2 sil
-A0002_S001_0_G0004_segment_0181|sil en1 nei4 ni3 shui4 sil
-A0002_S004_0_G0004_segment_0007|sil e4 sil wo3 zhi1 sil dao4
-A0002_S004_0_G0004_segment_0110|sil ling4 yi1 mian4 sil
-A0002_S002_0_G0004_segment_0203|sil dui4 dui4 dui4 sil shi4 man2 wei1 xian3 sil de5 sil zui4 hao3 hai2 shi4 sil bie2 sil qu4 sil
-A0002_S006_0_G0004_segment_0017|sil di2 yuan2 gong1 zai4 sil jia1 ban4 sil gong1 sil
-A0002_S002_0_G0004_segment_0198|sil you3 sil xie1 ren2 jiu4 sil shi4 sil
-A0002_S004_0_G0004_segment_0036|sil en1
-A0002_S003_0_G0004_segment_0239|sil zhi3 shi4 shuo1 sil
-A0002_S004_0_G0004_segment_0056|sil en1 sil hai2 you3 nei4 sil ge4 sil
-A0002_S006_0_G0004_segment_0080|sil dui4 ya5 suo3 yi3 wo3 jue2 de5 zhe4 sil xie1 you3 bu2 sil cuo4 de5 yi1 xie1 sil fang1 sil fa3 sil
-A0002_S004_0_G0004_segment_0189|sil ni3 you4 hua1 sil qian2 qu4 du2 shu1 sil
-A0002_S003_0_G0004_segment_0254|sil suo3 yi3 sil qi2 shi2 sil
-A0002_S003_0_G0004_segment_0032|sil suan4 shi4 sil zhuan1 ye4 wen2 ping2 zhe4 yang4 zi5 sil de5 sil ba5 sil
-A0002_S002_0_G0004_segment_0174|sil en1 sil
-A0002_S006_0_G0004_segment_0129|sil dui4 suo3 yi3 sil
-A0002_S001_0_G0004_segment_0092|sil na4 ge4 man2 gao3 sil xiao4 di2 sil
-A0002_S003_0_G0004_segment_0038|sil du2 shu1 sil wo3 zhi3 shi4 sil du2 ma5 sil ran2 hou4 sil
-A0002_S001_0_G0004_segment_0187|sil en1 sil bi3 jiao4 shao3 sil kan4 sil
-A0002_S002_0_G0004_segment_0130|sil ta1 shui4 sil ta1 jiu4 hen3 sil xing4 fen4 yin1 wei4 ta1 sil hui4 jiang3 sil zhong1 wen2 sil
-A0002_S002_0_G0004_segment_0216|sil en1 sil
-A0002_S005_0_G0004_segment_0205|sil en1 sil
-A0002_S002_0_G0004_segment_0204|sil a1 min3 gan3 min3 gan3 sil
-A0002_S005_0_G0004_segment_0139|sil e4 you3 yi1 dian3 xiang4 jiu4 shi4 sil
-A0002_S001_0_G0004_segment_0229|wo3 jue2 dei3 sil you3 shi2 hou4 nei4 sil xie1 mei2 you3 sil ge1 ci2 de5 sil
-A0002_S001_0_G0004_segment_0061|sil e4 sil shi4 sil cai3 yong4 zhe4 ge4 fang1 sil fa3 sil suo3 yi3 ta1 men5 ye3 shi4 fen1 sil cheng2 wu3 sil ge4 sil bu4 sil fen4 sil
-A0002_S004_0_G0004_segment_0178|hua1 hen3 duo1 sil shi2 jian1 he4 jin1 qian2 qu4 da2 li3 ni3 de5 wai4 sil zai4 ma3 sil
-A0002_S002_0_G0004_segment_0155|sil ta1 men5 de5 sil zi4 ran2 sil feng1 jing3 dou1 man2 mei3 di4 sil suo3 yi3 jiu4 man2 xiang3 sil qu4 sil kan1 yi1 sil xia4 sil
-A0002_S005_0_G0004_segment_0039|sil e4 wo3 qi2 shi2 mei2 you3 sil zhu4 sil guo4 eeei2 sil
-A0002_S004_0_G0004_segment_0157|sil suo3 yi3 qi2 shi2 sil
-A0002_S006_0_G0004_segment_0177|sil en1 sil yin1 wei4 bu2 zhi3 bu2 jian4 ma5 jiu4 shi4 wan4 yi1 sil tiao2 jian4 ru2 guo3 shou3 ji1 shuai1 huai4 le5 hai2 shi4 shen2 me5 ne5 sil na4 ye3 shi4 sil dui4 ma3 sil
-A0002_S006_0_G0004_segment_0185|sil en4 sil
-A0002_S006_0_G0004_segment_0066|sil dui4 suo3 yi3 sil
-A0002_S003_0_G0004_segment_0070|sil wo3 men5 yi3 qian2 sil ke3 yi3 sil xuan3 sil de5 nei4 xie1 dong1 sil xi1 hui4 bi3 jiao4 sil shao3 sil
-A0002_S005_0_G0004_segment_0058|sil lian2 xu4 yi1 ge4 xing1 sil qi1 zhi1 neng2 shi4 tong2 yi1 ge4 ren2 sil qu4 sil
-A0002_S006_0_G0004_segment_0133|sil en1 sil ni3 ye3 yin3 sil bu2 dao4 sil
-A0002_S002_0_G0004_segment_0196|sil en1 sil
-A0002_S001_0_G0004_segment_0003|sil ti2 xing3 yi1 xia4 wo3 men5 di4 yi1 ge4 liao2 tian1 sil de5 sil hua4 sil ti2 sil shi4 sil
-A0002_S002_0_G0004_segment_0220|sil ooo5 wo3 ye3 bu2 zhi1 dao4 wo3 mei2 you3 qu4 sil guo5 sil
-A0002_S005_0_G0004_segment_0141|sil suo3 yi3 hou4 lai2 ta1 men5 sil jiu4 sil xian4 zai4 zheng4 sil fu3 sil gui1 ding4 shi4 shuo1 ni3 xu1 yao1 huan2 yi1 sil dian3 sil dian3 sil
-A0002_S003_0_G0004_segment_0272|sil jiu4 shi4 ying1 sil wen2 sil shu4 xue2 sil gen1 sil
-A0002_S002_0_G0004_segment_0063|sil ye3 shi4 hen3 duo1 di4 sil fang1 aaa2 sil
-A0002_S006_0_G0004_segment_0126|sil dui4 hai2 you3 sil shang4 ci4 bu2 shi4 you3 xin1 wen2 shuo1 nei4 ge4 nv3 sheng1 sil
-A0002_S004_0_G0004_segment_0203|sil e4 sil zhang3 shen2 me5 yang4 zi5 huo4 zhe3 shuo1 yao1 zuo4 shen2 me5 gai3 bian4 sil
-A0002_S001_0_G0004_segment_0063|sil di4 sil san1 sil de5 sil jiu4 shi4 sil cha1 bu4 duo1 yi1 sil ban4 ba5 yin1 wei2 yi1 zhi2 sil zai4 di4 sil san1 sil
-A0002_S002_0_G0004_segment_0192|sil e4 ru2 guo3 you3 ji1 hui4 qu4 sil ooo4 wo3 sil wo3 xiang3 dao4 yi1 sil ge4 sil
-A0002_S006_0_G0004_segment_0155|sil e4 sil
-A0002_S006_0_G0004_segment_0157|sil gang1 kai1 sil shi3
-A0002_S005_0_G0004_segment_0075|sil wo3 jue2 de5 sil
-A0002_S003_0_G0004_segment_0270|sil ta1 men5 sil shi4 te4 bie2 xue2 xiao4 ta1 men5 sil
-A0002_S001_0_G0004_segment_0069|sil ke3 neng2 hai2 sil xian4 zai4 shi4 san1 shi2 sil
-A0002_S004_0_G0004_segment_0022|sil suo3 yi3 ni3 jue2 de5 sil di4 yi1 ni3 shi4 sil bi3 jiao4 sil wai4 xiang4 hai2 shi4 nei4 sil xiang4 de5 ren2 sil
-A0002_S005_0_G0004_segment_0068|sil xing1 qi1 si4 kai1 shi3 sil
-A0002_S005_0_G0004_segment_0059|sil en1 sil
-A0002_S002_0_G0004_segment_0017|sil wai4 guo2 de5 sil
-A0002_S001_0_G0004_segment_0013|sil en1 sil
-A0002_S004_0_G0004_segment_0161|sil e4 sil
-A0002_S005_0_G0004_segment_0209|sil du3 sai4 sil
-A0002_S002_0_G0004_segment_0051|sil dui4 dui4 dui4 sil dui4 dui4 sil
-A0002_S003_0_G0004_segment_0215|eeen5 sil
-A0002_S002_0_G0004_segment_0117|sil pang2 bian1 ke3 neng2 shi4 ling4 wai4 yi1 ge4 sil guo2 jia1 di4 ren2 ran2 hou4 ta1 sil ye3 zai4 sil chang4 sil
-A0002_S004_0_G0004_segment_0172|sil en1 sil dui4 sil dui4 sil dui4 sil
-A0002_S004_0_G0004_segment_0024|sil en1 sil
-A0002_S005_0_G0004_segment_0190|en1 dui4 sil
-A0002_S002_0_G0004_segment_0138|sil zai4 han2 guo2 you2 sil
-A0002_S006_0_G0004_segment_0088|sil you3 aaa2 wo3 sil jue2 de5 sil jiu4 shi4 en1 sil
-A0002_S001_0_G0004_segment_0033|sil na4 ni3 you3 mei2 you3 sil kan4 sil
-A0002_S004_0_G0004_segment_0025|suo3 yi3 ni3 jue2 de5 zhun3 ma3 sil
-A0002_S002_0_G0004_segment_0136|sil jiu4 sil gan3 jue2 jiu4 shi4 you3 sil gen1 sil
-A0002_S001_0_G0004_segment_0026|sil chu2 le5 kan1 sil dian4 sil dian4 ying3 sil dian4 shi4 sil ju4 ni3 hai2 sil hui4 sil zuo4 shen2 me5 ma3 sil
-A0002_S005_0_G0004_segment_0111|sil ni3 zhi1 dao4 wo3 men5 you3 yi1 ge4 si1 li4 yi1 yuan4 jiu4 shi4 na4 ge4 yi1 li2 sha1 sil bai2 sil ma5 sil
-A0002_S001_0_G0004_segment_0018|sil eeen5 sil na4 ni3 ne5 sil
-A0002_S004_0_G0004_segment_0048|sil e4 ye3 bu4 kuai4 shui4 sil xin1 ku3 la5 dan4 shi4 jiu4 shi4 sil shuo1 sil
-A0002_S004_0_G0004_segment_0158|e4 ye3 you3 shui4 sil ye3 neng2 shuo1 sil
-A0002_S006_0_G0004_segment_0029|sil yi3 qian2 zhi1 you3 er4 sil shi2 duo1 ta1 jiang3 sil mei3 ci4 dou1 shi4 er4 shi2 sil duo1 sil
-A0002_S005_0_G0004_segment_0133|sil bu4 xu1 yao1 ma3 sil
-A0002_S003_0_G0004_segment_0171|sil dui4 bi1 sil bie2 de5 tong2 xue2 ta1 men5 sil jiu4 hui4 sil
-A0002_S003_0_G0004_segment_0146|sil bi3 jiao4 dan1 xin1 sil ta1 men5 hai2 sil zi5 sil
-A0002_S002_0_G0004_segment_0031|sil ran2 hou4 sil
-A0002_S002_0_G0004_segment_0040|sil e4 sil can1 sil guan4 jiu4 shi4 lv3 xing2 sil bi3 jiao4 sil pu3 tong1 de5 nei4 yi1 sil zhong3 sil
-A0002_S001_0_G0004_segment_0101|sil bi1 sai4 dian3 sil ping2 bu4 sil fen4 sil
-A0002_S001_0_G0004_segment_0224|sil eeen5 eeen5 sil
-A0002_S006_0_G0004_segment_0089|sil dian4 hua4 dian4 nao3 sil sui1 ran2 hen3 sil fang1 sil bian4 sil
-A0002_S003_0_G0004_segment_0151|sil suo3 sil yi3 ta1 men5 you3 sil
-A0002_S005_0_G0004_segment_0142|sil dang1 ran2 ni3 ye3 ke3 yi3 mai3 bie2 de5 sil bao3 xian3 gai4 guo4 zhe4 yi1 sil ge4 le5 dan4 sil shi4 sil dui4 aaa4 sil
-A0002_S006_0_G0004_segment_0057|sil wo3 bu2 zhi1 dao4 sil
-A0002_S003_0_G0004_segment_0177|sil zhe4 sil xie1 sil e4 sil
-A0002_S006_0_G0004_segment_0192|sil suo3 yi3 zhen1 de5 hen3 sil
-A0002_S002_0_G0004_segment_0141|sil bi3 jiao4 hao3 sil wan2 de5 sil dian3 jiu4 zai4 zhe4 li3 ni3 sil ke3 yi3 gen1 sil bu2 tong2 sil
-A0002_S003_0_G0004_segment_0269|sil qi2 shi2 you3 yi1 xie1 sil xue2 sil xiao4 sil
-A0002_S004_0_G0004_segment_0074|sil na1 ye3 sil bian4 xiang4 bian4 xiang4 de5 sil
-A0002_S005_0_G0004_segment_0213|sil dan4 shi4 qi2 shi2 you3 yi1 dian3 sil
-A0002_S006_0_G0004_segment_0196|en4 sil
-A0002_S002_0_G0004_segment_0166|sil e2 nei4 sil ge4 dui4 hen3 mei3 sil ooo5 sil
-A0002_S002_0_G0004_segment_0146|sil you3 aaa2 sil
-A0002_S003_0_G0004_segment_0099|sil dui4 sil qi2 shi2 sil
-A0002_S001_0_G0004_segment_0146|sil suo3 yi3 wo3 ye3 hen3 nan2 xiang3 xiang4 sil ba3 wo3 zi4 ji3 sil fang4 zai4 nei4 yi1 sil bian5 sil
-A0002_S001_0_G0004_segment_0147|sil hen3 sil shao3 yin1 wei4 wo3 sil bi3 jiao4 sil dan3 sil xiao3
-A0002_S004_0_G0004_segment_0149|sil wo3 jue2 de5 zui4 zhong4 yao4 jiu4 shi4 shuo1 sil
-A0002_S005_0_G0004_segment_0041|you3 a1 dang4 ran2 sil
-A0002_S001_0_G0004_segment_0143|suo3 yi3 ye3 shi4 bi3 jiao4 nan2 qu4 xiang3 sil xiang4 sil
-A0002_S003_0_G0004_segment_0120|sil suo3 yi3 wo3 you3 qu4 dao4 ling4 sil ling4 wai4 yi1 suo3 xue2 sil xiao4 ran2 sil hou4 sil
-A0002_S005_0_G0004_segment_0117|sil ai1 sil
-A0002_S005_0_G0004_segment_0053|sil ran2 hou4 e4 sil
-A0002_S004_0_G0004_segment_0131|sil e4 sil
-A0002_S003_0_G0004_segment_0068|sil ta1 men5 sil
-A0002_S003_0_G0004_segment_0221|sil en1 sil
-A0002_S006_0_G0004_segment_0161|sil ni3 de5 dong1 xi1 dou1 zai4 sil cun2 zai4 nei4 ge4 sil dian4 hua4 shang3 sil na1 sil
-A0002_S005_0_G0004_segment_0047|sil zai4 ta1 men5 sil
-A0002_S004_0_G0004_segment_0013|sil shi4 e4 ta1 you3 si4 zhong4 sil
-A0002_S001_0_G0004_segment_0209|sil en1 sil
-A0002_S005_0_G0004_segment_0033|sil na4 ni3 ye3 neng2 sil e4 sil
-A0002_S004_0_G0004_segment_0053|sil en1 sil
-A0002_S003_0_G0004_segment_0231|sil you3 xie1 ren2 shi4 yong4 lai2 sil e4 sil
-A0002_S003_0_G0004_segment_0100|sil e4 sil
-A0002_S005_0_G0004_segment_0026|sil yin1 wei4 wo3 men5 neng2 sil gou4 sil xuan3 ze2 sil shuo1 wo3 men5 yao1 sil
-A0002_S005_0_G0004_segment_0030|sil ni3 neng2 gou4 sil
-A0002_S002_0_G0004_segment_0163|sil de5 ling2 gan3 lai2 sil zi4 yu2 e4 sil xin1 sil xi1 lan2 huo4 zhe3 sil jiu4 sil shi4 rui4 sil shi4 sil
-A0002_S001_0_G0004_segment_0011|sil dong4 hua4 sil wo3 jiu4 sil zai4 kan1 hai3 zei2 wang4 sil
-A0002_S001_0_G0004_segment_0203|e4 dan4 shi4 sil cheng2 long2 de5 wo3 jue2 dei3 sil bi3 jiao4 sil
-A0002_S003_0_G0004_segment_0218|sil hai2 man2 bu2 sil cuo4 ni3 sil ni3 hui4 you3 xiang3 yao1 qu4 gai3 yi1 gai3 hang2 sil ma5 sil
-A0002_S004_0_G0004_segment_0034|sil en1 le5 sil jie3 sil
-A0002_S003_0_G0004_segment_0103|sil ni3 yao1 lai2 sil shuo1 yi1 sil xia4 ma5 sil
-A0002_S003_0_G0004_segment_0244|sil ye3 you3 hen3 duo1 ren2 zhe4 yang4 zi5 sil zuo4 qi2 shi2 bu2 zhi3 shi4 wo3 ran2 hou4 ta1 men5 sil du1 sil
-A0002_S006_0_G0004_segment_0115|sil dui4 sil dui4 sil dui4 sil
-A0002_S001_0_G0004_segment_0109|sil en4 wo3 zhi3 ji4 sil de5 sil ta1 ran2 sil hou4 hou4 lai2 ta1 sil jiu4 yin1 wei2 nei4 sil ge4 zhe4 sil ge4 wo3 shi4 sil ge1 shou3 sil bian4 sil de5 hen3 sil hong2 sil dui4 ma3 sil
-A0002_S005_0_G0004_segment_0253|sil na4 wo3 men5 jiu4 xian1 liao2 dao4 zhe4 li3 sil ba1 sil
-A0002_S003_0_G0004_segment_0023|sil da4 sil xue2 sil
-A0002_S001_0_G0004_segment_0196|sil yin1 sil wei4 ta1 you3 jiang3 gui3 ya5 sil
-A0002_S002_0_G0004_segment_0164|sil suo3 yi3 wo3 jiu4 hen3 xiang3 sil qu4 sil kan4 nei4 sil xie1 sil di4 sil fang1 sil
-A0002_S005_0_G0004_segment_0196|sil en4 aaai2 sil aaai2 sil zheng4 ma3 sil
-A0002_S005_0_G0004_segment_0003|sil wo3 men5 sil zhe4 ci4 sil de5 liao2 tian1 hua4 ti2 sil shi4 yi1 liao2 sil
-A0002_S003_0_G0004_segment_0277|sil ta1 men5 sil
-A0002_S004_0_G0004_segment_0082|sil ling4 wai4 yi1 ge4 ren2 de5 jiao3 sil duo2 shi4 ling4 wai4 yi1 ge4 yang4 sil zi5 sil
-A0002_S005_0_G0004_segment_0004|sil en4 sil
-A0002_S001_0_G0004_segment_0138|en1
-A0002_S001_0_G0004_segment_0230|sil dan4 ye3 yao4 sil kan4 le5 you3 shi2 hui4 sil fen1 sil xin1 you3 shi2 bu2 hui4 sil
-A0002_S005_0_G0004_segment_0201|sil wo3 you3 dian3 wang4 sil le5 la5 sil
-A0002_S002_0_G0004_segment_0116|sil yin1 wei4 sil
-A0002_S006_0_G0004_segment_0169|sil qu4 qu3 dao4 ni3 de5 zhe4 xie1 sil xin4 xi1 sil
-A0002_S003_0_G0004_segment_0181|sil wo3 shi4 sil da3 suan4 sil
-A0002_S006_0_G0004_segment_0102|en1 sil
-A0002_S006_0_G0004_segment_0049|sil mai4 nei4 sil xie1 dian4 zi5 chan3 pin3 de5 sil e4 sil yi1 xie1 sil dian4 na5 sil
-A0002_S003_0_G0004_segment_0222|sil en4 nuo2 man2 hao4 sil
-A0002_S004_0_G0004_segment_0039|sil nuo2 ni3 shang4 ci4 you3 sil shuo1 ni3 sil de5 sil xing4 ge2 sil
-A0002_S002_0_G0004_segment_0181|sil e2 wo3 hai2 zhi1 dao4 sil ke3 neng2 shi4 bu2 shi4 nuo2 wei1 hai2 shi4 shen2 me5 jiu4 shi4 hen3 kao4 sil jin4 sil
-A0002_S003_0_G0004_segment_0048|sil wei4 shen2 me5 ne5 sil
-A0002_S001_0_G0004_segment_0154|sil zui4 ke3 pa4 de5 hai2 shi4 sil
-A0002_S003_0_G0004_segment_0087|sil en1 sil
-A0002_S003_0_G0004_segment_0144|sil ye3 shi4 you3 ya1 li4 yin1 wei4 sil ta1 men5 sil you3 yi1 xie1 sil jia1 zhang3 jiu4 shi4 sil bi3 jiao4 sil
-A0002_S006_0_G0004_segment_0179|sil zui4 jin4 wo3 you3 kan1 dao4 na1 ge4 ping2 sil guo3 de5 nei4 ge4 guang3 sil gao4 sil shuo1 sil dao4 sil shi2 me5 sil
-A0002_S001_0_G0004_segment_0239|sil duo1 cai2 sil duo1 sil
-A0002_S002_0_G0004_segment_0023|sil e4 sil yi3 se4 lie4 sil
-A0002_S003_0_G0004_segment_0251|sil en1 sil
-A0002_S001_0_G0004_segment_0166|sil e4 sil
-A0002_S003_0_G0004_segment_0021|ran2 hou4 sil
-A0002_S001_0_G0004_segment_0078|sil ye3 he2 han2 guo2 di1 sil du1 you3 sil kan4 zhong4 sil guo2 de5 sil
-A0002_S003_0_G0004_segment_0176|sil qi2 shi2 ye3 shi4 e4 xing4 sil xun2 huan2 suo3 sil yi3 wo3 jue2 de2 sil dui4 sil
-A0002_S005_0_G0004_segment_0054|sil ta1 sil
-A0002_S002_0_G0004_segment_0101|e4 wo3 men5 sil qu4 di2 shi2 hou4 shi4 shi2 er4 yue4 ma5 ran2 hou4 sil gang1 hao4 you3 sil ta1 men5 sil de5 sil
-A0002_S004_0_G0004_segment_0002|sil e4 zhe4 ci4 wo3 men5 de5 liao2 tian1 hua4 ti2 sil shi4 sil ge4 ren2 te4 sil zheng1 sil
-A0002_S001_0_G0004_segment_0054|sil e4 sil te4 bie2 di2 jiang3 sil gu4 shi4 de5 sil fang1 sil fa3 sil
-A0002_S003_0_G0004_segment_0039|sil suo3 yi3 sil ke3 neng2 wo3 hai2 mei2 sil zhen1 de5 xue2 dao4 hen3 sil duo1 sil shi2 sil jian1 guan3 li3 sil
-A0002_S003_0_G0004_segment_0252|sil bie2 sil
-A0002_S003_0_G0004_segment_0091|sil ji2 shi3 ni3 sil bu4 sil ji2 shi3 ni3 bu2 shi4 nei4 yi1 sil zhong4 sil
-A0002_S003_0_G0004_segment_0059|sil en4 suo3 sil yi3 ke3 neng2 jiu4 sil
-A0002_S001_0_G0004_segment_0079|sil pao2 nan2 sil shi4 ma5 mo4 you3 mei2 you3 sil
-A0002_S003_0_G0004_segment_0281|sil en1 sil
-A0002_S003_0_G0004_segment_0119|sil bi3 jiao4 xu1 yao1 sil he2 xue2 xiao4 you3 sil jie1 sil chu4 sil
-A0002_S004_0_G0004_segment_0127|sil e4 sil ye3 bu2 sil cuo4 la5 sil jiu4 shi4 sil
-A0002_S006_0_G0004_segment_0171|sil en1 sil
-A0002_S001_0_G0004_segment_0192|sil en4 sil
-A0002_S002_0_G0004_segment_0086|sil ooo4 wa1 sil zhen1 de5 hen3 sil gui4 ye2 sil
-A0002_S003_0_G0004_segment_0134|sil you3 gan3 chu4 jiu4 sil jue2 de5 shuo1 sil
-A0002_S001_0_G0004_segment_0198|sil en1 sil
-A0002_S001_0_G0004_segment_0097|sil en1 sil
-A0002_S002_0_G0004_segment_0028|sil en1 sil
-A0002_S001_0_G0004_segment_0041|sil zui4 xin1 sil man4 hua4 man4 hua4 jiu4 shi4 yi3 jing1 yi1 qian1 ling2 er4 sil shi2 sil
-A0002_S006_0_G0004_segment_0136|sil zhen1 de5 hen3 sil fang1 sil bian4 sil jiu4 shi4 shuo1 sil
-A0002_S006_0_G0004_segment_0084|sil na1 sil ke3 neng2 ye3 sil neng2 e4 sil gai3 qu4 sil
-A0002_S006_0_G0004_segment_0031|sil qi2 shi2 sil
-A0002_S004_0_G0004_segment_0071|sil en1 sil bu2 tong2 ren2 qun2 de5 sil bu2 tong4 sil bu2 tong2 lao3 ban3 jiu4 sil bu4 yi1 yang4 sil
-A0002_S005_0_G0004_segment_0203|sil xin1 zang4 sil bing4 sil
-A0002_S006_0_G0004_segment_0019|sil eeen5 sil
-A0002_S004_0_G0004_segment_0004|sil you3 sil nei4 sil zai4 sil he4 wai4 zai4 sil
-A0002_S005_0_G0004_segment_0254|sil en1 sil
-A0002_S005_0_G0004_segment_0181|sil ta1 men5 sil
-A0002_S005_0_G0004_segment_0186|zhe4 sil qi2 shi2 sil shi4 yi1 ge4 hao3 zhu3 yi4 jiu4 shi4 sil gu3 li4 ren2 sil duo1 sil zou3 lu4 aaa2 shen2 me5 de5 dan4 shi4 sil
-A0002_S004_0_G0004_segment_0065|sil e4 sil qi2 shi2 ye3 hao3 yin1 wei4 you3 yi1 sil xie1 dong1 sil xi1 zhen1 de5 shi4 ru2 guo3 sil
-A0002_S006_0_G0004_segment_0096|sil xiao3 shi2 hou4 shi4 sil ta1 men5 sil de5 sil
-A0002_S003_0_G0004_segment_0187|sil en4 dan4 shi4 sil
-A0002_S006_0_G0004_segment_0174|sil ooo4 wo3 sil
-A0002_S006_0_G0004_segment_0122|sil wan2 you2 xi4 ran2 hou4 sil ta1 men5 sil jiu4 yong4 ta1 sil men5 di2 nei4 ge4 fu4 mu3 sil qin1 de5 sil
-A0002_S002_0_G0004_segment_0171|sil en1 ye3 sil xing2 dui4 sil dui4 sil dui4 sil hen3 mei3 sil ooo5 sil
-A0002_S002_0_G0004_segment_0140|sil en1 sil
-A0002_S001_0_G0004_segment_0186|sil ooo5 sil
-A0002_S002_0_G0004_segment_0145|sil en4 sil
-A0002_S004_0_G0004_segment_0173|sil suo3 yi3 dan4 shi4 sil ni3 jue2 sil de5 sil
-A0002_S005_0_G0004_segment_0231|sil e4 he4 nai3 sil cha2
-A0002_S003_0_G0004_segment_0090|sil e4 sil ke4 cheng2 sil suo3 yi3 sil
-A0002_S001_0_G0004_segment_0099|wo3 you3 shi2 hui4 sil qu4 wang3 sil shang3 zhao3 ta1 men5 sil fan1 sil chang4 di1 sil
-A0002_S005_0_G0004_segment_0225|sil hai3 sil bao4 ran2 hou4 jiu4 sil fang4 zai4 na4 li3 ji3 ren2 sil jia1 sil kan4 sil ran2 hou4 sil
-A0002_S004_0_G0004_segment_0153|sil ye3 shi4 cong2 li3 mian4 sil fa1 chu1 lai2 de5 sil
-A0002_S003_0_G0004_segment_0217|sil ru2 sil guo3 ni3 zuo4 de5 hai2 sil
-A0002_S005_0_G0004_segment_0153|dan4 shi4 hai2 shi4 bu2 neng2 sil hai2 sil ke3 yi3 sil ke3 yi3 da2 wang3 qiu2 ma3 sil bu2 xing2 ma5 sil
-A0002_S005_0_G0004_segment_0177|sil bao3 chi2 jian4 kang1 le5 sil
-A0002_S001_0_G0004_segment_0108|sil deng4 sil zi3 sil qi2 ta1 shi4 ying1 gai1 shi4 sil di4 yi1 qi1 de5 ba1 sil
-A0002_S003_0_G0004_segment_0155|sil hai2 yao4 qu4 sil e4 sil
-A0002_S005_0_G0004_segment_0086|sil en1 sil
-A0002_S001_0_G0004_segment_0073|sil wu3 shi2 duo1 sil
-A0002_S003_0_G0004_segment_0066|sil you3 sil bi3 jiao4 sil duo1 dong1 xi1 yao4 sil du2 sil
-A0002_S003_0_G0004_segment_0139|sil en1 sil
-A0002_S003_0_G0004_segment_0179|sil hen3 hao3 sil bei4 jing3 de5 jia1 ting2 sil de5 tong2 sil xue2 lai2 jiang3 ye3 sil bu2 shi4 shi2 sil ma5 hao4 sil shi4 sil
-A0002_S003_0_G0004_segment_0197|sil suo3 yi3 shui3 mo4 hua4 ta1 men5 sil ke3 neng2 sil bi3 jiao4 sil mei2 sil you3 na1 me5 de5 sil
-A0002_S001_0_G0004_segment_0210|sil na1 sil hai2 you3 shen2 me5 xing4 qu4 ai4 hao3 sil
-A0002_S003_0_G0004_segment_0166|sil qiong2 huo4 sil zhe3 ta1 men5 sil
-A0002_S006_0_G0004_segment_0118|sil e4 wo3 ye3 you3 sil kan4 dao4 sil bao4 dao4 sil shuo1 sil
-A0002_S001_0_G0004_segment_0202|sil dui4 ma3 sil
-A0002_S004_0_G0004_segment_0032|sil shou3 sil
-A0002_S004_0_G0004_segment_0098|sil hai2 man2 you3 qu4 de5 jiu4 shi4 sil
-A0002_S001_0_G0004_segment_0127|en1 sil
-A0002_S005_0_G0004_segment_0019|sil xun2 yi1 dan4 shi4 sil wo3 jue2 de5 bu2 sil zhi3 shi4 shuo1 wo3 men5 sil xin1 jia1 sil po1 de5 yi1 liao2 she4 bei4 sil hao3 shi4 shuo1 sil
-A0002_S005_0_G0004_segment_0244|sil en1 sil
-A0002_S002_0_G0004_segment_0065|sil wo3 men5 zhou1 wei2 de5 sil guo2 jia1 wo3 hen3 duo1 dou1 mei2 you3 qu4 sil guo4 wo3 zhi1 qu4 guo5 ma3 lai2 xi1 sil ya4 he4 tai4 sil guo2 sil
-A0002_S004_0_G0004_segment_0044|sil en1 sil yuan2 lai2 ru2 sil ci3 sil
-A0002_S002_0_G0004_segment_0187|sil ta1 men5 you3 shi2 hou4 hui4 sil jiu4 hui4 you3 nei4 sil ge4 sil bei3 ji2 sil xiong2 sil
-A0002_S005_0_G0004_segment_0056|sil jiu4 shi4 sil e4 jiu4 shi4 wo3 de5 ba4 la5 wo3 wo3 ba4 sil wo3 sil ba4 you3 qu4 ran2 hou4 sil
-A0002_S001_0_G0004_segment_0163|sil you3 yi1 ge4 yang2 ren2 de5 ta1 men5 sil shi4 sil
-A0002_S005_0_G0004_segment_0202|sil dan4 shi4 en1 sil dui4 aaa2 jiu4 sil shi4 sil en1 sil
-A0002_S002_0_G0004_segment_0191|sil dui4
-A0002_S004_0_G0004_segment_0202|sil neng2 li3 sil xiang3 de5 hua4 ni3 sil jue2 de5 ni3 zi4 ji3 ni3 xiang3 yao1 sil
-A0002_S001_0_G0004_segment_0051|sil jiu4 sil shi4 sil bi3 jiao4 sil
-A0002_S001_0_G0004_segment_0065|sil bu4 fen4 suo3 yi3 sil cha1 bu2 duo1 yi1 sil ban3 sil suo3 yi3 sil
-A0002_S006_0_G0004_segment_0073|sil suo3 yi3 ni3 sil
-A0002_S003_0_G0004_segment_0212|sil e4 sil xi1 shi4 de5 ma3 hai2 sil shi4
-A0002_S005_0_G0004_segment_0017|sil ni3 que4 sil shi2 jiang3 de5 dui4 sil jiu4 shi4 nei4 sil ge4 sil
-A0002_S004_0_G0004_segment_0085|en4 liao4 jie3 sil
-A0002_S004_0_G0004_segment_0126|sil dan4 shi4 sil
-A0002_S005_0_G0004_segment_0118|sil dan4 shi4 ying1 gai1 shi4 zhen1 de5 hen3 gui4 sil
-A0002_S005_0_G0004_segment_0157|e2 na1 ni3 shi2 nian2 qian2 jiu4 yi3 jing1 you3 zhe4 ge4 bao3 xian3 le5 ma3 sil
-A0002_S002_0_G0004_segment_0054|sil huan2 sil zhu1 ge2 ge2 shi4 sil zhen1 de5 ren2 ma3 sil
-A0002_S003_0_G0004_segment_0133|sil wo3 jiu4 sil bi3 jiao4 sil
-A0002_S004_0_G0004_segment_0187|er2 qie3 shi4 bu2 shi4 yi1 ci4 xing4 de5 sil suo3 yi3 sil dui4 aaa4 sil
-A0002_S005_0_G0004_segment_0179|sil eeen5
-A0002_S003_0_G0004_segment_0045|sil na1 ni3 you3 mei2 you3 da2 suan4 zai4 sil yao1 zai4 sil qu4 sil du2 shen2 me5 dong1 xi1 sil a5 sil
-A0002_S001_0_G0004_segment_0090|sil wang2 pai2 dui4 wang4 sil pai2 sil
-A0002_S002_0_G0004_segment_0076|sil jiu4 sil dang1 di4 sil ren2 ma5 sil
-A0002_S005_0_G0004_segment_0002|sil e4 wo3 sil
-A0002_S005_0_G0004_segment_0235|sil yan2 zhong4 de5 wen4 ti2 sil
-A0002_S005_0_G0004_segment_0082|sil yi1 yuan4 sil
-A0002_S005_0_G0004_segment_0135|hao3 xiang4 zui4 jin4 zheng4 fu3 you4 sil gai3 yi1 xie1 sil tiao2 sil li4 sil
-A0002_S004_0_G0004_segment_0041|sil chu4 nv3 zuo4 shi4 ma3 sil
-A0002_S004_0_G0004_segment_0166|sil shi4 ke3 er2 zhi3 ba5 jiu4 shi4 shuo1 sil
-A0002_S003_0_G0004_segment_0074|sil you3 ma5 sil
-A0002_S003_0_G0004_segment_0267|sil e4 sil
-A0002_S005_0_G0004_segment_0076|sil a1 mo4 you3 shuo1 wo3 sil wo3 jue2 de2 hao3 shi4 yin1 wei2 shuo1 xin1 sil
-A0002_S002_0_G0004_segment_0012|sil e4 sil chu1 ming2 de5 du1 hui4 you3 qu4 dan4 shi4 jiu4 shi4 ke3 neng2 sil
-A0002_S005_0_G0004_segment_0184|zui4 jin4 ta1 men5 bu2 shi4 you3 gei3 nei4 ge4 shou3 biao3 jiu4 shi4 rang4 ren2 sil duo1 zou3 lu4 nei4 sil ge4 ma5 yi1 tian1 sil zou3 yi1 wan4 bu4 sil
-A0002_S005_0_G0004_segment_0128|sil ru2 guo3 ni3 sil dao4 ni3 sheng1 bing4 di2 shi2 hou4 cai2 mai3 na1 you3 shi2 hou4 sil shi4 tai4 chi2 le5 sil
-A0002_S001_0_G0004_segment_0083|sil en1 sil
-A0002_S004_0_G0004_segment_0017|sil bi3 jiao4 nei4 xiang4 wai4 sil xiang4 sil
-A0002_S003_0_G0004_segment_0214|sil dan4 gao1 la1 bu2 shi4 mian4 bao1 sil
-A0002_S005_0_G0004_segment_0063|sil hen3 duan3 er2 yi3 shao3 guo5 yi1 ge4 xiao3 shi2 sil suo3 yi3 ni3 bu2 neng2 sil liu2 chao1 guo5 yi1 ge4 xiao3 sil shi2 sil
-A0002_S002_0_G0004_segment_0207|en1
-A0002_S001_0_G0004_segment_0034|sil ta1 sil zui4 sil jin4 sil ta1 sil e4 ru2 guo3 shi4 dian4 shi4 jiu4 shi4 sil dong4 sil
-A0002_S006_0_G0004_segment_0072|sil dan4 shi4 ru2 guo3 ni3 sheng3 de5 nei4 ge4 dian4 sil fei4 hui4 zhi2 sil de5 ma3 sil
-A0002_S002_0_G0004_segment_0059|sil en4 sil
-A0002_S006_0_G0004_segment_0121|sil ran2 hou4 ta1 men5 jiu4 sil
-A0002_S004_0_G0004_segment_0008|sil du1 shui4 you3 sil yi1 ge4 sil bi3 sil jiao4 sil
-A0002_S006_0_G0004_segment_0044|sil dui4 liao3 sil
-A0002_S005_0_G0004_segment_0065|sil dui4 er2 qie3 jiu4 sil shi4
-A0002_S001_0_G0004_segment_0195|sil yin1 wei4 sil ta1
-A0002_S001_0_G0004_segment_0188|sil yin1 wei4 ru2 sil guo3 sil ta1 men5 di1 sil na1 ge4 sil
-A0002_S003_0_G0004_segment_0271|sil chu2 le5 jiu4 shi4 yao4 sil kao3 shi4 de5 nei4 ji1 sil ge4 sil
-A0002_S001_0_G0004_segment_0199|sil en1 sil
-A0002_S005_0_G0004_segment_0070|sil qu4 kan4 bing4 sil qu4 kan4 sil tan4 tan4 wang4 sil
-A0002_S005_0_G0004_segment_0067|ran2 hou4 jiu4 sil gang1 gang1 hao3 ta1 men5 shi4 shuo1 sil
-A0002_S004_0_G0004_segment_0205|sil eeen5 en1 sil
-A0002_S005_0_G0004_segment_0008|sil chang2 qi1 zai4 guo2 wai4 sil zhu4 guo4 sil
-A0002_S006_0_G0004_segment_0187|bu2 sil hao3
-A0002_S002_0_G0004_segment_0194|sil zong4 lai2 you3 mei2 you3 xiang3 sil guo4 yao1 sil qu4 sil
-A0002_S002_0_G0004_segment_0026|sil eeen5 sil
-A0002_S005_0_G0004_segment_0091|sil na1 yin1 wei4 sil ta1 men5 sil
-A0002_S006_0_G0004_segment_0131|sil en1 dui4 sil dui4 sil
-A0002_S006_0_G0004_segment_0101|sil ru2 guo3 ta1 men5 zheng3 tian1 kan4 zhe4 sil ge4 dui4 ta1 men5 sil ying3 xiang3 ye3 sil bu2 shi4 hen3 hao3 sil
-A0002_S003_0_G0004_segment_0127|sil ran2 hou4 ta1 jiu4 zai4 ce4 suo3 li3 mian4 sil
-A0002_S003_0_G0004_segment_0156|sil jian4 jia1 zhang3 ran2 hou4 he2 jia1 zhang3 jiu4 sil shi4 you3 yi1 ge4 mian4 sil tan2 sil
-A0002_S004_0_G0004_segment_0186|sil zhe4 xie1 dou1 man2 gui4 de5 dan4 shi4 sil
-A0002_S004_0_G0004_segment_0086|sil en1 sil
-A0002_S005_0_G0004_segment_0101|ran2 hou4 wo3 jiu4 hen3 yi2 huo4 wo3 jiang3 shui4 sil
-A0002_S002_0_G0004_segment_0088|wo3 zhi1 dao4 you3 zhe4 sil yang4 zi5 jiu4 shi4 yin1 wei4 wo3 de5 tong2 sil shi4 shang4 sil ci4 sil
-A0002_S003_0_G0004_segment_0265|en4 sil
-A0002_S006_0_G0004_segment_0078|sil chang2 yuan4 lai2 shuo1 sil ta1 hai2 shi4 zhi2 de5 de5 dui4 ma3 sil
-A0002_S001_0_G0004_segment_0007|sil qi2 shi2 sil
-A0002_S006_0_G0004_segment_0208|eeei2 sil
-A0002_S006_0_G0004_segment_0071|sil dan4 shi4 ru2 sil
-A0002_S003_0_G0004_segment_0029|sil ran2 hou4 sil fan3 zheng4 sil
-A0002_S004_0_G0004_segment_0199|sil e4 na1 zui4 hou4 yi1 xia4 ni3 yao4 bu2 sil yao1 xing2 rong2 sil
-A0002_S005_0_G0004_segment_0232|sil jiu4 shi4 jiu4 shi4 sil zhi1 lei4 de5 le5 sil fan3 zheng1 jiu4 sil shi4 sil
-A0002_S006_0_G0004_segment_0006|sil wo3 jue2 de5 zhe4 ge4 he2 ni3 de5 zhuan1 ye4 you3 sil
-A0002_S006_0_G0004_segment_0108|sil hao3 chu4 duo1 hai2 shi4 huai4 chu3 duo1 ne5 sil
-A0002_S006_0_G0004_segment_0093|sil ran2 hou4 sil ta1 men5 sil ke3 neng2 cong2 xiao3 jiu4 xi2 guan4 kan4 zhe4 xie1 sil dong1 xi1 sil jiu4 hui4 sil
-A0002_S001_0_G0004_segment_0180|sil eeen5 sil
-A0002_S006_0_G0004_segment_0086|sil bu4 yao4 kai1 sil kong1 tiao2 sil
-A0002_S006_0_G0004_segment_0004|en4 sil shi4 de5 sil
-A0002_S001_0_G0004_segment_0194|sil qian4 nv3 you1 hun2 sil suan4 shi4 ai4 qing2 sil gu4 shi4 shi4 sil ma5 sil
-A0002_S005_0_G0004_segment_0180|sil suo3 yi3 qi2 shi2 zhe4 sil ge4 lai2 jiang3 xin1 sil jia1 po1 ye3 shi4 you3 zuo4 yi1 xie1 dong1 sil xi1 jiu4 shi4 sil
-A0002_S005_0_G0004_segment_0156|e2 yuan2 lai2 ru2 sil ci3 na4 shi4 sil ji3 nian2 qian2 de5 shi4 qing2 sil
-A0002_S003_0_G0004_segment_0240|sil ye3 yao1 sil kan4 zhe4 sil ge4 ren2 sil
-A0002_S001_0_G0004_segment_0044|sil hen3 sil jiu3 ta1 men5 hai2 zai4 tong2 yi1 ge4 di4 sil fang1 sil yi3 jing1 bu2 sil zhi1 dao4 sil duo1 sil jiu3 le5 sil
-A0002_S002_0_G0004_segment_0168|sil ru2 guo3 gei3 ni3 sil xuan3 ni3 sil bi3 jiao4 xiang3 sil qu4 sil
-A0002_S003_0_G0004_segment_0178|sil zai4 sil bu2 shi4 sil
-A0002_S001_0_G0004_segment_0005|sil en4 sil
-A0002_S004_0_G0004_segment_0129|sil e4 sil liao3 sil jie3 ran2 hou4 geng1 hao3 de5 fen1 pei4 gong1 zuo4 zhe4 yang4 sil zi5 sil
-A0002_S001_0_G0004_segment_0133|sil ni3 kuai4 bu4 hui4 xiang3 xiang4 sil
-A0002_S002_0_G0004_segment_0109|sil yi1 ge4 jie2 mu4 zhe4 yang4 sil zi5 ran2 hou4 wo3 men5 ke3 yi3 qu4 sil
-A0002_S002_0_G0004_segment_0097|sil dui4 sil shi4 zai4 suan4 shi4 sil dong1 ou1 ba5 dan4 shi4 sil shang4 ci4 ye3 shi4 yin1 wei2 sil
-A0002_S005_0_G0004_segment_0218|sil en1 sil
-A0002_S001_0_G0004_segment_0168|sil ta1 bei4 huo3 sil shao1 hai2 shi4 shen2 me5 de5 ta1 de5 lian3 sil na1 ge4 sil
-A0002_S004_0_G0004_segment_0040|sil ni3 sil ni3 sil shi4 shen2 sil ma5 sil
-A0002_S006_0_G0004_segment_0015|sil you2 qi2 shi4 sil
-A0002_S001_0_G0004_segment_0184|sil ooo5 sil
-A0002_S001_0_G0004_segment_0115|sil dui4 wo3 jue2 de5 ye3 shi4 man2 bu2 cuo4 you3 sil shi2 hou4 wo3 de5 sil biao3 jie3 ta1 ye3 hen3 xi3 huan1 sil du2 shu1 ta1 jiu4 hui4 jie4 shao4 yi1 xie1 sil shu1 sil ben3 ne5 sil ji3 wo3 sil kan4 sil
-A0002_S004_0_G0004_segment_0043|sil ni3 shi4 bi1 jiao4 e4 sil jue2 de5 ni3 shi4 sil kao4 sil jin4 sil zhe4 ge4 sil te4 zheng1 shi4 ma5 sil
-A0002_S001_0_G0004_segment_0031|wan2 sil jie1 le5 sil dui4 ma5 sil
-A0002_S001_0_G0004_segment_0215|sil ni3 ne5 sil
-A0002_S001_0_G0004_segment_0152|sil jiu4 sil zhou4 sil yuan4 sil
-A0002_S003_0_G0004_segment_0094|sil jing1 sil ji4 la1 zhe4 sil xie1 dan4 shi4 sil
-A0002_S001_0_G0004_segment_0137|eeen5 sil nei4 man2 you3 qu4 de5 sil
-A0002_S005_0_G0004_segment_0094|sil na1 ge4 sil
-A0002_S003_0_G0004_segment_0175|sil suo3 yi3 zhe4 yang4 zi5 de5 hua4 ta1 men5 jiu4 sil ni3 yi1 sil ni3 yi1 gen1 bu2 sil shang4 nei4 xie1 xiao3 hai2 zi5 jiu4 mei2 you3 xing4 qu4 suo3 yi3 sil
-A0002_S002_0_G0004_segment_0038|sil jiu4 shi4 zuo4 sil bi3 sil jiao4
-A0002_S003_0_G0004_segment_0137|sil en1 sil
-A0002_S002_0_G0004_segment_0013|sil yi1 xie1 bi3 jiao4 sil
-A0002_S005_0_G0004_segment_0011|wo3 jue2 de5 sil xin1 jia1 po1 hai2 sil man2 bu2 cuo4 di4 sil ni3 sil jue2 de5 ne5 sil
-A0002_S005_0_G0004_segment_0183|sil e4 yi1 xie1 sil zheng1 yi4 la5 yin1 wei2 sil
-A0002_S001_0_G0004_segment_0164|sil e4 pao3 sil qu4 ni3 meng4 li3 ran2 hou4 ba3 ni3 sil sha1 sil diao4 nei4 sil ge4 sil wo3 wang4 ji4 sil ta1 ming2 zi4 sil
-A0002_S004_0_G0004_segment_0188|sil bi3 ru2 shuo1 ni3 yao1 sil qu4 ying1 zheng1 yi1 fen4 gong1 sil zuo1 sil
-A0002_S004_0_G0004_segment_0095|sil dui4 sil yin1 wei4 ni3 gang1 sil cai2 ye3 shi4 shuo1 ni3 bi3 jiao4 sil xian4 sil shi2 de5 suo3 yi3 sil
-A0002_S002_0_G0004_segment_0014|sil eeen5 mei2 na1 me5 chu1 ming2 de5 yi1 xie1 sil di4 sil fang1 jiu4 sil bi3 sil
-A0002_S004_0_G0004_segment_0099|sil hen3 sil e4 hen3 sil xi3 huan1 jiu4 shi4 gen1 ren2 jia1 liao2 zhe4 ge4 a1 qu4 sil liao3 sil jie3 dao4 sil ta1 men5 sil da4 sil gai4 shi4 zen3 sil me5 yang4 sil zi5 sil
-A0002_S001_0_G0004_segment_0160|sil dui4 ma5 sil
-A0002_S006_0_G0004_segment_0009|sil suo3 yi3 e4 ni3 you3 sil shen2 me5 sil
-A0002_S003_0_G0004_segment_0138|sil shi4
-A0002_S004_0_G0004_segment_0075|sil jiu4 shi4 sil gu3 li4 ni3 sil zen3 me5 sil bi3 jiao4 you3 sil chuang4 sil yi4 dian3 sil
-A0002_S003_0_G0004_segment_0159|sil deng3 sil
-A0002_S004_0_G0004_segment_0073|sil en1 sil
-A0002_S006_0_G0004_segment_0152|sil jiu4 shi4 hen3 sil bu2 shi4 hen3 duo1 ren2 yong4 la5 sil hai2 bu2 shi4 shuo1 sil
-A0002_S001_0_G0004_segment_0039|sil e4 sil yi1 qian1 sil
-A0002_S006_0_G0004_segment_0130|wo3 sil wo3 ma1 ye3 shi4 mei3 ci4 du1 jiang3 wo3 sil ta1 jiu4 wo3 mei3 ci4 sil chu1 men2 ran2 hou4 jiu4 sil dai4 er3 ji1 wo3 hai2 jiang3 shuo1 ni3 ke3 yi3 bu2 yao1 ting1 ma5 zai4 wai4 mian4 sil
-A0002_S001_0_G0004_segment_0053|sil ta1 men5 riz4 ben3 you3 yi1 sil zhong3
-A0002_S002_0_G0004_segment_0046|sil ni3 qu4 guo4 ma3 sil
-A0002_S004_0_G0004_segment_0035|sil en1 sil
-A0002_S005_0_G0004_segment_0123|sil ta1 men5 mei2 you3 yi4 shi2 dao4 shuo1 zhe4 ge4 sil
-A0002_S001_0_G0004_segment_0107|sil wo3 zhi1 ji4 de5 sil
-A0002_S003_0_G0004_segment_0261|sil zai4 xuan3 zhuan1 ye4 de5 shi2 hou4 ta1 sil men5 ye3 sil bu2 sil zhi1 sil dao4 sil
-A0002_S005_0_G0004_segment_0103|sil dui4 ya5 sil
-A0002_S005_0_G0004_segment_0014|e4 e4 wo3 yao1 sil shuo1 shi2 me5 ne5 sil
-A0002_S003_0_G0004_segment_0113|sil hai2 you3 jiu4 shi4 ye3 shi4 xue2 xiao4 ba5 wo3 jue2 de5 xue2 sil xiao4 sil
-A0002_S006_0_G0004_segment_0162|sil di4 yi1 shi4 ru2 guo3 ni3 de5 sil dian4 hua4 bu2 sil jian4 le5 sil
-A0002_S005_0_G0004_segment_0093|sil ke3 neng2 shen1 ti3 you3 teng2 tong4 a1 sil suo3 yi3 sil
-A0002_S001_0_G0004_segment_0189|sil e4 sil te4 xiao4 zuo4 de5 sil bu4 hao3 ran2 hou4 sil kan4 qi3 lai2 sil jiu4 you3 dian3 sil tiao4 sil xi4 sil
-A0002_S002_0_G0004_segment_0119|sil ran2 hou4 sil
-A0002_S004_0_G0004_segment_0143|sil ni3 de5 sil
-A0002_S002_0_G0004_segment_0004|sil en1 sil jiu4 shi4 yi1 shi2 zhu4 xing2 sil hai2 you3 lv3 you2 sil
-A0002_S005_0_G0004_segment_0137|sil xian4 zai4 hen3 duo1 ren2 jiu4 shi4 yin1 wei4 bu2 xu1 yao1 fu4 qian2 ma5 sil
-A0002_S001_0_G0004_segment_0172|fan3 sil zheng1 wo3 jue2 de5 nei4 ge4 bu4 shi4 hen3 kong3 bu4 sil
-A0002_S002_0_G0004_segment_0228|sil dui4 sil suo3 yi3 sil you3 sil an1 quan2 you4 you3 yi1 sil dian3 wei1 sil bu2 shi4 an1 quan2 qu1 hen3 mei3 dan4 shi4 wei1 xian3 sil ke3 neng2 shi4 you3 sil
-A0002_S006_0_G0004_segment_0153|sil dui4 sil dui4 bi3 sil qi3 zhong1 guo2 sil dui4 ma5 sil
-A0002_S003_0_G0004_segment_0174|sil mei2 sil ta1 men5 gen1 bu2 sil shang4 sil
-A0002_S005_0_G0004_segment_0216|sil kan4 ni3 zai4 chi1 shen2 me5 sil bu2 ran2 zai4 xin1 jia1 po1 wo3 jue2 de5 ni3 zai4 wai4 mian4 mai3 dong1 xi1 qi2 shi2 hen3 duo1 dong1 xi1 dou1 hen3 you2 sil
-A0002_S005_0_G0004_segment_0200|sil dui4 dui4 dui4 sil
-A0002_S002_0_G0004_segment_0219|sil chu2 le5 nei4 ge4 qi2 sil ta1 de5 ye3 ying1 gai1 bu2 sil shi4 hen3 hao3 gou1 sil tong1 sil ba5 sil
-A0002_S001_0_G0004_segment_0140|sil zhen1 sil tan4 lei4 de5 sil shu1 sil zhu3 jue2 sil shi4 sil
-A0002_S006_0_G0004_segment_0128|sil huan2 sil you3 sil
-A0002_S006_0_G0004_segment_0156|sil you3 la1 dan4 shi4 jiu4 shi4 sil
-A0002_S003_0_G0004_segment_0195|sil jue2 de5 sil
-A0002_S006_0_G0004_segment_0033|sil dan4 shi4 xian4 zai4 jiu4 shi4 mei3 sil ci4 dou1 shi4 sil guo4 san1 sil shi2 sil
-A0002_S006_0_G0004_segment_0200|sil wa1 sil
-A0002_S004_0_G0004_segment_0093|sil ooo5 nei4 ni3 shi4 na5 yi1 ge4 sil
-A0002_S003_0_G0004_segment_0078|sil hao3 xiang4 li3 gong1 xue2 yuan4 ta1 men5 hao3 xiang4 you3 jiao1 jiu4 sil shi4 sil
-A0002_S006_0_G0004_segment_0012|sil gei3 ni3 sil sheng1 huo2 dai4 lai2 sil hen3 duo1 sil bian4 li4 de5 sil shuo4 ma3 sil chan3 pin3 sil ma5 sil
-A0002_S003_0_G0004_segment_0030|sil wo3 jiu4 hou4 lai2 wo3 du2 wan2 zhe4 sil xie1 wo3 jiu4 sil
-A0002_S001_0_G0004_segment_0017|sil e4 you3 sil zuo4 sil dan4 sil gao1 sil
-A0002_S006_0_G0004_segment_0074|sil mei2 you3 sil suo3 yi3 ni3 mai3 bi3 jiao4 sil gui4 de5 nei4 ge4 sil
-A0002_S002_0_G0004_segment_0170|sil en1 sil
-A0002_S005_0_G0004_segment_0222|zhen3 liao2 suo3 sil
-A0002_S006_0_G0004_segment_0139|sil xian4 zai4 he2 yi3 qian2 bi3 sil
-A0002_S001_0_G0004_segment_0193|sil ooo5 sil
-A0002_S005_0_G0004_segment_0049|sil e4 sil xi4 tong3 dui4 dui4 dui4 ran2 hou4 ni3 jiu4 yao1 qu4 shuo1 ooo5 sil shi4 sil qu4 sil kan4 shui2 shui2 sil shui2 ran2 hou4 sil
-A0002_S004_0_G0004_segment_0026|en1 en1 sil
-A0002_S002_0_G0004_segment_0073|sil nuo2 ni3 qu4 le5 na1 me5 duo1 di4 fang1 ni3 sil zui4 xi3 huan1 di2 sil shi4 na3 li3 sil
-A0002_S005_0_G0004_segment_0241|sil shi4 sil
-A0002_S003_0_G0004_segment_0129|suo3 yi3 wo3 jue2 de5 shi4 shuo1 wo3 zhe4 dian3 qian2 sil
-A0002_S003_0_G0004_segment_0110|sil jue2 sil de5 hai2 sil shi4 di4 sil yi1 shi4 sil jia1 li3 sil
-A0002_S003_0_G0004_segment_0126|sil jiu4 sil ce4 suo3 wai4 mian4 sil
-A0002_S005_0_G0004_segment_0089|sil zhe4 zhe4 zhe4 zhe4 ge4 mei2 you3 shen2 me5 hao3 yi2 han4 di2 zhe4 shi4 hao3 sil shi4 sil
-A0002_S005_0_G0004_segment_0045|sil ran2 hou4 ni3 yao1 qu4 sil
-A0002_S005_0_G0004_segment_0043|sil jiu4 shi4 zai4 sil lou2 xia4 de5 shi2 hou4 sil
-A0002_S004_0_G0004_segment_0050|sil ru2 guo3 wo3 shi4 lian2 xu4 hao3 ji1 sil tian1 yi1 sil zhi2 sil zai4 wai4 mian4 sil de5 hua4 sil
-A0002_S003_0_G0004_segment_0184|sil e4 sil
-A0002_S001_0_G0004_segment_0136|sil en1 ran2 hou4 ni3 sil xia4 yi1 sil bu4 hui4 zen3 me5 sil qu4 sil zuo4 sil shen2 ma2 sil
-A0002_S006_0_G0004_segment_0059|sil suo3 yi3 ta1 men5 jiang3 shuo1 zui4 hao3 jiu4 shi4 sil dao4 si4 ge4 gou1 sil
-A0002_S001_0_G0004_segment_0021|sil ni3 yao1 sil liao2 yi1 liao2 you3 sil ni3 shi4 zui4 xi3 huan1 na5 yi1 sil ge4 ma5 sil
-A0002_S003_0_G0004_segment_0063|sil yi3 qian2 sil
-A0002_S006_0_G0004_segment_0058|sil wo3 shi4 sil ting1 shuo1 dan4 shi4 wo3 bu2 zhi1 dao4 shi4 bu2 shi4 zhen1 de5 sil
-A0002_S004_0_G0004_segment_0130|sil en4 sil
-A0002_S003_0_G0004_segment_0077|sil bi3 jiao4 e4 sil xin1 ying3 sil de5 jiu4 sil shi4 sil
-A0002_S005_0_G0004_segment_0113|en4 sil
-A0002_S003_0_G0004_segment_0035|sil yao1 du2 de5 shi2 hou4 sil shi2 jian1 zhen1 de5 shi4 sil shao3 le5 hen3 duo1 yao1 sil bi3 jiao4 sil zi4 lv4 sil
-A0002_S004_0_G0004_segment_0058|sil ni3 shi4 yi1 ge4 bi3 jiao4 shi2 ji4 de5 ren2 hai2 shi4 shuo1 ni3 shi4 yi1 ge4 sil bi1 jiao4 sil
-A0002_S002_0_G0004_segment_0110|sil zai4 zai4 sil
-A0002_S003_0_G0004_segment_0010|sil en1 sil
-A0002_S004_0_G0004_segment_0201|sil ru2 guo3 sil
-A0002_S006_0_G0004_segment_0202|sil na1 sil
-A0002_S003_0_G0004_segment_0149|sil ji1 ji2 de5 qu4 e4 sil
-A0002_S001_0_G0004_segment_0222|sil yi1 xie1 sil
-A0002_S005_0_G0004_segment_0083|sil he2 nei4 sil xie1 sil jia1 hu4 sil bing4 sil fang2 hai2 sil neng2 sil gou4 sil
-A0002_S003_0_G0004_segment_0075|sil uuua5 sil
-A0002_S004_0_G0004_segment_0181|sil en1 sil
-A0002_S004_0_G0004_segment_0042|sil suo3 yi3 ni3 di1 sil dao4 sil
-A0002_S003_0_G0004_segment_0162|sil bu2 zhi3 shi4 shuo1 sil
-A0002_S004_0_G0004_segment_0089|sil e4 sil
-A0002_S004_0_G0004_segment_0045|sil en1 sil
-A0002_S003_0_G0004_segment_0082|sil e4 sil di4 yi1 jiu4 shi4 yue4 lai2 yue4 duo1 nian2 qing1 ren2 ye3 sil shi4 sil
-A0002_S003_0_G0004_segment_0046|sil ooo5 sil ye3 shi4 du2 dian4 nao3 de5 ma5 sil
-A0002_S005_0_G0004_segment_0243|yao1 sil jin4 liang4 hai2 shi4 ru2 guo3 ke3 yi3 sil zhu4 yi4 yin3 sil shi2 ran2 hou4 sheng1 huo2 xi2 sil guan4 sil
-A0002_S001_0_G0004_segment_0197|sil kong3 bu4 sil
-A0002_S005_0_G0004_segment_0071|sil dui4 sil
-A0002_S005_0_G0004_segment_0167|sil e2 yin1 wei4 dan4 shi4 sil dan4 shi4 ni3 zhi1 sil dao4 aaa2 dan4 shi4 ni3 zhi1 sil dao4 ta1 zai4 nei4 sil bian5 sil zuo4 nei4 sil ge4 sil
-A0002_S002_0_G0004_segment_0197|sil bu2 zhi1 dao4 a5 yin1 wei4 sil
-A0002_S002_0_G0004_segment_0091|sil gu3 zhuang1 ran2 hou4 sil chuan1 le5 sil pai1 sil zhao4 sil
-A0002_S001_0_G0004_segment_0129|sil ni3 zai4 sil du2 de5 sil shi2 hou4 ni3 hui4 sil e4 yi1 bian1 xiang3 ran2 hou4 sil
-A0002_S003_0_G0004_segment_0093|sil chuan2 tong3 sil de5 nei4 xie1 sil ke1 sil xue2 la1 sil
-A0002_S002_0_G0004_segment_0223|sil eeen5 eeen5 sil
-A0002_S004_0_G0004_segment_0171|sil en4 sil
-A0002_S005_0_G0004_segment_0052|sil wo3 de5 ma1 ma1 sil zui4 jin4 sil gang1 kai1 sil dao1 sil
-A0002_S006_0_G0004_segment_0140|sil yi3 qian2 ke3 neng2 ni3 yao1 sil
-A0002_S002_0_G0004_segment_0234|sil e2 sil
-A0002_S001_0_G0004_segment_0206|sil ta1 xian4 zai4 hai2 you3 yan3 ma5 sil ta1 hai2 mei2 tui4 sil xiu1 ooo2 sil
-A0002_S001_0_G0004_segment_0016|sil you3 wan2 you2 sil xi4 ya5 you3 sil ye3 you3 sil kan4 yi1 xie1 sil dian4 sil shi4 sil ju4 shen2 me5 sil de5 ran2 hou4 sil
-A0002_S004_0_G0004_segment_0066|sil tai4 sil guo4 sil
-A0002_S002_0_G0004_segment_0122|sil hai2 bu2 sil zhi1 sil dao4 sil chi1 dong1 xi1 sil fu4 sil qian2 sil ke3 neng2 you3 yi1 sil dian3 sil dian3 di2 sil
-A0002_S001_0_G0004_segment_0158|sil bu2 shi4 sil gui3 de5 ta1 men5 shi4 bi4 jiao4 sil shan4 sil chang2 nei4 sil ge4 sil
-A0002_S005_0_G0004_segment_0226|sil you3 yi1 xie1 shi4 man2 kong3 bu4 de5 la5 yin1 wei4 sil
-A0002_S005_0_G0004_segment_0051|sil dui4 sil jiu4 sil zhi1 lei4 de5 ran2 hou4 ta1 men5 jiu4 kuai4 rang4 ni3 shang3 qu4 dan4 shi4 sil xian4 sil zai4 de5 hua4 yin1 wei4 sil
-A0002_S003_0_G0004_segment_0131|sil yin1 wei4 you3 gang1 sil gang1 gang1 sil ni3 shuo1 de5 nei4 jian4 shi4 qing2 gang1 gang1 sil fa4 sil sheng1 sil
-A0002_S003_0_G0004_segment_0223|sil dan4 dan4 shi4 ye3 bu2 sil cuo4 aaa3 wo3 jue2 de5 jiu4 sil shi4 yin1 wei4 sil
-A0002_S001_0_G0004_segment_0227|sil en1 sil
-A0002_S002_0_G0004_segment_0124|sil mei2 you3 na1 me5 shu2 sil xi1 sil dan4 shi4 sil
-A0002_S005_0_G0004_segment_0155|sil wei4 shen2 me5 sil zhe4 shi4 yi1 zhi1 sil shou3 di2 shi4 qing2 ma3 sil
-A0002_S001_0_G0004_segment_0081|e4 sil
-A0002_S001_0_G0004_segment_0169|sil ran2 hou4 sil ta1 jiu4 sil
-A0002_S004_0_G0004_segment_0090|sil hai2 you3 sil shi2 me5 na4 sil si4 ge4 te4 zheng1 cha1 bu4 duo1 shi4 zhe4 sil yang4 zi3 sil ba5 sil
-A0002_S005_0_G0004_segment_0187|sil yin1 wei4 zhe4 jian4 shi4 sil qing2 ta1 men5 zui4 jin4 cha2 zhang4 ran2 hou4 cha2 chu1 le5 yi1 xie1 wen4 ti2 sil dui4 ma5 sil
-A0002_S005_0_G0004_segment_0189|sil en4 jiu4 shi4 sil ni3 yao4 sil shuo1 yi1 xia4 shi4 shi2 me5 wen4 ti2 sil ma5 sil
-A0002_S005_0_G0004_segment_0250|sil en1 sil
-A0002_S004_0_G0004_segment_0162|fan3 zheng1 shi4 ni3 sil
-A0002_S005_0_G0004_segment_0023|sil ta1 men5 ye3 sil shi4 sil
-A0002_S001_0_G0004_segment_0219|sil nuo2 ni3 zai4 jia1 de5 shi2 hou4 kuai4 bu4 sil hui4 yin3 sil
-A0002_S006_0_G0004_segment_0213|sil yong4 lai2 kan4 shi4 pin2 shi4 hao3 sil
-A0002_S004_0_G0004_segment_0124|sil suo3 yi3 sil dang1 ran2 you3 hao3 you3 huai4 la5 wo3 jue2 de5 sil
-A0002_S003_0_G0004_segment_0225|sil ru2 guo3 mei2 ji4 sil cuo4 de5 hua4 ta1 men5 sil zai4 sil
-A0002_S002_0_G0004_segment_0213|sil e2 sil
-A0002_S002_0_G0004_segment_0175|sil dui4 sil
-A0002_S003_0_G0004_segment_0085|sil gu3 li4 sil ta1 men5 ba3 yu4 ba4 xia4 bo1 de5 zhe4 xie1 sil xiao3 sil fan4 ke4 sil neng2 jiu4 hui4 sil
-A0002_S001_0_G0004_segment_0098|sil mei2 you3 eeei2 wo3 sil bu2 shi4 xi3 sil huan1 kan4 sil bi3 sil sai4 lei4 de5 dan4 shi4 sil
-A0002_S005_0_G0004_segment_0140|sil bu4 hao3 hao3 sil li4 yong4 sil zhe4 ge4 dong1 xi1 le5 sil jiu4 shi4 sil
-A0002_S001_0_G0004_segment_0076|sil en1 sil zong1 yi4 de5 hua4 sil
-A0002_S005_0_G0004_segment_0034|sil jie1 shou4 dao4 zhi4 liao2 sil
-A0002_S003_0_G0004_segment_0028|sil ta1 you3 bian4 cheng2 sil zheng4 sil fu3 de5 sil
-A0002_S003_0_G0004_segment_0246|sil dou1 zuo4 de5 sil dao4 sil la5 wo3 jue2 dei3 sil
-A0002_S004_0_G0004_segment_0079|sil e4 zen3 me5 sil shuo1 sil
-A0002_S001_0_G0004_segment_0071|sil ba5 sil wo3 sil ye3 sil bu2 ji4 de5 sil cha1 bu2 duo1 sil ke3 neng2 jiu4 sil duo1 sil
-A0002_S005_0_G0004_segment_0029|sil mo4 you3 wo3 jue2 de2 sil shui4 you3 zhe4 ge4 xuan3 ze2 sil shi4 hao3 shi4 yin1 wei2 sil
-A0002_S003_0_G0004_segment_0026|ran2 hou4 ci1 sil bu2 duo1 ran2 hou4 sil
-A0002_S006_0_G0004_segment_0079|sil en1 sil
-A0002_S004_0_G0004_segment_0001|sil ha1 lou2 ni3 hao4 sil
-A0002_S002_0_G0004_segment_0003|sil suo3 yi3 zhe4 ci4 wo3 men5 de5 liao2 tian1 sil hua4 sil ti2 sil jiu4 sil shi4 lv3 sil lv3 you2 sil
-A0002_S001_0_G0004_segment_0068|sil a1 mei2 you3 mei2 you3 jiu4 shi4 ta1 sil zhe4 ge4 sil dao3 sil shi4 yi1 sil ban3 sil suo3 yi3 ta1 sil
-A0002_S001_0_G0004_segment_0232|sil ooo5 e2 sil
-A0002_S004_0_G0004_segment_0119|sil bu4 na4 me5 sil de5 sil
-A0002_S005_0_G0004_segment_0079|sil sui1 ran2 wo3 men5 you3 sil
-A0002_S002_0_G0004_segment_0020|sil ao4 sil dai4 li4 ya4 sil
-A0002_S005_0_G0004_segment_0121|sil yi1 yao4 bao3 xian3 zhen1 de5 hen3 sil chong2 yao4 hen3 duo1 sil
-A0002_S003_0_G0004_segment_0190|sil shui3 sil shui3 mo4 sil hua4 sil
-A0002_S003_0_G0004_segment_0060|sil er2 qie3 sil
-A0002_S005_0_G0004_segment_0031|sil ru2 guo3 ni3 jing1 ji4 sil fu4 dan1 bu4 qi3 de5 hua4 na1 ni3 neng2 gou4 qu4 sil
-A0002_S004_0_G0004_segment_0083|sil en4 sil
-A0002_S006_0_G0004_segment_0045|sil ai1 suo3 yi3 wo3 sil ye3 bu4 sil
-A0002_S005_0_G0004_segment_0046|sil e4 sil
-A0002_S004_0_G0004_segment_0185|sil gei3 sil bi2 zi5 hui4 ting3 sil aaa2 hai2 shi4 shen2 me5 de5 sil
-A0002_S001_0_G0004_segment_0089|sil nuo2 ge4 bu2 shi4 sil kuai4 le4 da4 ben3 ying2 aaa2 na1 sil ge4 shi4 sil
-A0002_S001_0_G0004_segment_0150|sil ou1 mei3 de5 hai2 shi4 xi3 huan1 kan1 sil ya4 zhou1 jiu4 shi4 riz4 sil ben3 han2 guo2 di2 nei4 yi1 sil zhong3 sil
-A0002_S002_0_G0004_segment_0231|sil ke3 neng2 sil shi4 zhe4 yang4 zi5 sil
-A0002_S002_0_G0004_segment_0133|sil ran2 hou4 ta1 sil jiu4 hen3 sil xing1 fen4 jiu4 yi1 zhi2 gen1 wo3 men5 sil jiang3 zhong1 sil wen2 ran2 hou4 jue2 dei3 ei1 sil hai2 man2 sil ku4 de5 sil
-A0002_S005_0_G0004_segment_0050|sil e4 sil
-A0002_S004_0_G0004_segment_0121|sil dui4 suo3 yi3 sil
-A0002_S006_0_G0004_segment_0203|sil wo3 jue2 de5 zhe4 yang4 shi4 hao3 sil
-A0002_S006_0_G0004_segment_0051|sil nei4 ge4 sil da3 sil gou1 de5 dui4 sil ma3 sil
-A0002_S002_0_G0004_segment_0172|sil en1 sil
-A0002_S003_0_G0004_segment_0273|sil ke1 xue2 ta1 men5 sil you3 yi1 xie1 xue2 xiao4 sil xiao3 xue2 le5 sil
-A0002_S004_0_G0004_segment_0054|sil suo3 yi3 sil
-A0002_S002_0_G0004_segment_0165|sil en4 nei4 ni3 ni2 sil
-A0002_S002_0_G0004_segment_0106|sil ta1 men5 yin1 wei4 wo3 men5 shi4 he2 chang4 tuan2 de5 sil suo3 yi3 sil
-A0002_S006_0_G0004_segment_0172|sil dan4 shi4 xian4 sil zai4 hao3 xiang4 ta1 men5 shi4 bang3 ding4 dao4 ni3 de5 zhang4 hao2 na1 ge4 yun2 sil duan1 de5 sil zhang4 sil hao4 suo3 yi3 ni3 ke4 yi3 sil
-A0002_S005_0_G0004_segment_0015|sil ooo5 sil
-A0002_S001_0_G0004_segment_0145|sil yin1 wei4 wo3 men5 du2 de5 shi4 ying1 wen2 de5 sil suo3 yi3 hen3 duo1 du1 sil shi4 sil zai4 wai4 sil guo2 fa4 sil sheng1 ran2 hou4 dou1 shi4 wai4 sil guo2 ren2 sil
-A0002_S002_0_G0004_segment_0237|hao3 sil ba1 sil
-A0002_S002_0_G0004_segment_0178|sil ying1 sil wen2 man2 pu3 sil bian4 de5 ying1 gai1 sil du1 mei2 you3 wen4 sil ti2 you2 qi2 shi4 ou1 sil zhou1 de5 sil guo2 jia1 sil
-A0002_S004_0_G0004_segment_0063|sil jiu4 shi4 shuo1 ni3 shi4 bi1 jiao4 sil xian4 shi2 di4 ren2 hai2 shi4 ni3 shi4 bi3 jiao4 li3 sil xiang3 sil hua4 di2 ren2 sil
-A0002_S003_0_G0004_segment_0191|sil dan4 shi4 sil hao3 xiang4 sil
-A0002_S004_0_G0004_segment_0113|sil you3 ke4 you3 ke3 neng2 zhe4 ge4 ren2 qi2 shi2 ye3 sil bu2 shi4 zhen1 de5 shi4 zhe4 sil yang4 sil zi5 sil
-A0002_S001_0_G0004_segment_0144|er2 qie3 you3 sil
-A0002_S002_0_G0004_segment_0118|sil ke3 neng2 sil ta1 chang4 de5 sheng4 dan4 ge1 tong2 sil yang4 de5 sil diao4 dan4 shi4 ta1 men5 shi4 sil zi4 ji3 di4 yu3 yan2 sil
-A0002_S004_0_G0004_segment_0134|ke4 ren2 sil
-A0002_S005_0_G0004_segment_0102|sil ming2 ming2 kan4 qi3 lai2 jiu4 hen3 hao3 chi1 wen2 qi3 lai2 ye3 hen3 hao3 chi1 sil
-A0002_S001_0_G0004_segment_0132|sil zhe4 ge4 zhe4 ge4 sil jue2 se4 hui4 sil fei1 chang2 hao4 sil
-A0002_S006_0_G0004_segment_0062|sil sui1 ran2 wo3 ye3 bu2 zhi1 dao4 zhe4 sil
-A0002_S002_0_G0004_segment_0120|sil bu4 sil hui4 a1 sil da4 duo1 shuo4 ke3 yi3 yin1 wei2 wo3 men5 ye3 shi4 gen1 zhu4 xue2 xiao4 lai2 wai4 sil di2 ran2 hou4 wo3 men5 zi4 ji3 zou3 de5 shi2 jian1 sil bu2 shi4 hen3 sil duo1 dan4 shi4 sil
-A0002_S004_0_G0004_segment_0104|sil e4 sil
-A0002_S005_0_G0004_segment_0119|sil que4 sil shi2 zhe4 qi2 shi2 sil
-A0002_S003_0_G0004_segment_0258|sil ni3 zi4 ji3 xi3 huan1 zuo4 de5 ba5 huo4 sil zhe3 shi4 sil
-A0002_S002_0_G0004_segment_0144|sil lv3 you2 de5 hao3 sil chu3 sil
-A0002_S006_0_G0004_segment_0003|sil he2 sil dian4 zi5 sil chan3 pin3 sil
-A0002_S003_0_G0004_segment_0047|sil gong1 sil
-A0002_S004_0_G0004_segment_0213|sil en1 sil
-A0002_S004_0_G0004_segment_0072|sil wo3 wo3 sil
-A0002_S006_0_G0004_segment_0038|sil you3 yi1 dian3 sil xin1 sil xu1 ni3 zhi1 dao4 ma3 yin1 wei4 wo3 jue2 de5 shuo1 sil
-A0002_S004_0_G0004_segment_0215|sil en4 sil
-A0002_S001_0_G0004_segment_0058|sil dan4 shi4 ta1 men5 jiu4 shi4 sil
-A0002_S005_0_G0004_segment_0165|sil na1 shi4 bu2 shi4 hen3 kong3 bu4 jiu4 shi4 ni3 zhi1 dao4 ta1 zai4 sil kai1 sil dao1 sil
-A0002_S003_0_G0004_segment_0024|sil da4 sil gai4 sil
-A0002_S002_0_G0004_segment_0150|sil chu2 le5 jing3 dian3 aaa4 wo3 sil shi4 bi3 jiao4 sil xi3 huan1 kan1 nei4 sil xie1 sil
-A0002_S002_0_G0004_segment_0153|sil rui4 shi4 sil
-A0002_S006_0_G0004_segment_0106|sil en1 sil
-A0002_S001_0_G0004_segment_0176|sil hai2 sil xing2 bu2 shi4 hen3 kong3 bu4 sil
-A0002_S001_0_G0004_segment_0237|nei4 ni3 xian4 zai4 ne5 sil e4 hui4 de5 yue4 sil qi4 you3 sil duo1 sil shi4 shen2 me5 sil
-A0002_S004_0_G0004_segment_0105|sil ni3 jue2 de5 zhe4 shi4 hao3 de5 ma3 sil
-A0002_S006_0_G0004_segment_0022|sil you3 shi2 hou4 bu2 zhi1 dao4 zen3 me5 sil ban4 sil
-A0002_S006_0_G0004_segment_0042|sil ye3 bu2 zhi1 dao4 sil
-A0002_S005_0_G0004_segment_0185|sil dui4 dan4 shi4 sil
-A0002_S002_0_G0004_segment_0090|sil ta1 qu4 le5 bei3 sil jing1 sil ran2 hou4 ta1 sil jiu4 sil jiang3 sil ta1 ye3 shi4 xiang3 sil zu1 nei4 sil xie1 sil
-A0002_S005_0_G0004_segment_0114|sil en4 sil
-A0002_S005_0_G0004_segment_0012|sil dui4 bu2 qi3 sil
-A0002_S004_0_G0004_segment_0179|sil ji1 ben3 sil
-A0002_S005_0_G0004_segment_0130|sil e2 ni3 shi4 mai3 na5 yi1 sil zhong3 de5 sil
-A0002_S002_0_G0004_segment_0098|sil gen1 zhe5 sil xue2 sil xiao4 de5 he2 sil chang4 sil tuan2 yi1 qi3 sil qu4 yin1 wei2 wo3 men5 qu4 sil
-A0002_S002_0_G0004_segment_0105|sil en4 sui1 sil ran2 hai2 man2 sil ku4 de5 di4 yi1 sil ci4 sil kan4 sil dao4 er2 sil qie3 sil
-A0002_S001_0_G0004_segment_0015|sil ran2 hou4 ne5 sil zai4 sil geng1 qian2 mian4 sil
-A0002_S001_0_G0004_segment_0112|sil jin1 yong1 sil xiao3 shui4 sil
-A0002_S005_0_G0004_segment_0131|sil jiu4 shi4 sil
-A0002_S003_0_G0004_segment_0031|sil en1 mei2 you3 sil du2 le5 yi1 zhen4 zi5 zui4 sil jin4 wo3 jiu4 sil kai1 shi3 sil du2 jiu4 sil shi4 sil
-A0002_S005_0_G0004_segment_0042|sil e4 sil qi2 shi2 yi3 qian2 hai2 hao3 yi3 qian2 jiu4 shi4 wo3 men5 ru2 guo3 yao4 qu4 sil tan4 sil bing4 sil
-A0002_S004_0_G0004_segment_0206|sil en1 sil
-A0002_S005_0_G0004_segment_0109|sil wo3 hao3 xiang4 ting1 sil shuo1 sil guo4 sil
-A0002_S002_0_G0004_segment_0047|sil bei3 sil jing1 sil
-A0002_S002_0_G0004_segment_0033|sil en1 ran2 hou4 hai2 sil
-A0002_S006_0_G0004_segment_0053|sil dui4 dan4 shi4 sil
-A0002_S002_0_G0004_segment_0058|sil en1 sil hai2 man2 you3 qu4 na1 ni3 you3 qu4 guo5 shen2 ma5 de5 sil fang1 sil
-A0002_S005_0_G0004_segment_0164|sil suo3 yi3 shi4 ju2 bu4 ma2 zui4 sil
-A0002_S006_0_G0004_segment_0082|sil ru2 sil guo3 you3 yi1 sil xie1 sil you3 yi1 xie1 sil tian1 na5 jiu4 hao3 xiang4 sil bi3 ru2 sil shuo1 sil
-A0002_S003_0_G0004_segment_0073|sil gong1 sil zuo1 a1 sil hai2 shi4 shen2 me5 de5 sil
-A0002_S001_0_G0004_segment_0002|sil e4 sil
-A0002_S002_0_G0004_segment_0229|sil te4 ding4 yi1 xie1 shi4 gei3 lv3 sil ke4 de5 sil jiu4 hui4 sil bi3 jiao4 an1 sil quan2 sil
-A0002_S001_0_G0004_segment_0123|sil dui4 qi2 shi2 sil dian4 ying3 shen2 me5 wo3 ye3 shi4 hen3 xi3 huan1 kan4 dan4 shi4 hen3 sil shao3 sil ran2 hou4 dong4 man4 jiu4 shi4 ke1 nan2 a5 ran2 sil hou4 sil jin1 tian2 yi1 dan4 shi4 sil
-A0002_S003_0_G0004_segment_0185|sil wo3 jue2 sil de2 wo3 zhe4 ge4 nian2 ji4 yi3 jing1 you3 dian3 kun3 nan2 sil
-A0002_S004_0_G0004_segment_0038|sil en1 sil
-A0002_S001_0_G0004_segment_0135|sil ooo5 sil
-A0002_S005_0_G0004_segment_0136|sil yin1 wei4 ta1 men5 shi4 shuo1 sil
-A0002_S001_0_G0004_segment_0072|san1 shi2 mei2 you3 ying1 gai1 bu2 sil zhi3 sil ke3 neng2 you3 sil
-A0002_S002_0_G0004_segment_0042|sil you3 aaa2 er2 qie3 ta1 de5 sil ta1 de5 nei4 sil xie1 sil
-A0002_S005_0_G0004_segment_0120|sil e4 ru2 guo3 neng2 sil gou4 sil fu4 dei3 qi3 sil de5 hua4 wo3 jue2 de5 zhen1 de5 sil
-A0002_S006_0_G0004_segment_0025|sil dui4 zui4 duo1 you3 shi2 hou4 ni3 sil ni3 kan1 dao4 ta1 sil san1 shi2 ta1 de5 sil jiu4 sil jiu4 shi4 jiang3 shuo1 zhe4 yi1 tian1 zhen1 de5 shi4 sil chao1 ji2 wu2 di2 re4 dan4 shi4 xian4 zai4 sil
-A0002_S002_0_G0004_segment_0236|sil ooo5 sil
-A0002_S004_0_G0004_segment_0068|sil wo3 jue2 de5 sil
-A0002_S002_0_G0004_segment_0027|sil e4 you3 yi1 xie1 sil shi4 yin1 wei4 sil xue2 xiao4 de5 sil shi2 hou4 sil qu4 di1 sil
-A0002_S002_0_G0004_segment_0066|sil dan4 qi2 shi2 ye3 hen3 mei3 aaa2 qi2 shi2 wo3 men5 de5 sil zhou1 sil zhou1 wei2 de5 sil guo2 jia1 sil
-A0002_S001_0_G0004_segment_0006|sil dui4
-A0002_S003_0_G0004_segment_0012|sil na4 sil ye3 shi4 hen3 duo1 nian2 liao3 e2 sil
-A0002_S005_0_G0004_segment_0024|sil wo3 men5 de5 nei4 ge4 sil
-A0002_S003_0_G0004_segment_0042|sil suo3 yi3 bi1 jiao4 sil xue2 hui4 bi3 jiao4 sil zi4 lv4 yi1 dian3 sil dian3 sil
-A0002_S002_0_G0004_segment_0177|sil wo3 sil jue2 dei3 yu3 sil ying1 wen2 sil
-A0002_S004_0_G0004_segment_0217|en1 sil
-A0002_S003_0_G0004_segment_0199|sil zhong4 sil
-A0002_S005_0_G0004_segment_0099|sil dan4 shi4 wo3 mei3 ci4 sil gen1 nei4 ge4 bing4 ren2 liao2 uuua5 sil kan1 qi3 lai2 hen3 hao4 sil chi1
-A0002_S006_0_G0004_segment_0211|sil dui4 ya5 xian4 sil zai4 yue4 lai2 yue4 da4 yue4 lai2 yue4 sil da4 sil
-A0002_S006_0_G0004_segment_0054|sil dan4 shi4 wo3 ting1 shuo1 you3 yi1 xie1 wu3 ge4 sil gou1 de5 chan3 pin3 sil bu2 shi4 hen3 sil hao3 yong4 jiu4 shi4 yin1 wei4 sil
-A0002_S006_0_G0004_segment_0097|sil dai4 nao3 fa1 sil e4 shen2 me5 sil
-A0002_S001_0_G0004_segment_0142|sil dui4 sil
-A0002_S006_0_G0004_segment_0023|sil qi2 shi2 wo3 sil ba4 shi4 gao4 sil su4 wo3 shuo1 yi3 qian2 qi2 shi2 sil xin1 jia1 po1 shi4 mei2 you3 na4 me5 re4 de5 sil
-A0002_S001_0_G0004_segment_0190|sil e4 e2 sil
-A0002_S004_0_G0004_segment_0020|sil qi2 shi2 wo3 qi2 shi2 ye3 shi4 sil zhi1 sil ji4 de5 zhe4 ge4 qi2 ta1 de5 wo3 you3 dian3 wang4 ji4 ni3 ji4 de5 ma5 na3 si4 ge4 de5 sil
-A0002_S001_0_G0004_segment_0244|sil na1 wo3 men5 sil jie1 sil shu4 le5 qu4 xia4 yi1 sil ge4 sil ba1 sil
-A0002_S006_0_G0004_segment_0013|en1 sil que4 shi2 sil
-A0002_S003_0_G0004_segment_0255|sil en1 sil
-A0002_S003_0_G0004_segment_0064|sil ta1 sui1 ran2 ke3 neng2 sil xiang1 sil bi1 lai2 sil jiang3 sil bi1 sil jiao4 sil qing1 sil song1 sil yi1 sil dian3 sil
-A0002_S001_0_G0004_segment_0241|sil en1 yuan2 sil lai2 ru2 ci3 sil
-A0002_S005_0_G0004_segment_0230|sil dui4 ma5 sil
-A0002_S005_0_G0004_segment_0009|sil dan4 shi4 sil
-A0002_S003_0_G0004_segment_0017|sil nei4 xiao3 xue2 gen1 zhong1 xue2 shi4 yi1 yang4 aaa2 sil jiu4 liu4 nian2 he4 si4 nian2 sil
-A0002_S002_0_G0004_segment_0093|sil en1 sil shi4 ba5 ying4 gai1 yin1 wei4 ping2 chang2 ye3 mei2 you3 ji1 hui4 sil chuan1 zhe4 xie1 yi1 sil fu2 sil dui4 ma5 sil
-A0002_S001_0_G0004_segment_0212|sil e4 sil
-A0002_S002_0_G0004_segment_0218|sil bu2 shi4 sil
-A0002_S003_0_G0004_segment_0152|sil jia1 zhang3 sil dang1 zhong1 ta1 men5 ye3 zhi1 dao4 shuo1 sil
-A0002_S005_0_G0004_segment_0095|sil ye3 sil shi4 sil
-A0002_S005_0_G0004_segment_0006|xin1 jia1 po1 de5 yi1 liao2 she4 bei4 wo3 hai2 jue2 de5 man2 bu2 sil cuo4 de5 qi2 shi2 lao3 shi2 jiang3 sil
-A0002_S005_0_G0004_segment_0152|sil na1 ni3 xian4 zai4 hai2 you3 sil hou4 yi2 zheng1 ma5 hai2 sil ke3 yi3 sil
-A0002_S004_0_G0004_segment_0067|sil tai4 duo1 xiang3 fa3 de5 hua4 sil fan3 er2 you3 xie1 shi4 qing2 zhen1 di4 sil zuo4 bu2 sil dao4 sil
-A0002_S001_0_G0004_segment_0217|sil en1 na1 ni3 jie4 shao4 yi1 xia4 ba5 ni3 sil dou1 sil xi3 huan1 ting1 sil
-A0002_S005_0_G0004_segment_0126|sil suo3 yi3 ying1 gai1 ye3 sil huan2 hao3 sil dan4 shi4 jiu4 shi4 zhen1 de5 man2 zhong4 yao4 jiu4 shi4 sil
-A0002_S001_0_G0004_segment_0035|sil dong4 hua4 de5 hua4 ying4 gai1 sil shi4 sil
-A0002_S001_0_G0004_segment_0226|sil ooo4 hui4 ma3 sil
-A0002_S002_0_G0004_segment_0169|sil yin1 wei4 you3 you3 ji1 ge4 guo2 jia1 neng2 kan4 dao4 ni3 hui4 sil ni3 sil bi3 jiao4 sil xiang3 qu4 na5 li3 sil
-A0002_S006_0_G0004_segment_0215|sil ei1 sil
-A0002_S004_0_G0004_segment_0218|sil fa1 jue2 ni3 di4 sil
-A0002_S002_0_G0004_segment_0160|sil e4 sil jiu4 shi4 sil zhi3 huan2 wang2 na1 ge4 sil dian4 ying3 sil hai2 you3 nei4 sil xie1 sil shu1 sil
-A0002_S006_0_G0004_segment_0095|sil bu4 neng2 sil zhuan1 zhu4 yin1 wei2 sil
-A0002_S002_0_G0004_segment_0015|sil mei2 you3 sil qu4 sil guo4 sil
-A0002_S006_0_G0004_segment_0163|sil na4 hen3 you3 ke3 neng2 ni3 de5 hen3 duo1 zhe4 xie1 fu4 kuan3 ne5 sil shen2 me5 de5 sil
-A0002_S004_0_G0004_segment_0139|sil dui4 dan4 shi4 wo3 jue2 de5 you3 yi1 ge4 ni3 sil ni3 jiang3 dao4 jiu4 shi4 shuo1 sil
-A0002_S006_0_G0004_segment_0123|sil zhang4 hao4 ran2 hou4 hua1 le5 hen3 duo1 qian2 sil jiu4 shi4 zai4 you2 xi4 shang3 sil
-A0002_S001_0_G0004_segment_0022|sil ni3 you3 du2 na1 xie1 sil shu1 ma5 sil
-A0002_S001_0_G0004_segment_0052|sil eeen5 wo3 sil wo3 zui4 jin4 cai2 fa4 xian4 e4 sil bi3 jiao4 sil you3 sil qu4 di2 sil jiu4 sil shi4 yin1 wei4 sil
-A0002_S004_0_G0004_segment_0047|sil bi3 jiao4 zhai2 sil xi3 huan1 sil dai1 sil zai4 sil jia1 li3 sil
-A0002_S003_0_G0004_segment_0213|sil ooo5 sil suo3 yi3 jiu4 shi4 sil
-A0002_S002_0_G0004_segment_0022|sil zhong1 sil guo2 sil
-A0002_S003_0_G0004_segment_0165|sil yin1 wei4 you3 yi1 sil xie1 bi3 jiao4 sil
-A0002_S006_0_G0004_segment_0010|sil en1
-A0002_S005_0_G0004_segment_0087|sil na4 ni3 you3 sil
-A0002_S003_0_G0004_segment_0083|sil dui4 zhe4 ge4 you3 sil xing1 qu4 sil
-A0002_S004_0_G0004_segment_0052|sil e4 sil zi4 ji3 de5 yi1 dian3 shi2 jian1 sil ran2 hou4 qu4 sil chong1 dian4 sil
-A0002_S005_0_G0004_segment_0081|sil you3 yi1 sil xie1 yi4 qing2 de5 nei4 xie1 ren2 sil shu3 dan4 sil shi4 sil
-A0002_S004_0_G0004_segment_0184|sil huo4 zhe3 shi4 shuo1 wei1 zheng3 ta1 men5 you3 xie1 bu2 shi4 shuo1 sil dong4 sil dao1 ta1 men5 jiu4 shi4 sil da3 yi1 xie1 sil
-A0002_S003_0_G0004_segment_0153|sil nei3 xie1 xue2 xiao4 shi4 hao3 sil you4 er2 yuan2 ne5 sil bu2 shi4 xiao3 xue2 sil
-A0002_S006_0_G0004_segment_0091|sil e4 jiu4 shi4 zhe4 xie1 sil dong1 sil xi1 sil
-A0002_S006_0_G0004_segment_0083|sil xin1 jia1 po1 you3 shi2 sil hou4 hui4 yi1 zhi2 sil xia4 yu3 sil jiu4 sil bi3 jiao4 liang2 sil kuai4 sil
-A0002_S003_0_G0004_segment_0106|sil en1 sil
-A0002_S005_0_G0004_segment_0206|sil hen3 sil wei1 sil xian3 sil
-A0002_S002_0_G0004_segment_0184|sil dui4 er2 qie3 ni3 jiu4 shi4 ke3 yi3 sil zhu4 zai4 na1 bian1 shi4 shen2 me5 wo3 bu2 zhi1 dao4 sil fan3 zheng1 jiu4 bu2 sil xu1 yao4 qian1 sil zheng4 sil dan4 sil shi4 sil
-A0002_S004_0_G0004_segment_0019|sil e4 sil
-A0002_S004_0_G0004_segment_0062|sil e4 sil you3 yi1 xie1 li3 xiang3 la1 sil dan4 shi4 sil
-A0002_S006_0_G0004_segment_0034|sil en1 sil
-A0002_S001_0_G0004_segment_0093|sil hai2 you3 wo3 sil
-A0002_S003_0_G0004_segment_0097|sil dui4 dui4 dui4 suo3 yi3 sil wo3 jue2 de5 hai2 man2 bu2 sil cuo4 de5 eeen5 sil
-A0002_S004_0_G0004_segment_0055|sil qi2 shi2 sil
-A0002_S003_0_G0004_segment_0067|sil dan4 shi4 sil
-A0002_S004_0_G0004_segment_0102|sil ye3 jiu4 shi4 man2 you3 qu4 shi4 kan4 dao4 shuo1 ye3 sil neng2 sil you3 yi1 ge4 sil da4 sil gai4 de5 liao3 sil jie3 sil
-A0002_S002_0_G0004_segment_0173|sil bing1 sil dao3 sil bei5 sil xiang4 nuo2 wei1 ma5 sil ke3 neng2 sil
-A0002_S002_0_G0004_segment_0069|sil en1 nuo2 ni3 shi4 sil lv3 you2 xi3 huan1 kan4 cheng2 sil shi4 hai2 shi4 xi3 huan1 kan4 sil feng1 sil jing3 ne5 sil
-A0002_S006_0_G0004_segment_0166|sil yong4 sil
-A0002_S004_0_G0004_segment_0016|sil shi4 sil
-A0002_S003_0_G0004_segment_0057|sil yi3 qian2 de5 hua4 ke3 neng2 sil xin1 jia1 po1 mei2 you3 na1 me5 sil duo1 de5 sil zhe4 sil xie1 sil
-A0002_S003_0_G0004_segment_0201|sil you2 hua4 sil
-A0002_S003_0_G0004_segment_0264|sil eeen5 sil
-A0002_S004_0_G0004_segment_0220|sil en1 hao3 sil
-A0002_S003_0_G0004_segment_0150|sil jiu4 shi4 sil bao4 ming2 xue2 xiao4 sil ta1 men5 you4 er2 yuan2 ye3 sil shi4 sil zai4 sil yi3 jing1 zai4 sil xuan3 sil
-A0002_S002_0_G0004_segment_0041|sil you3 a1 sil you3 aaa2 sil ran2 hou4 sil
-A0002_S001_0_G0004_segment_0020|sil jiu4 shi4 sil
-A0002_S002_0_G0004_segment_0235|sil dan4 shi4 sil xi1 sil zang4 de5 hua4 ta1 hen3 sil gao1 ni3 hui4 bu2 sil kuai4 pa4 sil jiu4 shi4 hu1 xi1 kun4 nan2 sil
-A0002_S006_0_G0004_segment_0182|sil ni3 you3 kan4 dao4 sil ma5 nuo2 sil xie1 guang3 gao4 sil
-A0002_S005_0_G0004_segment_0169|sil ta1 mei2 you3 gen1 ni3 liao2 sil tian1 ma3 sil
-A0002_S003_0_G0004_segment_0019|sil wo3 jiu4 sil du2 le5 liang3 nian2 de5 sil chu1 ji2 xue2 yuan4 sil
-A0002_S004_0_G0004_segment_0003|sil suo3 yi3 e4 sil
-A0002_S004_0_G0004_segment_0088|sil na1 sil
-A0002_S003_0_G0004_segment_0104|sil en1 sil
-A0002_S002_0_G0004_segment_0024|ran2 hou4 sil en1 sil bu4 la1 sil ge2 sil
-A0002_S004_0_G0004_segment_0064|sil en1 sil
-A0002_S005_0_G0004_segment_0214|sil ye3 shi4 nan2 la5 yin1 wei4 ni3 yao4 sil
-A0002_S004_0_G0004_segment_0116|sil dui4 aaa4 dan4 shi4 sil
-A0002_S002_0_G0004_segment_0080|sil en1 ooo1 zhen1 huo4 sil ta1 men5 dang1 di4 ren2 yi1 qi3 sil zhu4 sil shi4 ma3 sil
-A0002_S001_0_G0004_segment_0050|en1 sil
-A0002_S003_0_G0004_segment_0205|sil nuo2 ni3 ne5 ni3 you3 shen2 me5 xiang3 xue2 de5 ma3 sil
-A0002_S006_0_G0004_segment_0117|sil en4 qi2 shi2 zui4 sil
-A0002_S003_0_G0004_segment_0280|sil dui4 wo3 shi4 yin1 wei4 wo3 de5 gong1 zuo4 wo3 cai2 sil
-A0002_S002_0_G0004_segment_0230|sil en1 eeen5 sil
-A0002_S003_0_G0004_segment_0007|sil zhe4 ge4 sil jiao1 yu4 sil guo4 sil cheng2 ma3 sil
-A0002_S001_0_G0004_segment_0167|sil dui4 dui4 dui4 ran2 hou4 ta1 ta1 sil zhang3 de2 sil
-A0002_S002_0_G0004_segment_0114|wo3 men5 zai4 na4 li3 sil ju4 ji2 ran2 hou4 sil chang4 nuo2 sil xie1 sil sheng4 dan4 sil ge1 a1 sil
-A0002_S006_0_G0004_segment_0076|sil ni3 sheng3 le5 dian4 fei4 sil suo3 yi3 sil
-A0002_S005_0_G0004_segment_0035|sil dan4 shi4 ru2 guo3 ni3 yao1 sil kuai4 yi1 dian3 hao3 yi1 dian3 di2 zhi4 liao2 ni3 da4 gai4 ye3 neng2 qu4 sil
-A0002_S003_0_G0004_segment_0216|sil na1 ni3 xue2 de5 sil shi4 sil
-A0002_S006_0_G0004_segment_0018|sil suo3 yi3 sil ta1 men5 ke3 yi3 yong4 zhe4 sil xie1 sil e4 kai1 sil kuai4 sil
-A0002_S006_0_G0004_segment_0005|er2 sil qie3 sil
-A0002_S001_0_G0004_segment_0096|e4 yuan2 sil ben3 de5 mi4 shi4 da4 tao2 tuo1 ran2 hou4 hou4 lai2 zhong4 sil guo2 jiu4 sil xue2 sil ta1 de5 nei4 ge4 sil
-A0002_S006_0_G0004_segment_0124|sil eeen5 suo3 yi3 zhe4 ye3 ying4 sil gai1 shi4 yi1 ge4 wen4 sil ti2 sil
-A0002_S006_0_G0004_segment_0021|sil zhen1 de5 shi4 sil
-A0002_S003_0_G0004_segment_0249|sil en1 en1 sil
-A0002_S003_0_G0004_segment_0143|sil jia1 zhang3 hen3 sil
-A0002_S001_0_G0004_segment_0117|sil xi3 huan1 de5 zhong3 lei4 sil ge1 sil he4 wo3 you3 dian3 sil bu2 yi1 yang4 sil ba5 sil wo3 ye3 shi4 xi3 huan1 bi3 jiao4 sil
-A0002_S002_0_G0004_segment_0217|sil en1 sil
-A0002_S002_0_G0004_segment_0147|en1 sil
-A0002_S003_0_G0004_segment_0266|sil dui4 sil
-A0002_S004_0_G0004_segment_0128|sil qi2 shi2 ni3 lao3 ban3 you3 zhe4 ge4 xin1 sil shuo1 sil jiu4 shi4 yao1 qu4 sil
-A0002_S006_0_G0004_segment_0135|sil sui1 ran2 you3 zhe4 sil xie1 wen4 ti2 dan4 sil shi4 sil
-A0002_S003_0_G0004_segment_0111|sil fu4 mu3 qing4 ke4 neng2 yao1 sil zhu4 yi4 yi1 xia4 sil hai2 zi5 men5 de5 nei4 sil xie1 sil
-A0002_S003_0_G0004_segment_0006|sil e4 ni3 sil ke3 yi3 miao2 sil shu4 yi1 sil xia4 ni3 sil xin1 sil ni3 sil zai4 xin1 sil jia1 sil po1 sil de5 sil
-A0002_S005_0_G0004_segment_0125|sil dan4 shi4 ye3 sil dan4 shi4 en4 sil xian4 zai4 hen3 duo1 fu4 mu3 qin1 ye3 hui4 bang1 xiao3 hai2 mai3 le5 sil
-A0002_S004_0_G0004_segment_0146|sil deng3 sil deng3 deng3 deng3 zhi1 lei4 de5 you3 mei2 you3 ni3 de5 lian3 hen3 sil xiao3 la1 sil ni3 zhi1 dao4 zhe4 xie1 sil
-A0002_S006_0_G0004_segment_0016|sil hen3 duo1 de5 sil gong1 si1 sil dou1 sil zai4 sil e4 sil
-A0002_S003_0_G0004_segment_0043|sil eeen5 sil
-A0002_S003_0_G0004_segment_0025|san1 sil hai2 shi4 si4 nian2 wo3 wang4 le5 sil
-A0002_S002_0_G0004_segment_0078|sil bu2 shi4 sil
-A0002_S002_0_G0004_segment_0211|sil bu2 ran2 qu4 kan4 yi1 sil kan4 nei4 xie1 sil dong4 wu4 ying1 gai1 ye3 bu2 sil cuo4 sil
-A0002_S001_0_G0004_segment_0114|sil en1 ying1 wen2 di2 sil
-A0002_S004_0_G0004_segment_0142|sil yin1 wei4 wo3 men5 xian4 zai4 jiang3 dao4 sil wai4 zai4 wo3 men5 jiang3 dao4 shuo1 ooo5 you3 sil mei2 you3 sil shuang1 yan3 sil pi2 la1 sil
-A0002_S004_0_G0004_segment_0211|sil en1 wo3 shi4 jue2 sil de5 nei4 sil zai4 ba5 sil
-A0002_S002_0_G0004_segment_0205|wo3 ran2 hou4 hai2 you3 sil jiu4 sil shi4 en1 sil
-A0002_S006_0_G0004_segment_0170|sil dui4 ma3 sil
-A0002_S002_0_G0004_segment_0019|sil wo3 qu4 sil wo3 qu4 sil guo4 ma3 lai2 sil xi1 ya4 ran2 hou4 you3 qu4 sil guo5 sil tai4 sil guo2 sil
-A0002_S005_0_G0004_segment_0085|sil zheng4 chang2 yun4 zuo4 sil
-A0002_S003_0_G0004_segment_0160|sil suo3 yi3 wo3 jue2 de5 ta1 sil men5 na4 sil me5 xiao3 jiu4 yi3 jing1 you3 sil
-A0002_S006_0_G0004_segment_0178|sil shi4 di2 sil dan4 shi4 sil
-A0002_S003_0_G0004_segment_0124|sil he4 ta1 sil de5 sil peng2 you3 sil ran2 hou4 sil
-A0002_S005_0_G0004_segment_0233|sil e4 sil dui4 sil jiu4 hen3 rong2 yi4 you3 sil yi1 xie1 sil tang2 niao4 sil bing4 de5 wen4 sil ti2 sil suo3 yi3 sil
-A0002_S002_0_G0004_segment_0180|sil hai2 sil hao3 sil jiu4 shi4 sil
-A0002_S002_0_G0004_segment_0149|sil en1 sil
-A0002_S004_0_G0004_segment_0057|sil zui4 sil ji4 sil de5 nei4 ge4 ta1 que4 sil jiang3 shuo1 ni3 shi4 bi3 jiao4 sil
-A0002_S003_0_G0004_segment_0092|sil e4 ke3 neng2 ni3 you3 xing4 qu4 yu2 zhe4 xie1 bi3 jiao4 sil
-A0002_S006_0_G0004_segment_0137|wo3 xian4 zai4 sil
-A0002_S003_0_G0004_segment_0279|sil jiu4 shi4 sil du2 li4 sil e4 na1 sil xie1 ren2 jiu4 shi4 sil yun4 yong4 mu3 yu3 sil
-A0002_S005_0_G0004_segment_0028|er2 qie3 sil
-A0002_S006_0_G0004_segment_0206|sil en1 sil
-A0002_S001_0_G0004_segment_0175|sil wo3 ye3 wang4 ji4 le5 sil fan3 zheng4 sil
-A0002_S006_0_G0004_segment_0207|sil dui4
-A0002_S003_0_G0004_segment_0145|sil e4 sil
-A0002_S006_0_G0004_segment_0201|sil uuua5 na1 sil zhen1 di2 shi4 sil
-A0002_S003_0_G0004_segment_0200|sil suo3 yi3 ta1 men5 hen3 duo1 de5 nei4 sil xie1 sil jiao1 hua4 de5 dou1 sil shi4 sil
-A0002_S001_0_G0004_segment_0055|sil ran2 hou4 e4 sil
-A0002_S005_0_G0004_segment_0195|sil en1 sil
-A0002_S004_0_G0004_segment_0154|er2 bu2 shi4 shuo1 ni3 zhang3 de5 hao3 kan4 hai2 shi4 bu4 hao3 sil kan4 er2 shi4 sil cong1 sil
-A0002_S006_0_G0004_segment_0199|sil hen3 gui4 ma3 sil
-A0002_S006_0_G0004_segment_0103|sil en1 sil
-A0002_S002_0_G0004_segment_0007|wo3 jue2 sil de2 hen3 rong2 yi4 jiu4 shi4 ni3 sil zhu4 zai4 na3 li3 jiu4 hui4 sil bi3 sil jiao4 li3 suo3 sil dang1 ran2 sil
-A0002_S002_0_G0004_segment_0099|sil can1 jia1 jiu4 sil shi4 sil bi3 sil sai4 a5 sil shen2 me5 di4 sil suo3 yi3 wo3 men5 jiu4 sil qu4 dao4 na4 li3 ran2 hou4 sil
-A0002_S002_0_G0004_segment_0143|sil ge4 di4 di4 ren2 sil you3 yi1 xie1 sil jie1 sil chu4 wo3 sil jue2 de5 zhe4 sil jiu4 sil shi4 sil
-A0002_S006_0_G0004_segment_0061|sil shi4 ma3 sil
-A0002_S001_0_G0004_segment_0104|sil you3 ma5 you3 sil xin1 jia1 po1 de5 ma5 sil
-A0002_S002_0_G0004_segment_0045|sil ke3 sil pa4 de5 sil jiu4 shi4 ta1 sil bi3 jiao4 sil xie2 yi1 sil dian3 sil
-A0002_S006_0_G0004_segment_0143|sil dui4 ma3 sil
-A0002_S004_0_G0004_segment_0151|sil shi4 zui4 sil ji1 sil ben3 ran2 hou4 er2 sil qie3 ni3 shuo1 de5 zhi1 ti3 yu3 yan2 na5 zhe4 xie1 sil
-A0002_S003_0_G0004_segment_0226|sil yi4 qing2 qi1 jian1 ran2 hou4 you4 you3 bu3 tie1 le5 duo1 wu3 bai3 kuai4 shi4 ma5 sil
-A0002_S001_0_G0004_segment_0040|sil er4 shi2 sil
-A0002_S003_0_G0004_segment_0065|sil jiu4 shi4 yin1 wei4 xian4 zai4 sil de5 xue2 sheng1 zhen1 de5 sil shi4 sil
-A0002_S001_0_G0004_segment_0214|sil shen4 zhi4 sil bie2 di4 yu3 yan2 de5 sil ge1 ye3 yin3 sil
-A0002_S001_0_G0004_segment_0012|ran2 hou4 sil
-A0002_S001_0_G0004_segment_0151|sil ooo5 sil
-A0002_S003_0_G0004_segment_0208|sil suo3 yi3 wo3 zi4 ji3 hai2 yao1 sil bu3 tie1 yi1 sil xie1 sil
-A0002_S005_0_G0004_segment_0154|sil e2 sil
-A0002_S005_0_G0004_segment_0092|sil bu2 neng2 aaa4 ta1 sil men5 sil
-A0002_S003_0_G0004_segment_0055|sil ooo5 sil
-A0002_S006_0_G0004_segment_0043|sil e4 sil dui4 le5 jiu4 shi4 sil
-A0002_S005_0_G0004_segment_0147|sil ooo5 sil shen2 me5 shi4 qing2 sil
-A0002_S005_0_G0004_segment_0251|sil en1 wo3 ye3 bu2 sil zhi1 dao4 sil
-A0002_S003_0_G0004_segment_0122|sil you3 yi1 ge4 nv3 tong2 sil xue2 sil
-A0002_S005_0_G0004_segment_0234|sil wo3 jue2 de5 ke3 neng2 sil wo3 bu2 zhi1 dao4 sil quan2 qiu2 le5 dan4 shi4 ke3 neng2 ying1 gai1 shi4 zai4 xin1 jia1 po1 sil tang2 niao4 sil bing4 sil shi4 yi1 ge4 sil bi3 sil jiao4 sil
-A0002_S006_0_G0004_segment_0077|sil e4 sil
-A0002_S004_0_G0004_segment_0212|sil ni3 ne5 sil
-A0002_S003_0_G0004_segment_0233|sil dan4 you3 yi1 sil xie1 de5 ye3 shi4 jiu4 sil shi4
-A0002_S003_0_G0004_segment_0235|sil yi4 qing2 ying3 xiang3 sil suo3 yi3 ta1 men5 neng2 gou4 qu4 sil
-A0002_S006_0_G0004_segment_0099|sil dui4 dui4 sil dui4 fa1 yu4 de5 shi2 hou4 sil suo3 yi3 sil
-A0002_S006_0_G0004_segment_0037|wo3 kai1 kong1 tiao2 hai2 shi4 shen2 me5 wo3 jue2 sil de5 sil
-A0002_S003_0_G0004_segment_0236|sil xue2 ling4 wai4 yi1 sil ge4 sil
-A0002_S003_0_G0004_segment_0115|sil yi1 sil ge4 huan2 sil jing4 sil
-A0002_S002_0_G0004_segment_0189|sil jiu4 sil
-A0002_S006_0_G0004_segment_0068|sil en1 sil
-A0002_S001_0_G0004_segment_0204|sil zen3 me5 sil jiang3 sil qian1 pian1 sil yi1 lv4 aaa3 sil
-A0002_S006_0_G0004_segment_0114|sil eeen5 sil
-A0002_S005_0_G0004_segment_0022|sil er2 shi4 shuo1 sil
-A0002_S001_0_G0004_segment_0211|sil dou1 sil you3 sil ba1 sil
-A0002_S005_0_G0004_segment_0025|sil xi4 tong3 sil
-A0002_S001_0_G0004_segment_0118|sil ke1 huan4 yi1 dian3 jiu4 shi4 sil
-A0002_S001_0_G0004_segment_0231|en1 sil kan1 ta1 zai4 sil zuo4 shen2 me5 sil
-A0002_S002_0_G0004_segment_0208|sil wo3 bu2 sil ying1 gai1
-A0002_S005_0_G0004_segment_0038|sil eeen5 fang1 sil fa3 sil
-A0002_S001_0_G0004_segment_0084|e2 kuai4 yue4 da4 sil ben3 ying2 ma3 sil
-A0002_S002_0_G0004_segment_0156|sil en1 sil
-A0002_S006_0_G0004_segment_0064|sil eeen5 sil
-A0002_S006_0_G0004_segment_0112|sil en4 sil yong4 lai2 zuo4 shen2 me5 sil
-A0002_S006_0_G0004_segment_0132|sil dui4 huo4 sil zhe3 nv3 sheng1 wan3 shang3 hui2 sil jia1 de5 shi2 hou4 you3 mei2 you3 ren2 gen1 zong1 sil
-A0002_S002_0_G0004_segment_0227|sil ye3 shi4 tong2 shi2 ting1 sil shuo1 you3 yi1 xie1 hai3 sil dao3 sil suo3 yi3 sil
-A0002_S003_0_G0004_segment_0098|e4 sil
-A0002_S004_0_G0004_segment_0125|sil eeen5 sil
-A0002_S002_0_G0004_segment_0226|sil mei2 you3 a1 jiu4 shi4 you3 yi1 xie1 sil ta1 men5 yi1 sil xie1 sil dao3 jiu4 shi4 hen3 mei3 de5 nei4 sil xie1 sil sha1 sil tan1 sil aaa3 shen2 me5 dan4 shi4 sil
-A0002_S003_0_G0004_segment_0141|sil bu4 guo5 hen3 kua1 zhang1 de5 jiu4 sil shi4 sil
-A0002_S005_0_G0004_segment_0061|sil tan4 tan4 sil bing4 jiu4 shi4 qu4 yi1 yuan4 sil kan4 sil
-A0002_S005_0_G0004_segment_0010|sil dang1 ran2 ni3 zui4 chang2 ting1 dao4 shi4 mei3 guo2 ren2 ta1 men5 mei3 ci4 dou1 shi4 zai4 sil jiang3 ta1 men5 zi4 ji3 de5 sil yi1 liao2 de5 yi1 xie1 wen4 ti2 sil suo3 yi3 sil
-A0002_S006_0_G0004_segment_0040|sil jie4 sil jiu4 shi4 you3 you3 e4 sil
-A0002_S003_0_G0004_segment_0136|sil ke3 neng2 mian4 lin2 hen3 duo1 ya1 li4 sil ba5 sil
-A0002_S005_0_G0004_segment_0144|sil mei2 you3 a1 wo3 du1 mei2 you3 sil zhu4 sil guo5 yuan4 sil
-A0002_S004_0_G0004_segment_0061|sil jiu4 shi4 sil hen3 xi3 huan1 sil
-A0002_S001_0_G0004_segment_0077|sil nei4 sil ge4 zhong1 sil guo2 sil de5 sil
-A0002_S001_0_G0004_segment_0038|sil jiu4 sil shi4 sil dong4 man4 sil jiu4 shi4 sil du2 wu4 de5 nei4 ge4 yi3 jing1 shi4 yi1 sil qian1 sil
-A0002_S001_0_G0004_segment_0048|sil ran2 hou4 zhe4 sil ge4 dao3 ke3 neng2 bi3 jiao4 duo1 sil shi4 qing2 sil fa1 sheng1 suo3 yi3 ta1 men5 jiu4 bi3 jiao4 jiu3 yi1 sil dian3
-A0002_S005_0_G0004_segment_0074|sil mian3 yi4 li4 sil di1 de5 yi1 xie1 ren2 suo3 yi3 ta1 sil men5 sil jiu4 wei4 le5 sil bao3 hu4 sil ta1 men5 ba5 sil
-A0002_S003_0_G0004_segment_0210|sil e2 na1 ying1 gai1 hen3 you3 sil qu4 sil
-A0002_S001_0_G0004_segment_0171|sil lei4 si4 ba5 sil
-A0002_S002_0_G0004_segment_0129|sil you3 yi1 ge4 lao3 nai3 nai3 sil shang4 lai2 sil gen1 wo3 men5 liao2 sil tian1 ran2 hou4 sil
-A0002_S006_0_G0004_segment_0186|sil en1 sil
-A0002_S003_0_G0004_segment_0224|sil e4 sil zhe4 ge4 zheng4 sil fu3 ta1 men5 ji3 wo3 men5 zhe4 ge4 qian2 sil you2 qi2 sil shi4 hao3 xiang4 sil
-A0002_S003_0_G0004_segment_0140|sil dui4 ya5 sil
-A0002_S003_0_G0004_segment_0069|sil e4 de5 sil ji1 hui4 ye3 bi3 jiao4 sil duo1 sil
-A0002_S001_0_G0004_segment_0119|sil ta1 sil ke3 neng2 bi3 sil jiao4 xi3 huan1 qing2 sil gan3 lei4 de5 dan4 shi4 wo3 bu2 sil shi4 hen3 sil xi3 huan1 nei4 yi1 sil zhong3 sil
-A0002_S003_0_G0004_segment_0198|sil kan4 sil
-A0002_S001_0_G0004_segment_0028|sil dui4 wo3 sil
-A0002_S006_0_G0004_segment_0197|sil en1 sil
-A0002_S002_0_G0004_segment_0030|sil wo3 qi2 shi2 sil di4 yi1 sil ci4 qu4 zhong1 sil guo2 jiu4 shi4 xiao3 xue2 liu4 nian2 sil ji2 de5 sil shi2 hou4 sil
-A0002_S006_0_G0004_segment_0175|sil ooo5 sil ke3 neng2 jiu4 shi4 sil
-A0002_S004_0_G0004_segment_0021|sil en1 sil
-A0002_S003_0_G0004_segment_0142|sil en4 you4 er2 yuan2 sil ran2 hou4 ta1 men5 jiu4 yi3 jing1 xue2 le5 hen3 duo1 dong1 xi1 sil suo3 yi3 sil
-A0002_S005_0_G0004_segment_0018|sil ta1 men5 hen3 duo1 lin2 sil ju1 dou1 sil guo5 lai2 zhe4 li3 sil en1 sil
-A0002_S001_0_G0004_segment_0042|sil huan2 shi4 yi1 qian1 ling2 er4 sil shi2 yi1 le5 sil
-A0002_S003_0_G0004_segment_0008|sil en1 sil
-A0002_S003_0_G0004_segment_0058|sil you2 xi4 de5 zhe4 xie1 sil gong1 sil si1 hai2 shi4 shen2 me5 sil dan4 shi4 sil zui4 sil jin4 sil bi1 jiao4 sil duo1 yi1 sil dian3 sil dian3 sil
-A0002_S006_0_G0004_segment_0032|sil hen3 shao3 shang4 san1 shi2 sil dao4 san1 shi2 jiu4 shi4 shuo1 sil fei1 chang2 fei1 chang2 re4 de5 tian1 sil
-A0002_S003_0_G0004_segment_0089|sil xian4 sil zai4 ta1 men5 yue4 lai2 yue4 duo1 de5 zhe4 xie1 sil bu2 sil tong2 de5 sil
-A0002_S004_0_G0004_segment_0197|sil a5 nei4 ge4 wo3 sil
-A0002_S004_0_G0004_segment_0033|sil suo3 yi3 ni3 shi4 yi1 ge4 hen3 shou3 shi2 di4 ren2 sil
-A0002_S002_0_G0004_segment_0188|sil suo3 yi3 ni3 jiu4 sil hui4 bi3 jiao4 wei1 xian3 sil yi1 sil dian3 dian3 sil
-A0002_S003_0_G0004_segment_0034|hui4 sil jiu4 shi4 zhen1 de5 sil xue2 e4 sil
-A0002_S003_0_G0004_segment_0248|sil ooo5 sil
-A0002_S001_0_G0004_segment_0207|wo3 hao3 xiang4 qian2 ji3 nian2 wo3 ting1 shuo1 ta1 tui4 sil xiu1 le5 hou4 lai2 you4 you3 chu1 dian3 ling2 shou4 wo3 ye3 shi4 you3 yi1 dian3 sil hun4 luan4 liao3 wo3 du1 bu2 zhi1 dao4 ta1 xian4 sil zai4 shi4 tui4 sil xiu1 le5 hai2 shi4 mei2 you3 sil
-A0002_S004_0_G0004_segment_0023|sil e4 yi1 yang4 de5 sil
-A0002_S006_0_G0004_segment_0176|sil shi2 bu2 shi2 yao4 qu4 geng1 xin1 yi1 sil xia4 lou5 sil
-A0002_S006_0_G0004_segment_0204|sil yin1 wei4 ni3 jiu4 hui4 sil hen3 zhen1 sil xi1 na1 yi1 tai2 sil shou3 sil ji1 sil
-A0002_S002_0_G0004_segment_0025|sil e4 wei2 ye3 na4 hai2 you3 sil fen1 lan2 sil
-A0002_S003_0_G0004_segment_0125|sil ta1 jiu4 sil duo3 zai4 sil ta1 de5 sil na1 ge4 sil ce4 suo3 yi1 gang1 hao3 wo3 zai4 sil ce4 suo3 na1 bian5 sil zheng3 li3 yi1 xie1 sil dong1 sil xi1 sil
-A0002_S004_0_G0004_segment_0069|eeen5 sil
-A0002_S001_0_G0004_segment_0057|sil bu2 shi4 hen3 qing1 chu3 sil
-A0002_S005_0_G0004_segment_0237|sil suo3 yi3 jiu4 shi4 sil
-A0002_S004_0_G0004_segment_0159|sil nei4 zai4 ye3 hui4 ye3 hui4 ying3 xiang3 dao4 yi1 xie1 wai4 sil zai4 ba5 sil
-A0002_S005_0_G0004_segment_0080|sil e4 xian4 zai4 sil ye3 sil suan4 shi4 sil
-A0002_S003_0_G0004_segment_0037|sil bi3 jiao4 sil gao1 sil xing4 de5 jiu4 shi4 shuo1 yi3 qian2 sil
-A0002_S004_0_G0004_segment_0194|sil ni3 ke3 yi3 zuo4 dao4 hen3 zi4 ran2 suo3 sil yi3
-A0002_S006_0_G0004_segment_0127|sil ta1 pao3 bu4 hou4 lai2 you3 nei4 ge4 sil shu4 sil dao3 zai4 ta1 shen1 sil shang4 nei4 ge4 ma3 sil
-A0002_S004_0_G0004_segment_0049|sil e4 sil
-A0002_S006_0_G0004_segment_0125|sil en4 sil
-A0002_S006_0_G0004_segment_0168|sil bi3 jiao4 sil dong3 zhe4 sil xie1 sil dian4 nao3 de5 ren2 ye3 hen3 rong2 yi4 sil qu4 sil
-A0002_S005_0_G0004_segment_0132|sil ooo5 sil dui4 dui4 sil dui4 dui4 sil dui4 nei4 zhong3 kuai4 bi3 sil jiao4 hao3 sil
-A0002_S001_0_G0004_segment_0236|sil dan4 na4 tan2 sil zou4 sil dui4 ma3 sil
-A0002_S001_0_G0004_segment_0165|shi4 sil bu2 shi4 sil
+A0002_S005_0_G0004_segment_0223 ran2 hou4 sil ta1 men5 jiu4
+A0002_S005_0_G0004_segment_0191 suo3 sil yi3 qi2 shi2 wo3 jue2 de5 hen3 duo1 zhe4 sil xie1 xiang3 sil fa3 qi2 shi2 shi4 hao3 dan4 sil shi4 ke3 neng2 sil
+A0002_S003_0_G0004_segment_0183 sil e4 que4 shi2 you2 qi2 shi4 wo3 mei2 you3 shen2 me5 yi4 shu4 xi4 sil bao1 sil
+A0002_S002_0_G0004_segment_0112 ran2 hou4 sil
+A0002_S005_0_G0004_segment_0217 sil en1 sil dui4
+A0002_S005_0_G0004_segment_0182 sil zui4 jin4 sil dang1 ran2 ye3 you3 sil
+A0002_S004_0_G0004_segment_0114 sil dui4 ma3 sil
+A0002_S006_0_G0004_segment_0149 sil hai2 shi4 mei2 you3 sil dao4 hen3 guang3 sil fan4 de5 yi1 sil ge4 sil
+A0002_S006_0_G0004_segment_0011 sil jue2 de5 shi4 shuo1 sil
+A0002_S004_0_G0004_segment_0219 sil en4 sil que4 shi2 sil
+A0002_S006_0_G0004_segment_0120 sil you3 shi2 hou4 ni3 hui4 sil kan4 dao4 bao4 dao4 sil nei4 sil xie1 xiao3 hai2 yong4 ta1 men5 sil fu4 mu3 sil qin1 de5 sil
+A0002_S003_0_G0004_segment_0194 sil zheng4 tong3 sil de5 nei4 sil xie1 hua4 sil jia1 a2 sil hai2 shi4 shen2 me5 ta1 men5 sil
+A0002_S001_0_G0004_segment_0009 sil ei1 wo3 sil zui4 sil jin4 de5 hua4 hai2 man2 xi3 huan1 sil kan1 sil
+A0002_S005_0_G0004_segment_0193 sil e4 you3 dai1 sil jin4 bu4 a4 sil
+A0002_S006_0_G0004_segment_0065 sil ye3 you3 ke3 neng2 sil
+A0002_S004_0_G0004_segment_0112 sil ni3 sil tai4 xiang1 sil xin4 ta1 de5 hua4 sil na1 sil
+A0002_S003_0_G0004_segment_0245 sil dui4 ya5 sil
+A0002_S006_0_G0004_segment_0165 sil na2 qu4 sil
+A0002_S002_0_G0004_segment_0123 sil jiu4 shi4 sil bi3 jiao4 sil
+A0002_S004_0_G0004_segment_0168 sil ta1 men5 sil zen3 me5 kan4 zi4 sil ji3 jiu4 shi4 jue2 de5 shuo1 you3 yi1 dian3 wen4 ti2 sil
+A0002_S005_0_G0004_segment_0048 sil dui4 ta1 men5 you3 yi1 ge4 nei4 ge4 sil
+A0002_S002_0_G0004_segment_0167 sil en4 sil
+A0002_S001_0_G0004_segment_0001 sil e4 sil
+A0002_S006_0_G0004_segment_0030 sil dui4 sil ta1 jiang3 shuo1 ta1 xiao3 shi2 hou4 shi4 er4 shi2 duo1 ran2 hou4 sil
+A0002_S005_0_G0004_segment_0168 sil o5 ta1 mei2 you3 sil
+A0002_S006_0_G0004_segment_0191 sil en1 dui4 dui4 sil dui4 dui4 sil
+A0002_S003_0_G0004_segment_0186 sil xiao3 hai2 zi5 ke3 neng2 hai2 xing2 sil
+A0002_S005_0_G0004_segment_0188 sil ni3 you3 sil yin3 shui4 sil ma5 sil
+A0002_S002_0_G0004_segment_0061 sil en1 sil
+A0002_S004_0_G0004_segment_0145 sil jiu4 shi4 shuo1 huo4 zhe3 shi4 sil
+A0002_S003_0_G0004_segment_0116 sil en1 sil
+A0002_S001_0_G0004_segment_0094 sil wo3 you4 kan4 han2 guo2 de5 han2 guo2 de5 wo3 zai4 sil kan4 nei4 sil ge4 sil
+A0002_S002_0_G0004_segment_0179 sil en5 jiu4 shi4 sil
+A0002_S004_0_G0004_segment_0148 sil biao1 zhun3 shi4 shuo1 kan4 zhe4 ge4 ren2 hao3 bu4 hao3 kan4 dan4 shi4 qi2 shi2 sil
+A0002_S001_0_G0004_segment_0088 sil dan4 shi4 nei4 ge4 bu2 shi4 kuai4 sil
+A0002_S005_0_G0004_segment_0249 sil jian4 sil kang1 jiu4 yao4 zao3 sil shui4 dan4 shi4 wo3 jue2 de5 sil ge4 ren2 lai2 sil jiang3 shi4 bi3 jiao4 sil kun4 nan2 sil
+A0002_S002_0_G0004_segment_0039 sil dan4 ye3 sil zhi1 shi4 qu4 yi1 sil tian1 ba5 ran2 hou4 qi2 ta1 dou1 sil shi4 sil zai4 sil
+A0002_S001_0_G0004_segment_0126 sil na1 xie1 shu1 ben3 lai2 jiang3 sil hai2 man2 sil hai2 man2 bu2 sil cuo4 wo3 shi4 xi3 huan1 sil du2 nei4 sil zhong3 sil
+A0002_S006_0_G0004_segment_0046 sil gong4 xian4 sil dui4 sil qi2 zhong4 yi1 sil ge4 suo3 yi3 sil
+A0002_S006_0_G0004_segment_0190 sil dui4 zhen1 de5 sil
+A0002_S002_0_G0004_segment_0049 sil o5 ying1 gai1 man2 bu2 sil cuo4 di2 sil jiu4 hen3 sil duo1 de5 you3 sil gu4 sil gong1 a2 zhe4 sil xie1 ran2 hou4 sil
+A0002_S002_0_G0004_segment_0085 sil hen3 sil gui4 ma5 sil
+A0002_S004_0_G0004_segment_0136 sil shi4 shuo1 bu2 zhong4 yao1 sil dui4 ma3 jiu4 shi4 shuo1 mei3 ge4 ren2 jiu4 kan4 nei4 zai4 sil dan4 shi4 sil shi4 shi2 shang4 sil jiu4 sil shi4 sil
+A0002_S001_0_G0004_segment_0162 sil wo3 ji4 de5 wo3 sil kan1 guo5 zui4 sil bi3 jiao4 sil bu2 ke3 pa4 de5 sil shi4 nei4 ge4 ni3 zhi1 dao4 sil
+A0002_S002_0_G0004_segment_0053 sil huan2 sil zhu1 ge2 sil ge2 sil
+A0002_S004_0_G0004_segment_0190 sil suo3 yi3 ta1 yao4 ying1 fen1 yi1 ge4 mo2 te4 er2 de5 gong1 zuo1 ta1 qu4 hua1 qian2 qu4 sil ba3 zi4 sil ji3 nong4 mei3 a5 sil
+A0002_S003_0_G0004_segment_0050 sil na1 ni3 shi4 xi3 huan1 sil e4 sil
+A0002_S002_0_G0004_segment_0036 sil en1 yi1 sil ge4 ta1 sil men5 de5 sil xue2 xiao4 sil
+A0002_S004_0_G0004_segment_0081 sil ke3 neng2 jiu4 shi4 ni3 bi3 jiao4 rong2 yi4 qu4 sil liao3 jie3 shuo1 o5 ke3 neng2 zhe4 ge4 ren2 de5 jiao3 du4 shi4 zhe4 yang4 zi5 huo4 zhe3 sil
+A0002_S003_0_G0004_segment_0044 sil en1 sil
+A0002_S002_0_G0004_segment_0221 en1 sil
+A0002_S004_0_G0004_segment_0156 sil ran2 hou4 ta1 sil fa1 chu1 lai2 ran2 hou4 jiu4 sil bian4 cheng2 ni3 wai4 zai4 de5 yi1 ge4 dong1 xi1 sil
+A0002_S001_0_G0004_segment_0174 sil wo3 wang4 ji4 sil le5 sil
+A0002_S002_0_G0004_segment_0008 sil ran2 hou4 sil jiu4 hen3 shao3 qu4 sil
+A0002_S005_0_G0004_segment_0112 sil dui4 sil nei4 ge4 yi1 yuan4 de5 hua4 wo3 ting1 shui4 sil ta1 men5 de5 chu2 shi1 you3 ying2 guo4 jiu4 shi4 peng1 ren4 de5 jiang3 o5 sil
+A0002_S003_0_G0004_segment_0182 jiu3 yue4 de5 shi2 hou4 wo3 xiang3 qu4 sil xue2 you2 sil hua4 sil
+A0002_S006_0_G0004_segment_0184 sil en4 sil
+A0002_S003_0_G0004_segment_0049 sil en5 nuo2 sil
+A0002_S001_0_G0004_segment_0014 sil qian2 yi1 zhen4 zi5 you3 xi3 huan1 yue4 sil du2 sil
+A0002_S006_0_G0004_segment_0194 sil yao1 sil xiao3 xin1 sil
+A0002_S002_0_G0004_segment_0215 sil zhong1 guo2 huan2 sil you3 ni3 jiang3 de5 han2 guo2 yin1 wei4 ni3 sil xue2 le5 han2 yu3 ma5 sil
+A0002_S006_0_G0004_segment_0193 sil yao1 xiao3 xin1 lo5 sil
+A0002_S004_0_G0004_segment_0070 sil qi2 shi2 ye3 yao1 kan4 lao3 ban3 la5 sil you3 sil
+A0002_S003_0_G0004_segment_0003 sil jiao4 yu4 sil
+A0002_S005_0_G0004_segment_0220 sil you2 qi2 shi4 zai4 xin1 jia1 sil po1 yin1 wei4 sil
+A0002_S004_0_G0004_segment_0018 sil hai2 sil shi4 shuo1 ni3 sil shi4 sil bi1 sil jiao4 sil
+A0002_S005_0_G0004_segment_0108 e2 dan4 shi4 sil
+A0002_S004_0_G0004_segment_0209 sil nv3 sheng1 yong3 yuan3 zai4 sil jian3 fei2 sil
+A0002_S004_0_G0004_segment_0084 sil en1 sil
+A0002_S001_0_G0004_segment_0025 sil en5 na1 sil
+A0002_S004_0_G0004_segment_0165 sil jiu4 shi4 shuo1 wo3 jue2 sil de5 la5 ge4 ren2 jue2 de5 sil shi4 sil
+A0002_S006_0_G0004_segment_0113 sil liao3 sil jie3 sil le5 jie3 sil
+A0002_S003_0_G0004_segment_0168 sil ta1 men5 sil de5 sil fu4 mu3 qin1 ke3 neng2 mei2 you3 zhe4 ge4 neng2 li4 ba3 ta1 men5 sil song4 qu4
+A0002_S003_0_G0004_segment_0018 sil ran2 hou4 en5 sil
+A0002_S001_0_G0004_segment_0221 sil ni3 shang4 ban1 de5 shi2 hou4 hui4 ma5 sil
+A0002_S003_0_G0004_segment_0238 sil dui4 dui4 suo3 yi3 sil wo3 jue2 de5 ye3 man2 sil bu2 sil cuo4 de5 sil suo3 yi3 sil
+A0002_S003_0_G0004_segment_0163 sil e4 sil jia1 zhang3 ya1 li4 er2 qie3 sil
+A0002_S005_0_G0004_segment_0088 sil zhu4 yuan4 de5 jing1 li4 ma3 sil
+A0002_S004_0_G0004_segment_0111 huo4 zhe3 shi4 shuo1 ke3 neng2 zhe4 ge4 dong1 xi1 sil
+A0002_S005_0_G0004_segment_0228 sil wo3 jue2 de5 zhe4 shi4 yi1 ge4 wen4 ti2 la1 sil zai4 sil xin1 jia1 po1 you2 qi2 shi4 yin1 wei4 sil
+A0002_S002_0_G0004_segment_0210 sil ting1 shuo1 bu2 sil shi4 hen3 sil an1 quan2 sil
+A0002_S004_0_G0004_segment_0204 sil en5 heng1 sil
+A0002_S005_0_G0004_segment_0007 sil dang1 ran2 wo3 ye3 mei2 you3 sil zai4 sil
+A0002_S004_0_G0004_segment_0207 sil e4 na4 shi4 mei2 you3 zhi3 shi4 shuo1 zui4 jin4 you3 yi1 sil
+A0002_S003_0_G0004_segment_0054 sil na4 ni3 yi3 sil qian2 wei4 shen2 ma5 hui4 xuan3 ze2 qu4 sil du2 sil dian4 nao3 sil ne5 sil
+A0002_S002_0_G0004_segment_0064 e4 sil zhi3 shi4 sil bi3 jiao4 yuan3 sil dan4 ye3 mei2 you3 hen3 duo1 you2 qi2 shi4 wo3 men5 qi2 shi2 sil
+A0002_S004_0_G0004_segment_0122 sil en5 sil
+A0002_S006_0_G0004_segment_0036 sil suo3 yi3 qi2 sil shi2 sil qi2 shi2 ye3 shi4 yue4 lai2 yue4 re4 liao4 xin1 sil jia1 po1 suo3 yi3 you3 shi2 hou4 sil
+A0002_S001_0_G0004_segment_0019 sil e4 sil
+A0002_S003_0_G0004_segment_0228 sil suo3 yi3 ta1 men5 qi2 shi2 e4 sil
+A0002_S001_0_G0004_segment_0235 sil wo3 ye3 zhi1 sil dao4 ni3 xi3 huan1 sil bu2 zhi3 shi4 ting1 yin1 yue4 ni3 ye3 xi3 huan1 jiu4 sil shi4 sil
+A0002_S006_0_G0004_segment_0119 sil qi2 shi2 hen3 duo1 xiao3 hai2 sil
+A0002_S001_0_G0004_segment_0045 sil en1 sil
+A0002_S001_0_G0004_segment_0139 sil dan4 shi4 yin1 wei4 wo3 jue2 de5 jiu4 shi4 yin1 wei4 ye3 sil shi4 hen3 duo1 sil shu1 ke3 neng2 sil ye3 sil bu2 shi4 shuo1 hen3 duo1 sil
+A0002_S001_0_G0004_segment_0179 sil ke4 pa4 sil
+A0002_S002_0_G0004_segment_0111 sil kao4 jin4 ta1 men5 nei4 ge4 sheng4 dan4 sil jie2 de5 nei4 sil ge4 ye4 sil shi4 jiu4 shi4 yi1 ge4 guang3 chang2 sil
+A0002_S006_0_G0004_segment_0008 sil bi3 jiao4 duo1 de5 sil xiang1 sil guan1 xing4 sil dui4 ma3 sil
+A0002_S001_0_G0004_segment_0056 sil ta1 men5 ying1 gai1 shi4 jiao4 sil ge1 sil ge1 ji1 sil hai2 shi4 shen2 me5 de5 wo3 ye3 sil
+A0002_S002_0_G0004_segment_0082 sil na1 ni3 dang1 sil shi2 shi4 sil zi4 ji3 qu4 ma5 hai2 sil shi4 sil
+A0002_S004_0_G0004_segment_0167 sil ni3 zuo4 dao4 sil
+A0002_S001_0_G0004_segment_0191 sil nuo2 ge4 sil shi4 xiang1 sil gang3 de5 shi4 ma5 sil dian4 ying3 sil shi4 sil shi4 nei4 sil ge4 e4 sil zhang1 guo2 rong2 na4 sil ge4 ba1 sil
+A0002_S002_0_G0004_segment_0126 sil jiu4 sil shi4
+A0002_S003_0_G0004_segment_0088 sil shuo1 wo3 jiu4 shuo1 zui4 jin4 sil
+A0002_S003_0_G0004_segment_0247 sil en1 sil
+A0002_S002_0_G0004_segment_0162 ran2 hou4 ta1 sil men5 hen3 duo1 dou1 sil shi4 sil
+A0002_S001_0_G0004_segment_0121 sil dan4 sil shi4 sil
+A0002_S006_0_G0004_segment_0183 sil o5 wo3 sil jue2 dei3 sil zhe4 shi4 bi3 jiao4 sil da2 dong4 wo3 de5 yin1 wei4 wo3 zhen1 di2 shi4 bi3 jiao4 cu1 sil xin1 sil
+A0002_S005_0_G0004_segment_0238 sil en1 sil
+A0002_S004_0_G0004_segment_0051 sil na1 hui4 sil gan3 jue2 hui4 bi3 jiao4 lei4 yi1 sil dian3 sil ran2 hou4 gan3 jue2 jiu4 xu1 yao1 sil
+A0002_S006_0_G0004_segment_0048 sil zhe4 shi4 sil xian4 zai4 ye3 you3 hen3 duo1 jiu4 shi4 nei4 sil xie1 sil e4 sil
+A0002_S002_0_G0004_segment_0050 sil en1 hai2 you3 sil en1 sil
+A0002_S005_0_G0004_segment_0005 e4 sil
+A0002_S002_0_G0004_segment_0154 sil zhe4 xie1 sil guo2 sil jia1 sil jiu4 shi4 jiu4 shi4 hen3 mei3 sil
+A0002_S004_0_G0004_segment_0117 sil na4 ge4 ce4 shi4 ye3 shi4 sil
+A0002_S006_0_G0004_segment_0035 sil en1 ying1 gai1 shi4 sil
+A0002_S003_0_G0004_segment_0219 sil en5 sil
+A0002_S002_0_G0004_segment_0055 er2 bu2 shi4 gu4 shi4 ma3 sil
+A0002_S003_0_G0004_segment_0128 sil zai4 sil da4 sil ku1 sil
+A0002_S005_0_G0004_segment_0129 sil ni3 you3 mai3 ma5 sil
+A0002_S001_0_G0004_segment_0091 sil na4 ge4 wo3 you3 kan4 na4 yi3 sil qian2 sil xian4 zai4 mei2 you3 zuo4 de5 ba1 suo3 yi3 jiu4 mei2 you3 sil zai4 sil kan4 sil
+A0002_S005_0_G0004_segment_0246 sil dui4
+A0002_S003_0_G0004_segment_0095 sil ke3 neng2 ni3 ke3 yi3 sil e4 sil xuan3 zhe4 xie1 sil bu4 yi1 yang4 de5 dong1 sil xi1 ni3 ye3 you3 yi1 ge4 sil
+A0002_S006_0_G0004_segment_0098 sil zhang3 dai4 de5 shi2 hou4 sil
+A0002_S001_0_G0004_segment_0004 sil e4 sil jiu4 shi4 xiu1 xian2 yu2 le4 sil
+A0002_S004_0_G0004_segment_0160 sil dui4 dui4 dui4 sil que4 shi2 wo3 jue2 sil de5 sil
+A0002_S004_0_G0004_segment_0196 jiu4 kan4 nuo2 ge4 yi1 sheng1 de5 ji4 shu4 sil
+A0002_S005_0_G0004_segment_0148 sil shi4 gu1 tou2 ma3 sil
+A0002_S001_0_G0004_segment_0216 sil e2 ye3 shi4 bu2 sil cuo4 sil dui4 sil dui4 sil dui4 sil
+A0002_S004_0_G0004_segment_0198 sil yin3 shuo1 shi4 zhe4 yang4 sil zi5 sil
+A0002_S005_0_G0004_segment_0211 sil en1 sil
+A0002_S005_0_G0004_segment_0036 sil si1 ren2 yi1 sil yuan4 sil dui4 ma3 sil suo3 yi3 wo3 jue2 de5 sil
+A0002_S003_0_G0004_segment_0161 sil zhe4 ge4 wen4 ti2 er2 qie3 sil jiu4 sil shi4 sil
+A0002_S006_0_G0004_segment_0002 sil hao4 wo3 men5 zui4 hou4 yi1 ge4 liao2 tian1 sil hua4 sil ti2 sil shi4 shu4 ma3 sil chan3 sil pin3 sil
+A0002_S004_0_G0004_segment_0216 sil en4 sil
+A0002_S005_0_G0004_segment_0224 wo3 jiu4 sil fa1 sil xian4 sil ta1 men5 you3 hen3 sil duo1 de5 nei4 zhong3 tang2 sil niao4 sil bing4 de5 nei4 sil ge4 sil
+A0002_S003_0_G0004_segment_0250 sil wei4 shen2 me5 sil
+A0002_S004_0_G0004_segment_0147 sil wo3 men5 de5 nei4 xie1 sil suo3 wei4 de5 sil
+A0002_S003_0_G0004_segment_0158 sil deng3 na1 ge4 you3 sil kong1 wei4 ran2 hou4 cai2 ba3 ta1 men5 sil hai2 zi5 song4 guo4 sil qu4
+A0002_S004_0_G0004_segment_0080 sil fei1 hei1 sil ji2 sil bai2 sil nei4 yi1 zhong3 ma5 hai2 shi4 shuo1 sil
+A0002_S003_0_G0004_segment_0102 sil en1 sil
+A0002_S002_0_G0004_segment_0079 sil o5 sil
+A0002_S005_0_G0004_segment_0204 sil e2 na4 xin1 zang1 sil
+A0002_S001_0_G0004_segment_0037 sil ta1 di2 sil
+A0002_S005_0_G0004_segment_0198 sil en4 sil
+A0002_S004_0_G0004_segment_0060 sil e4 sil
+A0002_S005_0_G0004_segment_0242 sil dui4 suo3 yi3 wo3 jue2 de2 sil
+A0002_S003_0_G0004_segment_0040 sil sui1 ran2 ye3 shi4 you3 yi1 sil dian3 sil
+A0002_S002_0_G0004_segment_0018 sil e4 sil wo3 jue2 sil de2 sil
+A0002_S005_0_G0004_segment_0161 sil ni3 shi4 sil ni3 shuo1 ni3 mei2 you3 zhu4 yuan4 dan4 shi4 ni3 kai1 sil guo5 dao1 sil suo3 yi3 ni3 shi4 sil jiu4 sil
+A0002_S002_0_G0004_segment_0062 sil en1 sil
+A0002_S001_0_G0004_segment_0113 sil en1 wo3 ye3 sil
+A0002_S001_0_G0004_segment_0242 sil en1 sil
+A0002_S006_0_G0004_segment_0024 sil shi4 yin1 wei4 xian4 sil zai4 sil
+A0002_S001_0_G0004_segment_0080 sil mei2 you3 wo3 zui4 jin4 e4 zui4 jin4 shi4 zai4 kan4 na3 ge4 mi4 shi4 da4 tao2 tuo1 dan4 shi4 yi3 jing1 wan2 le5 dao4 zui4 hou4 yi1 sil ji2 wo3 hai2 mei2 sil kan4 sil
+A0002_S005_0_G0004_segment_0110 sil en1 sil ye3 bu2 shi4 zui4 jin4 le5 you3 yi1 zhen4 zi5 yi3 sil qian2 ran2 hou4 sil
+A0002_S003_0_G0004_segment_0211 sil ni3 shi4 xi3 huan1 ni3 shi4 xiang3 sil zuo4 na5 yi1 sil zhong3 sil jiu4 shi4 sil
+A0002_S005_0_G0004_segment_0106 sil zhe4 yi1 dian3 wo3 dao4 shi4 man2 hao3 qi2 de5 sil
+A0002_S005_0_G0004_segment_0146 sil shou3 sil jiu4 shi4 sil
+A0002_S006_0_G0004_segment_0116 sil en1 sil
+A0002_S005_0_G0004_segment_0060 sil er2 qie3 sil ta1 yi1 ci4 e4 sil jiu4 shi4 sil
+A0002_S002_0_G0004_segment_0067 sil dui4 dui4 sil dui4 sil
+A0002_S004_0_G0004_segment_0011 sil pu3 sil bian4 de5 yi1 sil ge4 sil
+A0002_S005_0_G0004_segment_0171 sil en1 sil
+A0002_S005_0_G0004_segment_0115 sil nei4 ni3 you3 wen4 sil ta1 shi4 zhen1 de5 hao3 sil chi1 ma3 sil
+A0002_S003_0_G0004_segment_0080 sil ping2 chang2 de5 nei4 xie1 gao1 sil ji2 de5 zhu3 fan4 er2 sil shi4 nei4 zhong3 sil xiao3 sil fan4 zhong1 sil xin1 de5 nei4 sil xie1 shi4 ma3 sil
+A0002_S003_0_G0004_segment_0112 sil jing1 shen2 zhuang4 tai4 sil
+A0002_S004_0_G0004_segment_0155 sil ni3 li3 mian4 sil
+A0002_S001_0_G0004_segment_0066 sil a4 sil dui4 a4 sil jiang3 le5 nuo2 me5 sil
+A0002_S003_0_G0004_segment_0027 sil ta1 sil shi4 yi3 sil qian2 suan4 sil shi4 sil si1 li4 dan4 shi4 hou4 lai2 sil
+A0002_S005_0_G0004_segment_0057 sil ta1 sil zhi3 you3 yi1 ge4 ren2 er2 qie3 shi4 sil
+A0002_S004_0_G0004_segment_0015 sil ni3 sil
+A0002_S002_0_G0004_segment_0068 sil jiu4 hao3 xiang4 yue4 nan2 ying1 gai1 ye3 sil man2 sil you3 hen3 mei3 di2 di4 sil fang1 yin4 ni2 ye3 shi4 sil yi1 ge4 hen3 mei3 di1 di4 sil fang1 sil
+A0002_S002_0_G0004_segment_0083 sil ni3 you3 sil chuan1 sil ta1 men5 de5 nei4 ge4 han2 sil fu2 sil pai1 sil zhao4 ma3 sil
+A0002_S003_0_G0004_segment_0206 en4 sil
+A0002_S002_0_G0004_segment_0094 sil en1 sil ying1 gai1 man2 bu2 sil cuo4 di4 sil
+A0002_S006_0_G0004_segment_0094 sil bi3 jiao4 sil
+A0002_S001_0_G0004_segment_0205 sil jiu4 shi4 bi4 jiao4 mei2 you3 shen2 me5 sil ji4 nian4 xing4 wo3 jue2 de5 na4 ge4 zhou1 xing1 chi2 de5 ni3 hui4 ji4 de5 nei4 ge4 sil gu4 shi4 nei4 xie1 xiao4 sil dian3 a3 shi2 me5 di4 sil
+A0002_S004_0_G0004_segment_0109 sil ni3 ye3 you3 sil you3 ye3 you3 sil ke3 neng2 shuo1 ni3 bu4 hui4 di4 yi1 bu4 neng2 sil fa1 jue2 dao4 bie2 ren2 de5 sil
+A0002_S002_0_G0004_segment_0183 sil ta1 men5 you3 yi1 ge4 di4 fang1 ta1 men5 shi4 sil bu2 xu1 yao1 sil qian1 zheng4 jiu4 neng2 sil qu4 de5 sil
+A0002_S006_0_G0004_segment_0134 sil dan4 shi4 wo3 jue2 sil de2 sil
+A0002_S003_0_G0004_segment_0117 sil suo3 yi3 sil er2 qie3 e4 sil
+A0002_S003_0_G0004_segment_0189 wo3 shi4 sil bi3 jiao4 xi3 sil huan1 sil
+A0002_S004_0_G0004_segment_0012 sil xin1 li3 sil ce4 sil shi4 sil
+A0002_S001_0_G0004_segment_0157 sil dan4 shi4 wo3 jue2 de5 sil fan3 er2 jiu4 shi4 mei3 sil guo2 de5 hai2 sil hao3 yi1 dian3 sil ke3 neng2 jiu4 shi4 ta1 men5 shi4 bi3 jiao4 sil shan4 sil chang2 sil
+A0002_S005_0_G0004_segment_0176 sil zui4 hao3 hai2 shi4 sil
+A0002_S002_0_G0004_segment_0081 sil na1 sil shi4 man2 bu2 sil cuo4 de5 sil
+A0002_S003_0_G0004_segment_0169 sil you4 er2 yuan2 sil
+A0002_S003_0_G0004_segment_0118 sil jiu4 sil shi4 yin1 wei4 zhe4 ge4 sil zhe4 jian4 shi4 fa1 sheng1 sil bu2 jiu3 zhi1 hou4 yin1 wei2 wo3 de5 gong1 zuo1 sil shi4 sil
+A0002_S003_0_G0004_segment_0014 sil en1 sil
+A0002_S004_0_G0004_segment_0087 sil hao4 sil
+A0002_S002_0_G0004_segment_0029 sil en1 sil
+A0002_S002_0_G0004_segment_0060 sil wa1 hen3 duo1 sil
+A0002_S002_0_G0004_segment_0222 ying1 gai1 man2 bu2 cuo4 sil fei1 lv4 sil bin1 wo3 ye3 mei2 you3 sil qu4 sil guo5 ni3 you3 qu4 sil guo5 ma3 sil
+A0002_S002_0_G0004_segment_0052 sil tian1 na4 sil
+A0002_S003_0_G0004_segment_0130 sil gang1 hao3 you4 sil
+A0002_S005_0_G0004_segment_0124 sil yi1 yao4 sil bao3 xian3 di2 zhong4 yao1 xing4 ran2 hou4 ta1 men5 ke3 neng2 mei2 you3 zao3 yi1 dian3 mai3 sil
+A0002_S003_0_G0004_segment_0041 sil dan4 shi4 xian4 zai4 wo3 zhen1 de5 sil jue2 de5 shuo1 yin1 wei4 shi2 jian1 zhen1 de5 hen3 sil bao3 sil gui4 sil
+A0002_S002_0_G0004_segment_0137 sil bu2 tong2 sil de5 sil ren2 sil ba5 sil jiu4 you3 yi1 xie1 jie1 sil chu4 hao3 xiang4 ni3 sil
+A0002_S002_0_G0004_segment_0035 sil hai2 sil qu4 le5 sil
+A0002_S005_0_G0004_segment_0078 sil mei2 you3 sil xiang4 wo3 men5 de5 yi1 xie1 lin2 sil ju1 na1 me5 zao1 sil gao1 yin1 wei4 sil
+A0002_S006_0_G0004_segment_0087 sil e4 sil
+A0002_S004_0_G0004_segment_0210 sil dan4 shi4 nv3 sheng1 yong3 yuan3 zai4 jian3 sil fei2
+A0002_S001_0_G0004_segment_0067 sil jiu3 de5 gu4 shi4 ta1 hai2 shi4 zai4 yi1 sil ban3 sil
+A0002_S005_0_G0004_segment_0134 sil o5 wo3 yi3 qian2 de5 ye3 shi4 zhe4 yang4 zi5 dan4 shi4 hou4 lai2 sil
+A0002_S002_0_G0004_segment_0157 sil dui4 sil bu2 zhi3 shi4 xue3 sil shan1 ta1 men5 de5 sil
+A0002_S005_0_G0004_segment_0032 sil zheng4 fu3 yi1 yuan4 sil
+A0002_S006_0_G0004_segment_0145 yao1 sil jiu4 shi4 zuo4 bu4 tong2 dong1 sil xi1 ni3 yao4 dai4 hen3 duo1 dong1 xi1 chu1 men2 sil dan4 shi4 ni3 xian4 zai4 ke3 neng2 jiu4 sil dai4 yi1 ge4 dian4 hua4 sil chu1 men2 jiu4 hao3 sil
+A0002_S003_0_G0004_segment_0009 sil en4 sil
+A0002_S005_0_G0004_segment_0210 sil o5 sil suo3 yi3 shi4 yin3 shi2 xi2 guan4 hu2 sil sheng1 huo2 xi2 guan4 de5 sil wen4 ti2 ma3 sil
+A0002_S003_0_G0004_segment_0203 sil en4 sil suo3 yi3 sil shi4 bi3 sil jiao4 sil kun4 nan2 la5 sil
+A0002_S002_0_G0004_segment_0158 en1 sil bu2 zhi3 shi4 dong1 tian1 ba5 qi2 ta1 ji4 sil jie1 ye3 ying1 gai1 hen3 mei3 yin1 wei4 you2 qi2 shi4 sil
+A0002_S001_0_G0004_segment_0185 sil wo3 zhi1 dao4 zui4 jin4 you3 yi1 ge4 sil
+A0002_S002_0_G0004_segment_0100 sil bi1 jiao4 ji4 yi4 shen1 ke4 shi4 yin1 wei2 sil
+A0002_S003_0_G0004_segment_0084 sil di4 er4 ye3 jiu4 shi4 sil
+A0002_S003_0_G0004_segment_0242 sil qi2 shi2 sil
+A0002_S004_0_G0004_segment_0193 sil ji4 shu4 a2 sil
+A0002_S001_0_G0004_segment_0085 sil o5 sil
+A0002_S001_0_G0004_segment_0173 sil dan4 shi4 shi4 man2 chu1 ming2 de5 yi1 ge4 hao3 xiang4 shi4 sil
+A0002_S001_0_G0004_segment_0183 sil na3 ge4 san1 sil shi4 shen2 sil shen2 me5 sil san1 sheng1 sil san1 sil shi4 sil
+A0002_S004_0_G0004_segment_0169 sil shi4 xin1 li3 de5 wen4 ti2 sil suo3 yi3 sil ru2 guo3 shi4 zhe4 sil yang4 zi5 de5 hua4 na1 jiu4 yao1 qu4 sil
+A0002_S003_0_G0004_segment_0154 sil jiu4 shi4 na5 yi1 sil xie1 xue2 xiao4 shi4 hao3 na5 sil xie1 xue2 xiao4 sil bu4 hao3 ran2 hou4 sil jiu4 sil
+A0002_S005_0_G0004_segment_0100 sil ta1 jiang3 sil mei2 you3 bu4 hao3 sil chi1 sil
+A0002_S005_0_G0004_segment_0064 sil en1 sil
+A0002_S003_0_G0004_segment_0005 sil e4 wo3 zhi3 xiang3 sil liao3 sil jie4 sil jiu4 shi4 sil
+A0002_S005_0_G0004_segment_0229 sil xian4 zai4 hen3 duo1 nian2 qing1 ren2 you4 hen3 ai4 he1 nei4 ge4 sil pao4 pao4 sil cha2 la1 sil shen2 me5 de5 sil
+A0002_S002_0_G0004_segment_0016 sil en1 sil
+A0002_S006_0_G0004_segment_0148 sil sui1 ran2 ta1 men5 you3 xian4 zai4 zai4 tui1 guang3 you2 qi2 shi4 sil zai4 zhe4 ge4 yi4 qing2 sil de5 shi2 hou4 dan4 shi4 sil
+A0002_S006_0_G0004_segment_0158 sil you3 dan4 shi4 sil gang1 kai1 shi3 sil ba1 wo3 jue2 de5 bu2 sil shi4 sil shuo1 hen3 pu3 bian4 sil
+A0002_S006_0_G0004_segment_0050 sil huo4 zhe3 pin3 sil pai2 sil ta1 sil men5 you3 nei4 sil xie1 sil sheng3 sil dian4 suo3 yi3 xin1 sil jia1 po1 you3 nei4 sil ge4 shen2 me5 sil
+A0002_S004_0_G0004_segment_0108 sil ye3 sil shi4 sil e4 ru2 sil guo3 you3 shi2 ni3 sil ying4 xing4 jiu4 shi4 zhe4 yang4 gui1 sil ding4 sil
+A0002_S005_0_G0004_segment_0055 sil zhi1 rang4 yi1 ge4 ren2 qu4 sil
+A0002_S005_0_G0004_segment_0162 sil o5 sil na4 hai2 sil hao3 sil shi4 yao4 ma2 zui4 ma5 sil quan2 shen1 ma2 zui4 sil
+A0002_S002_0_G0004_segment_0021 sil e4 han2 sil guo2 sil
+A0002_S006_0_G0004_segment_0205 sil yi3 qian2 de5 dong1 xi1 bi3 jiao4 nai4 la5 xian4 zai4 de5 dong1 xi1 sil bi3 jiao4 sil bu2 nai4 sil
+A0002_S004_0_G0004_segment_0144 sil you3 mei2 you3 hen3 sil shou4 la1 sil
+A0002_S004_0_G0004_segment_0195 sil qi2 shi2
+A0002_S001_0_G0004_segment_0024 e4 sil
+A0002_S003_0_G0004_segment_0108 sil wo3 men5 dang1 ran2 ye3 bu2 zhi1 dao4 sil wei4 shi2 ma5 sil ta1 sil
+A0002_S002_0_G0004_segment_0148 wo3 shi4 bi3 jiao4 sil xi3 huan1 kan1 sil a2 sil nei4 sil xie1 sil
+A0002_S004_0_G0004_segment_0170 sil jie1 shou4 yi1 xie1 xin1 li3 zhi4 liao2 sil
+A0002_S005_0_G0004_segment_0138 sil ran2 sil hou4 ta1 men5 jiu4 sil sui2 bian4 luan4 sil qu4 sil kan4 yi1 sheng1 a2 shen2 me5 jiu4 shi4 sil
+A0002_S001_0_G0004_segment_0103 en1 sil
+A0002_S001_0_G0004_segment_0074 e4 kan1 sil zong1 yi4 ba5 sil wo3 sil
+A0002_S002_0_G0004_segment_0185 sil na1 bian1 shi4 bi3 jiao4 wei1 xian3 yin1 wei4 ta1 men5 hen3 sil kao4 sil jin4 sil bei3 ji2 sil ma5 sil
+A0002_S004_0_G0004_segment_0120 sil zhen1 zheng4 de5 sil dong3 huo4 sil zhe3 shi4 shuo1 ta1 you3 yi1 xie1 sil gai3 sil bian4 sil
+A0002_S001_0_G0004_segment_0128 sil na1 ni3 na1 ni3 kuai4 bu4 hui4 jiu4 shi4 sil
+A0002_S001_0_G0004_segment_0105 sil you3 ma3 sil
+A0002_S004_0_G0004_segment_0133 sil wo3 sil wo3 sil
+A0002_S003_0_G0004_segment_0202 sil you2 qi2 shi4 sil xi1 yang2 ta1 sil men5 zai4 sil xi1 yang2 sil jiu4 shi4 wai4 sil guo2 xue2 sil de5 sil
+A0002_S002_0_G0004_segment_0135 sil dui4 ya5 sil suo3 yi3 jiu4 sil
+A0002_S001_0_G0004_segment_0177 suo3 sil yi3 wo3 jue2 de5 ou1 mei3 ye3 hai2 sil hao3 sil
+A0002_S002_0_G0004_segment_0108 sil en1 sil
+A0002_S004_0_G0004_segment_0177 sil na1 ni3 yi1 ge4 yue4 zhi1 zhong1 hui4 sil
+A0002_S006_0_G0004_segment_0180 sil ta1 men5 zhu3 da3 jiu4 shi4 shuo1 pin2 guo3 sil
+A0002_S001_0_G0004_segment_0116 sil dan4 shi4 ta1 de5 sil
+A0002_S001_0_G0004_segment_0223 sil o5 e2 sil
+A0002_S001_0_G0004_segment_0148 sil ni3 shi4 sil xi3 huan1 kan4 sil e4 na1 sil zhong3 sil
+A0002_S005_0_G0004_segment_0090 sil wei4 shen2 me5 sil
+A0002_S001_0_G0004_segment_0070 sil san1 shi2 le5 sil
+A0002_S004_0_G0004_segment_0078 na4 ni3 shi4 sil kan4 dong1 sil xi1 hui4 sil bi1 sil jiao4 sil
+A0002_S004_0_G0004_segment_0150 sil di4 yi1 ni3 you3 mei2 you3 jiu4 shi4 shuo1 sil da2 li3 hao3 zi4 ji3 sil yao4 sil gan4 sil jing4 sil dui4 ma5 sil
+A0002_S005_0_G0004_segment_0122 sil nian2 sil qing1 bi3 jiao4 nian2 sil qing1 yi1 sil xie1 de5 nei4 xie1 ren2 sil
+A0002_S004_0_G0004_segment_0175 sil ni3 jue2 de2 hao3 kan4 de5 ren2 hui4 bu4 hui4 sil
+A0002_S005_0_G0004_segment_0143 sil en1 sil
+A0002_S005_0_G0004_segment_0245 sil dan4 shi4 sil wo3 jue2 de5 wo3 sil ge4 ren2 lai2 jiang3 zui4 sil zui4 nan2 sil jie4 de5 yi1 ge4 jiu4 shi4 sil zao3 sil shui4 sil
+A0002_S003_0_G0004_segment_0274 sil ta1 men5 qi2 ta1 ke1 mu4 dou1 shi4 yong4 mu3 yu3 sil jiu4 shi4 yong4 sil zhong1 wen2 a5 hai2 shi4 shen2 me5 sil jiao4 sil
+A0002_S006_0_G0004_segment_0188 sil dui4 er2 qie3 wo3 jue2 de2 bu2 zhi3 shi4 zhe4 yang4 zi5 er2 qie3 ni3 ye3 sil bu2 zhi1 dao4 ta1 men5 zai4 wang3 shang4 jie1 chu4 de5 ren2 shi4 shei2 sil
+A0002_S005_0_G0004_segment_0197 sil ai2 zheng4 sil
+A0002_S001_0_G0004_segment_0046 sil en1 mei2 you3 le5 yin1 wei2 zhe4 ge4 sil ke3 neng2 yin1 wei2 sil ta1 men5 sil shi4 sil
+A0002_S002_0_G0004_segment_0214 sil di1 sheng1 ya4 zhou1 cheng2 shi4 rong2 yi4 gou1 tong1 de5 ye3 sil jiu4 sil shi4 sil
+A0002_S002_0_G0004_segment_0009 sil hen3 sil yi1 xie1 di4 sil fang1 a4 sil
+A0002_S002_0_G0004_segment_0103 sil sheng4 dan4 sil jie2 de5 nei4 sil xie1 sil
+A0002_S005_0_G0004_segment_0013 e4 sil
+A0002_S006_0_G0004_segment_0181 sil e4 sil pin2 guo3 dian4 hua4 hen3 nai4 sil shuai1 ran2 hou4 sil shen2 me5 de5 sil
+A0002_S006_0_G0004_segment_0144 sil ran2 hou4 ke3 neng2 sil ni3 sil
+A0002_S003_0_G0004_segment_0172 sil e4 sil
+A0002_S001_0_G0004_segment_0060 sil suo3 yi3 xian4 zai4 sil zhe4 sil ge4 gu4 shi4 yin1 wei2 sil
+A0002_S001_0_G0004_segment_0059 sil ta1 de5 sil gu4 shi4 shi4 sil jiang3 wu3 sil bu4 sil fen4 sil fen1 sil wu3 sil bu4 sil fen4 lai2 sil jiang3 sil de5 sil
+A0002_S002_0_G0004_segment_0225 sil jiu4 sil shi4 sil you3 yi1 xie1 di4 sil fang1 sil yin3 shui4 sil shi4 wei1 sil xian3 sil dan4 shi4 you3 xie1 di4 sil fang1 you4 yin3 sil shuo1 hen3 sil piao3 liang4 sil
+A0002_S003_0_G0004_segment_0192 sil en1 sil ta1 men5 hao3 xiang4 mei2 you3 yin1 wei4 sil
+A0002_S004_0_G0004_segment_0097 sil en1 sil yuan2 lai2 ru2 ci3 sil
+A0002_S001_0_G0004_segment_0111 en5 ran2 hou4 chu2 le5 zhe4 ge4 yue4 du2 de5 hua4 ni3 you3 ni3 sil you3 sil du2 shen2 me5 ma3 sil chu2 le5 ni3 gang1 cai2 jiang3 de5 yi3 tian1 tu2 long2 ji4 a4 sil
+A0002_S006_0_G0004_segment_0147 sil shou3 ji1 fu4 fei4 sil
+A0002_S005_0_G0004_segment_0027 sil e4 qu4 zheng4 fu3 yi1 yuan4 ne5 hai2 shi4 si1 ren2 yi1 yuan4 wo3 men5 you3 zhe4 ge4 xuan3 sil ze2 sil
+A0002_S002_0_G0004_segment_0209 sil hai2 sil hao3 sil ba1 zhi3 shi4 shuo1 sil
+A0002_S006_0_G0004_segment_0173 sil hao4 sil xiang4 ying1 gai1 sil an1 zhuo2 ye3 you3 ba5 jiu4 shi4 gu3 sil ge1 de5 sil mei2 you3 ma3 sil
+A0002_S004_0_G0004_segment_0115 sil en4 sil
+A0002_S003_0_G0004_segment_0262 sil yao1 zuo4 shen2 me5 sil ran2 hou4 wo3 jue2 sil de5 sil
+A0002_S003_0_G0004_segment_0232 sil ye3 shi4 sil jiu4 shi4 lei4 si4 de5 ta1 men5 ke3 neng2 xian4 zai4 de5 gong1 zuo4 ran2 hou4 ta1 men5 qu4 sil ti2 sheng1 zi4 ji3
+A0002_S002_0_G0004_segment_0001 sil ha1 lou5 ni3 hao3 sil
+A0002_S003_0_G0004_segment_0147 wei4 lai2 de5 zhe4 sil xie1 sil xue2 ye4 de5 zhe4 xie1 sil jia1 zhang3 ta1 men5 sil
+A0002_S001_0_G0004_segment_0201 sil e4 sil jue2 de5 nei4 xie1 zhou1 sil xing1 chi2 de5 ye3 bu2 sil cuo4 sil
+A0002_S003_0_G0004_segment_0241 sil yuan4 bu2 yuan4 yi4 qu4 sil xue2 le5 sil suo3 yi3 wo3 jue2 de5 sil
+A0002_S001_0_G0004_segment_0125 sil dui4 sil
+A0002_S005_0_G0004_segment_0020 sil e4 sil hui4 bi3 jiao4 sil
+A0002_S006_0_G0004_segment_0007 hen3 duo1 de5 sil
+A0002_S005_0_G0004_segment_0037 sil zhe4 shi4 yi1 ge4 hen3 hao3 de5 sil
+A0002_S003_0_G0004_segment_0259 sil shi4 he2 ni3 zi4 ji3 de5 dong1 xi1 yin1 wei4 sil
+A0002_S004_0_G0004_segment_0046 sil e4 sil nei4 sil xiang4 sil ba5 wo3 jue2 sil de5 sil
+A0002_S005_0_G0004_segment_0149 sil shi4 gu3 sil tou5 lie4 a5 sil
+A0002_S005_0_G0004_segment_0215 sil ni3 zhen1 de5 yao4 e4 sil xiao3 xin1 de5 qu4 sil
+A0002_S006_0_G0004_segment_0138 sil en1 sil wo3 sil yi3 qian2 de5 hua4 jiu4 shuo1 sil bie2 sil
+A0002_S003_0_G0004_segment_0002 e4 sil wo3 men5 sil xian4 sil xian4 zai4 liao2 sil di1 jiu4 shi4 sil e4 sil
+A0002_S005_0_G0004_segment_0084 sil e4 sil
+A0002_S006_0_G0004_segment_0164 sil jiu4 kuai4 bei4 bie2 ren2 sil
+A0002_S002_0_G0004_segment_0044 sil ti1 sil zi5 ba5 dan4 shi4 bi3 jiao4 sil xie2 sil suo3 yi3 wo3 hai2 sil ji4 de5 hai2 man2 sil
+A0002_S006_0_G0004_segment_0111 sil ni3 sil zui4 sil chang2 yong4 de5 shi4 sil shen2 me5 ni3 hui4 yong4 lai2 sil ding4 can1 sil ma3 hai2 shi4 yong4 sil
+A0002_S005_0_G0004_segment_0172 sil liao4 jie3 liao3 sil jie3 sil en1 sil
+A0002_S003_0_G0004_segment_0081 sil dui4 dui4 dui4 ting1 shuo1 sil jiu4 shi4 you3 yi1 xie1 zhe4 xie1 de5 ta1 men5 sil jiao4 ni3 sil zhu3 zhe4 sil xie1 de5 yin1 wei4 sil
+A0002_S002_0_G0004_segment_0201 wo3 yi1 zhi2 hao3 sil qi2 liao4 sil
+A0002_S005_0_G0004_segment_0173 sil suo3 yi3 sil
+A0002_S004_0_G0004_segment_0208 sil you3 xiang3 sil fa3 yao1 jian3 yi1 dian3 sil fei2 sil
+A0002_S004_0_G0004_segment_0091 sil a1 sil
+A0002_S002_0_G0004_segment_0142 sil shi4 jie4 ge4 sil
+A0002_S003_0_G0004_segment_0061 sil wo3 jue2 dei3
+A0002_S002_0_G0004_segment_0072 sil en1 liao4 sil jie3 liao4 sil
+A0002_S004_0_G0004_segment_0180 sil en5 sil
+A0002_S004_0_G0004_segment_0183 sil e4 ru2 guo3 qu4 sil dong4 sil dao1 nei4 sil jiu4 hen3 sil gui4 la5 sil
+A0002_S005_0_G0004_segment_0069 sil jiu4 bu4 neng2 you3 ren2 qu4 yi1 yuan4 kan4 bing4 sil le5 sil
+A0002_S006_0_G0004_segment_0027 sil qi2 shi2 shi4 quan2 qiu2 nuan3 hua1 de5 wen4 sil ti2 sil
+A0002_S006_0_G0004_segment_0141 sil da2 dian4 hua4 ni3 xu1 yao4 da2 yi1 ge4 sil dian4 hua4 sil
+A0002_S006_0_G0004_segment_0090 sil dan4 sil shi4 ye3 hen3 rong2 yi4 rang4 wo3 men5 sil chen2 mi2 yu2 sil
+A0002_S002_0_G0004_segment_0121 sil e4 sil ke3 neng2 wo3 men5 dang1 shi2 hai2 hen3 sil xiao3 sil suo3 yi3 sil jiu4 shi4 sil
+A0002_S004_0_G0004_segment_0141 sil hen3 duo1 bu2 shi4 shuo1 sil
+A0002_S003_0_G0004_segment_0234 sil ta1 men5 sil ke3 neng2 yin1 wei2 ta1 men5 de5 sil gong1 sil zuo1 sil bei4 sil
+A0002_S005_0_G0004_segment_0066 sil e4 wo3 sil wo3 ma1 ma1 shi4 xing1 qi1 sil er4 sil kai1 di4 sil dao1 ran2 hou4 ta1 xing1 qi1 san1 jiu4 sil chu1 yuan4 sil
+A0002_S001_0_G0004_segment_0064 sil jiu4 shi4 di4 sil
+A0002_S001_0_G0004_segment_0178 sil jiu4 shi4 ya4 zhou1 de5 bi3 jiao4 kong3 bu4 sil pian4 sil bi3 jiao4 sil
+A0002_S003_0_G0004_segment_0204 sil en4 sil
+A0002_S002_0_G0004_segment_0048 sil na4 ni3 you3 qu4 sil
+A0002_S003_0_G0004_segment_0121 sil gang1 hao3 nei4 yi1 tian1 wo3 qu4 di4 sil shi2 hou4 sil
+A0002_S002_0_G0004_segment_0127 sil e4 sil wo3 men5 sil
+A0002_S001_0_G0004_segment_0086 sil dan4 shi4 nei4 sil ge4 sil
+A0002_S002_0_G0004_segment_0113 sil bu2 zhi3 wo3 men5 ran2 hou4 hai2 you3 sil qi2 ta1 de5 he2 chang4 tuan2 sil shi4 sil jie4 sil ge4 di4 sil di4 sil ran2 hou4 sil
+A0002_S004_0_G0004_segment_0107 sil en4 dui4 wo3 jiao4 de2 sil ye3 sil bu2 cuo4 dan4 sil shi4 sil
+A0002_S002_0_G0004_segment_0128 sil e4 sil chang4 wan2 ge1 nei4 sil ge4 sil bu4 fen1 wo3 men5 sil zou3 le5 zhi1 hou4 sil
+A0002_S005_0_G0004_segment_0208 sil na1 sil qi2 shi2 xin1 zang1 bing4 de5 sil yuan2 yin1 shi4 shen2 me5 sil
+A0002_S004_0_G0004_segment_0163 sil shen1 ti3 shi4 ni3 zi4 ji3 de5 la5 sil
+A0002_S002_0_G0004_segment_0074 e2 wei4 shen2 me5 ne5 sil
+A0002_S005_0_G0004_segment_0174 sil ai1 ya5 sil qi2 shi2 sil
+A0002_S004_0_G0004_segment_0118 sil gen1 ju1 ni3 zi4 ji3 de5 da2 an4 dan4 shi4 ye3 you3 ke3 neng2 you3 xie1 ren2 sil
+A0002_S006_0_G0004_segment_0104 sil shi4 di2 sil
+A0002_S005_0_G0004_segment_0021 sil en1 li4 sil hai4
+A0002_S004_0_G0004_segment_0221 sil en4 sil
+A0002_S002_0_G0004_segment_0037 sil xiao3 sil xue2 sil
+A0002_S001_0_G0004_segment_0130 sil wo3 you3 shi2 hou4 hui4 jiu4 shi4 xiang3 shuo1 e2 ru2 guo3 yao4 sil pai1 sil cheng2 dian4 sil ying3 a1 sil
+A0002_S003_0_G0004_segment_0072 sil e4 ke1 sil mu4 zhi1 hou4 neng2 xuan3 ze2 de5 yi1 sil xie1 sil
+A0002_S006_0_G0004_segment_0150 sil e4 sil
+A0002_S004_0_G0004_segment_0101 sil yao4 liao4 jie3 yi1 ge4 ren2 ye3 sil bu2 zhi3 shi4 shuo1 e4 sil zhi1 shi4 wen4 ta1 zhe4 sil xie1 dan4 shi4 ye3 sil
+A0002_S004_0_G0004_segment_0164 sil suo3 yi3 ye3 mei2 you3 shuo1 dui4 hai2 shi4 cuo4 dan4 shi4 sil
+A0002_S005_0_G0004_segment_0160 sil na1 sil
+A0002_S001_0_G0004_segment_0120 sil dui4 dui4 dui4 wo3 ye3 shi4 hen3 xi3 huan1 nei4 yi1 sil zhong3 sil
+A0002_S003_0_G0004_segment_0053 sil o5 sil yuan2 lai2 sil
+A0002_S003_0_G0004_segment_0173 sil jiu4 jiu4 jiu4 sil
+A0002_S005_0_G0004_segment_0127 sil ni3 sheng1 bing4 de5 shi2 hou4 sil
+A0002_S006_0_G0004_segment_0069 sil dui4 dan4 shi4 ni3 de5 sil
+A0002_S001_0_G0004_segment_0149 sil e4 sil
+A0002_S002_0_G0004_segment_0224 sil en1 sil
+A0002_S003_0_G0004_segment_0123 sil ta1 jiu4 sil
+A0002_S006_0_G0004_segment_0056 sil dao3 zhi4 ta1 men5 de5 gong1 neng2 sil bu4 shi4 na4 me5 de5 hao3 wo3 bu2 zhi1 dao4 sil zhe4 shi4 sil dui4 di4 sil
+A0002_S001_0_G0004_segment_0134 sil a1 ni3 sil mo4 you3 sil
+A0002_S002_0_G0004_segment_0151 zi4 ran2 sil feng1 jing3 sil
+A0002_S001_0_G0004_segment_0027 en4 sil
+A0002_S003_0_G0004_segment_0022 sil jiu4 qu4 sil du2 sil
+A0002_S003_0_G0004_segment_0180 sil e4 sil
+A0002_S001_0_G0004_segment_0156 sil a1 dui4 tai4 sil guo2 de5 ye3 shi4 hen3 sil ke3 sil pa4 sil
+A0002_S002_0_G0004_segment_0092 sil dan4 shi4 wo3 sil jiu4 yin3 sil shuo1 you3 zhe4 sil ge4 sil
+A0002_S004_0_G0004_segment_0027 sil le5 sil jie4 liao4 sil jie3 sil
+A0002_S004_0_G0004_segment_0176 sil guo5 de5 bi3 jiao4 rong2 yi4 sil
+A0002_S003_0_G0004_segment_0096 sil wen2 ping2 huo4 zhe3 yi1 sil ge4 sil chu1 lu4 sil yi1 ge4 sil dui4 yi1 ge4 sil gong1 zuo4 zhe4 yang4 zi5 sil
+A0002_S006_0_G0004_segment_0212 sil en1 dan4 sil shi4 kan4 kan4 shi4 sil pin2 shi4 hao4 le5 sil
+A0002_S005_0_G0004_segment_0219 e2 sil jiang3 dao4 zhe4 ge4 wo3 jue2 dei3 ying1 gai1 sil tang2 niao4 sil bing4 ye3 sil shi4 yi1 ge4 wen4 ti2 sil yin1 wei4 sil
+A0002_S003_0_G0004_segment_0020 sil jiu4 shi4 sil suan4 shi4 hao3 xiang4 wai4 sil guo2 de5 sil gao1 sil zhong1 zhe4 yang4 sil zi5 sil de5 sil

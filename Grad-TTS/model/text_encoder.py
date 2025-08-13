@@ -383,7 +383,7 @@ class TextEncoder(BaseModule):
 
         x = self.prenet(x, x_mask)
         if self.n_spks > 1:
-            print("encoder not concate spk embedding")
+            # print("encoder not concate spk embedding")
             x = torch.cat([x, spk.unsqueeze(-1).repeat(1, 1, x.shape[-1])], dim=1)
         
         x = self.encoder(x, x_mask, cond=cond)
@@ -433,8 +433,10 @@ class TextConformerEncoder(BaseModule):
 
         x = self.prenet(x, x_mask)
         if self.n_spks > 1:
-            print("encoder not concate spk embedding")
+            # print("encoder concate spk embedding")
             x = torch.cat([x, spk.unsqueeze(-1).repeat(1, 1, x.shape[-1])], dim=1)
+        # else:
+            # print("encoder not concate spk embedding")
         
         x = self.encoder(x, x_mask, cond=cond)
         mu = self.proj_m(x) * x_mask

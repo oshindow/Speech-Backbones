@@ -1,0 +1,1112 @@
+Initializing Grad-TTS...
+ModelDimensions(n_mels=80, n_audio_ctx=1500, n_audio_state=768, n_audio_head=12, n_audio_layer=12, n_vocab=51865, n_text_ctx=448, n_text_state=768, n_text_head=12, n_text_layer=12, n_accents=4)
+GradTTSConformerGSTWhisper(
+  (spk_emb): Embedding(222, 768)
+  (encoder): TextConformerEncoder(
+    (emb): Embedding(199, 256)
+    (prenet): ConvReluNorm(
+      (conv_layers): ModuleList(
+        (0): Conv1d(256, 256, kernel_size=(5,), stride=(1,), padding=(2,))
+        (1): Conv1d(256, 256, kernel_size=(5,), stride=(1,), padding=(2,))
+        (2): Conv1d(256, 256, kernel_size=(5,), stride=(1,), padding=(2,))
+      )
+      (norm_layers): ModuleList(
+        (0): LayerNorm()
+        (1): LayerNorm()
+        (2): LayerNorm()
+      )
+      (relu_drop): Sequential(
+        (0): ReLU()
+        (1): Dropout(p=0.5, inplace=False)
+      )
+      (proj): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+    )
+    (encoder): ConformerEncoder(
+      (drop): Dropout(p=0.1, inplace=False)
+      (layers): ModuleList(
+        (0): ConformerBlock(
+          (sequential): Sequential(
+            (0): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (1): ResidualConnectionModule(
+              (module): MultiHeadedSelfAttentionModule(
+                (positional_encoding): RelPositionalEncoding()
+                (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                (attention): RelativeMultiHeadAttention(
+                  (query_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (key_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (value_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (pos_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=False)
+                  )
+                  (dropout): Dropout(p=0.1, inplace=False)
+                  (out_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                )
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): ResidualConnectionModule(
+              (module): ConformerConvModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Transpose()
+                  (2): PointwiseConv1d(
+                    (conv): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+                  )
+                  (3): GLU()
+                  (4): DepthwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(31,), stride=(1,), padding=(15,), groups=256, bias=False)
+                  )
+                  (5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  (6): Swish()
+                  (7): PointwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+                  )
+                  (8): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (3): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+          )
+          (ln): Condional_LayerNorm(
+            (W_scale): Linear(in_features=256, out_features=256, bias=True)
+            (W_bias): Linear(in_features=256, out_features=256, bias=True)
+          )
+        )
+        (1): ConformerBlock(
+          (sequential): Sequential(
+            (0): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (1): ResidualConnectionModule(
+              (module): MultiHeadedSelfAttentionModule(
+                (positional_encoding): RelPositionalEncoding()
+                (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                (attention): RelativeMultiHeadAttention(
+                  (query_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (key_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (value_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (pos_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=False)
+                  )
+                  (dropout): Dropout(p=0.1, inplace=False)
+                  (out_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                )
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): ResidualConnectionModule(
+              (module): ConformerConvModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Transpose()
+                  (2): PointwiseConv1d(
+                    (conv): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+                  )
+                  (3): GLU()
+                  (4): DepthwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(31,), stride=(1,), padding=(15,), groups=256, bias=False)
+                  )
+                  (5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  (6): Swish()
+                  (7): PointwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+                  )
+                  (8): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (3): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+          )
+          (ln): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (2): ConformerBlock(
+          (sequential): Sequential(
+            (0): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (1): ResidualConnectionModule(
+              (module): MultiHeadedSelfAttentionModule(
+                (positional_encoding): RelPositionalEncoding()
+                (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                (attention): RelativeMultiHeadAttention(
+                  (query_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (key_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (value_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (pos_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=False)
+                  )
+                  (dropout): Dropout(p=0.1, inplace=False)
+                  (out_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                )
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): ResidualConnectionModule(
+              (module): ConformerConvModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Transpose()
+                  (2): PointwiseConv1d(
+                    (conv): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+                  )
+                  (3): GLU()
+                  (4): DepthwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(31,), stride=(1,), padding=(15,), groups=256, bias=False)
+                  )
+                  (5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  (6): Swish()
+                  (7): PointwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+                  )
+                  (8): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (3): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+          )
+          (ln): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (3): ConformerBlock(
+          (sequential): Sequential(
+            (0): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (1): ResidualConnectionModule(
+              (module): MultiHeadedSelfAttentionModule(
+                (positional_encoding): RelPositionalEncoding()
+                (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                (attention): RelativeMultiHeadAttention(
+                  (query_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (key_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (value_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (pos_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=False)
+                  )
+                  (dropout): Dropout(p=0.1, inplace=False)
+                  (out_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                )
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): ResidualConnectionModule(
+              (module): ConformerConvModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Transpose()
+                  (2): PointwiseConv1d(
+                    (conv): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+                  )
+                  (3): GLU()
+                  (4): DepthwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(31,), stride=(1,), padding=(15,), groups=256, bias=False)
+                  )
+                  (5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  (6): Swish()
+                  (7): PointwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+                  )
+                  (8): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (3): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+          )
+          (ln): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (4): ConformerBlock(
+          (sequential): Sequential(
+            (0): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (1): ResidualConnectionModule(
+              (module): MultiHeadedSelfAttentionModule(
+                (positional_encoding): RelPositionalEncoding()
+                (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                (attention): RelativeMultiHeadAttention(
+                  (query_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (key_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (value_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (pos_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=False)
+                  )
+                  (dropout): Dropout(p=0.1, inplace=False)
+                  (out_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                )
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): ResidualConnectionModule(
+              (module): ConformerConvModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Transpose()
+                  (2): PointwiseConv1d(
+                    (conv): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+                  )
+                  (3): GLU()
+                  (4): DepthwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(31,), stride=(1,), padding=(15,), groups=256, bias=False)
+                  )
+                  (5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  (6): Swish()
+                  (7): PointwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+                  )
+                  (8): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (3): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+          )
+          (ln): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+        (5): ConformerBlock(
+          (sequential): Sequential(
+            (0): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (1): ResidualConnectionModule(
+              (module): MultiHeadedSelfAttentionModule(
+                (positional_encoding): RelPositionalEncoding()
+                (layer_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                (attention): RelativeMultiHeadAttention(
+                  (query_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (key_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (value_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                  (pos_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=False)
+                  )
+                  (dropout): Dropout(p=0.1, inplace=False)
+                  (out_proj): Linear(
+                    (linear): Linear(in_features=256, out_features=256, bias=True)
+                  )
+                )
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): ResidualConnectionModule(
+              (module): ConformerConvModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Transpose()
+                  (2): PointwiseConv1d(
+                    (conv): Conv1d(256, 512, kernel_size=(1,), stride=(1,))
+                  )
+                  (3): GLU()
+                  (4): DepthwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(31,), stride=(1,), padding=(15,), groups=256, bias=False)
+                  )
+                  (5): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+                  (6): Swish()
+                  (7): PointwiseConv1d(
+                    (conv): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+                  )
+                  (8): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+            (3): ResidualConnectionModule(
+              (module): FeedForwardModule(
+                (sequential): Sequential(
+                  (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+                  (1): Linear(
+                    (linear): Linear(in_features=256, out_features=1024, bias=True)
+                  )
+                  (2): Swish()
+                  (3): Dropout(p=0.1, inplace=False)
+                  (4): Linear(
+                    (linear): Linear(in_features=1024, out_features=256, bias=True)
+                  )
+                  (5): Dropout(p=0.1, inplace=False)
+                )
+              )
+            )
+          )
+          (ln): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        )
+      )
+    )
+    (proj_m): Conv1d(256, 80, kernel_size=(1,), stride=(1,))
+    (proj_w): DurationPredictor(
+      (drop): Dropout(p=0.1, inplace=False)
+      (conv_1): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,))
+      (norm_1): LayerNorm()
+      (conv_2): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,))
+      (norm_2): LayerNorm()
+      (proj): Conv1d(256, 1, kernel_size=(1,), stride=(1,))
+    )
+  )
+  (decoder): Diffusion(
+    (estimator): GradLogPEstimator2d(
+      (spk_mlp): Sequential(
+        (0): Linear(in_features=768, out_features=3072, bias=True)
+        (1): Mish()
+        (2): Linear(in_features=3072, out_features=80, bias=True)
+      )
+      (gst_mlp): Sequential(
+        (0): Linear(in_features=256, out_features=1024, bias=True)
+        (1): Mish()
+        (2): Linear(in_features=1024, out_features=80, bias=True)
+      )
+      (time_pos_emb): SinusoidalPosEmb()
+      (mlp): Sequential(
+        (0): Linear(in_features=64, out_features=256, bias=True)
+        (1): Mish()
+        (2): Linear(in_features=256, out_features=64, bias=True)
+      )
+      (downs): ModuleList(
+        (0): ModuleList(
+          (0): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=64, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=64, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Identity()
+          )
+          (2): Residual(
+            (fn): Rezero(
+              (fn): LinearAttention(
+                (to_qkv): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (to_out): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+              )
+            )
+          )
+          (3): Downsample(
+            (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          )
+        )
+        (1): ModuleList(
+          (0): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=128, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=128, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Identity()
+          )
+          (2): Residual(
+            (fn): Rezero(
+              (fn): LinearAttention(
+                (to_qkv): Conv2d(128, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (to_out): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+              )
+            )
+          )
+          (3): Downsample(
+            (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          )
+        )
+        (2): ModuleList(
+          (0): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=256, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=256, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Identity()
+          )
+          (2): Residual(
+            (fn): Rezero(
+              (fn): LinearAttention(
+                (to_qkv): Conv2d(256, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (to_out): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+              )
+            )
+          )
+          (3): Identity()
+        )
+      )
+      (ups): ModuleList(
+        (0): ModuleList(
+          (0): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=128, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=128, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 128, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Identity()
+          )
+          (2): Residual(
+            (fn): Rezero(
+              (fn): LinearAttention(
+                (to_qkv): Conv2d(128, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (to_out): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+              )
+            )
+          )
+          (3): Upsample(
+            (conv): ConvTranspose2d(128, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+          )
+        )
+        (1): ModuleList(
+          (0): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=64, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (1): ResnetBlock(
+            (mlp): Sequential(
+              (0): Mish()
+              (1): Linear(in_features=64, out_features=64, bias=True)
+            )
+            (block1): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (block2): Block(
+              (block): Sequential(
+                (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+                (2): Mish()
+              )
+            )
+            (res_conv): Identity()
+          )
+          (2): Residual(
+            (fn): Rezero(
+              (fn): LinearAttention(
+                (to_qkv): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (to_out): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+              )
+            )
+          )
+          (3): Upsample(
+            (conv): ConvTranspose2d(64, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+          )
+        )
+      )
+      (mid_block1): ResnetBlock(
+        (mlp): Sequential(
+          (0): Mish()
+          (1): Linear(in_features=64, out_features=256, bias=True)
+        )
+        (block1): Block(
+          (block): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+            (2): Mish()
+          )
+        )
+        (block2): Block(
+          (block): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+            (2): Mish()
+          )
+        )
+        (res_conv): Identity()
+      )
+      (mid_attn): Residual(
+        (fn): Rezero(
+          (fn): LinearAttention(
+            (to_qkv): Conv2d(256, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (to_out): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+          )
+        )
+      )
+      (mid_block2): ResnetBlock(
+        (mlp): Sequential(
+          (0): Mish()
+          (1): Linear(in_features=64, out_features=256, bias=True)
+        )
+        (block1): Block(
+          (block): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+            (2): Mish()
+          )
+        )
+        (block2): Block(
+          (block): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): GroupNorm(8, 256, eps=1e-05, affine=True)
+            (2): Mish()
+          )
+        )
+        (res_conv): Identity()
+      )
+      (final_block): Block(
+        (block): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GroupNorm(8, 64, eps=1e-05, affine=True)
+          (2): Mish()
+        )
+      )
+      (final_conv): Conv2d(64, 1, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (gst): GSTWhisper(
+    (model): Whisper(
+      (encoder): AudioEncoder(
+        (conv1): Conv1d(80, 768, kernel_size=(3,), stride=(1,), padding=(1,))
+        (conv2): Conv1d(768, 768, kernel_size=(3,), stride=(2,), padding=(1,))
+        (blocks): ModuleList(
+          (0): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (1): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (2): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (3): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (4): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (5): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (6): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (7): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (8): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (9): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (10): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+          (11): ResidualAttentionBlock(
+            (attn): MultiHeadAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=False)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (out): Linear(in_features=768, out_features=768, bias=True)
+            )
+            (attn_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (mlp): Sequential(
+              (0): Linear(in_features=768, out_features=3072, bias=True)
+              (1): GELU(approximate='none')
+              (2): Linear(in_features=3072, out_features=768, bias=True)
+            )
+            (mlp_ln): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          )
+        )
+        (ln_post): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (acc_head): PredHead(
+      (layers): Sequential(
+        (0): Linear(in_features=768, out_features=768, bias=True)
+        (1): GELU(approximate='none')
+        (2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (3): Linear(in_features=768, out_features=4, bias=True)
+      )
+    )
+    (spk_head): PredHead(
+      (layers): Sequential(
+        (0): Linear(in_features=768, out_features=768, bias=True)
+        (1): GELU(approximate='none')
+        (2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+        (3): Linear(in_features=768, out_features=222, bias=True)
+      )
+    )
+  )
+  (accent_embedding): Embedding(4, 256)
+)
+GradTTS loaded.
+Initializing Vocoder...
+Loaded model parameters from /data2/xintong/tts_server/ParallelWaveGAN/exp/magichub_sg_16k_csmsc_aishell3_base_finetuning/checkpoint-50000steps.pkl.
+Synthesizing 0 
+ uid A0002_S005_0_G0004_segment_0223 
+ spkid 221 
+ accid 3 
+ r an2 h ou4 sil t a1 m en5 j iu4
+using A0001_S006_0_G0001_segment_0173.wav as the reference audio
