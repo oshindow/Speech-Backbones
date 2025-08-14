@@ -11,7 +11,7 @@ from model.module_gstloss import STL
 def get_trueloss(output_len, loss_matrix):
     loss=0
     for i in range(len(output_len)):
-        loss += torch.sum(loss_matrix[i,:output_len[i],:])
+        loss = loss + torch.sum(loss_matrix[i,:output_len[i],:])
 
     dim = 1
     if (len(loss_matrix.size()) > 2):
@@ -74,10 +74,14 @@ class ReversalClassifier(torch.nn.Module):
         #     # torch.nn.Dropout(0.1)
         # )
         
-        self._classifier = STL(token_num=output_dim, token_embedding_size=256, num_heads=8, ref_enc_gru_size=128)
+        self._classifier = STL(token_num=output_dim, 
+            token_embedding_size=256, 
+            num_heads=8, 
+            ref_enc_gru_size=256)
 
     def forward(self, x):  
         x = GradientReversalFunction.apply(x, self._lambda, self._clipping)
+        # print(x.ah)
         x = self._classifier(x)
         return x
     

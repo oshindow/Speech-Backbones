@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 import params
-from model import GradTTSGST, GradTTSConformer, GradTTSConformerGSTWhisper
+from model import GradTTSGST, GradTTSConformer, GradTTSConformerGSTWhisper2
 from data import TextMelSpeakerDataset, TextMelSpeakerBatchCollate, TextMelSpeakerAccentDataset, TextMelSpeakerAccentBatchCollate
 from utils import plot_tensor, save_plot
 from text.symbols import symbols
@@ -35,7 +35,7 @@ spk_emb_dim = params.spk_emb_dim
 
 log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_whisper_256_2'
 n_epochs = params.n_epochs
-params.batch_size = 2
+params.batch_size = 32
 out_size = params.out_size
 learning_rate = 0.0001
 random_seed = params.seed
@@ -95,7 +95,7 @@ n_warm_up_step = 40000
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
 
 def infer_mel_to_audio(dumpdir):
 
@@ -212,7 +212,7 @@ def run(rank, n_gpus):
                                     pin_memory=False,sampler=test_sampler, collate_fn=TextMelSpeakerAccentBatchCollate())            
 
     print('Initializing model...')
-    model = GradTTSConformerGSTWhisper(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
+    model = GradTTSConformerGSTWhisper2(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, 
@@ -335,7 +335,7 @@ def run(rank, n_gpus):
                 spk = batch['spk'].cuda(rank)
                 acc = batch['acc'].cuda(rank)
                 file = batch['filepath']
-                print(x.shape, y.shape, y_prompt.shape, y_lengths)
+                # print(x.shape, y.shape, y_prompt.shape, y_lengths)
                 if model.module.grl:
                     dur_loss, prior_loss, diff_loss, acc_loss = model.module.compute_loss(x, x_lengths, # go gradtts compute loss
                                                                         y_prompt, y, y_lengths,

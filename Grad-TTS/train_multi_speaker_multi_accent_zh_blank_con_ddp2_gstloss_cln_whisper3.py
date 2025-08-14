@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 import params
-from model import GradTTSGST, GradTTSConformer, GradTTSConformerGSTWhisper
+from model import GradTTSGST, GradTTSConformer, GradTTSConformerGSTWhisper3
 from data import TextMelSpeakerDataset, TextMelSpeakerBatchCollate, TextMelSpeakerAccentDataset, TextMelSpeakerAccentBatchCollate
 from utils import plot_tensor, save_plot
 from text.symbols import symbols
@@ -22,6 +22,7 @@ from text.zhdict import ZHDict
 import os
 from data_utils import DistributedBucketSampler
 from optimizer import ScheduledOptim
+torch.autograd.set_detect_anomaly(True)
 
 train_filelist_path = 'resources/filelists/zh_all/train.dedup.txt'
 valid_filelist_path = 'resources/filelists/zh_all/valid.txt'
@@ -33,7 +34,7 @@ n_spks = 222
 n_accents = 1
 spk_emb_dim = params.spk_emb_dim
 
-log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_whisper_256'
+log_dir = '/data2/xintong/gradtts/logs/new_exp_sg_acc_blank_conformer_gst_whisper_256_3'
 n_epochs = params.n_epochs
 params.batch_size = 32
 out_size = params.out_size
@@ -88,7 +89,7 @@ from parallel_wavegan.datasets import (
     MelF0ExcitationDataset,
     MelSCPDataset,
 )
-
+from torch.nn import functional as F
 pretrained_model = ''
 n_warm_up_step = 40000
 
@@ -155,7 +156,7 @@ def main(params):
 
     n_gpus = torch.cuda.device_count()
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '60001'
+    os.environ['MASTER_PORT'] = '60003'
 
     print('Total batch size:', params.batch_size)
     params.batch_size = params.batch_size // n_gpus
@@ -212,7 +213,7 @@ def run(rank, n_gpus):
                                     pin_memory=False,sampler=test_sampler, collate_fn=TextMelSpeakerAccentBatchCollate())            
 
     print('Initializing model...')
-    model = GradTTSConformerGSTWhisper(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
+    model = GradTTSConformerGSTWhisper3(nsymbols, n_spks, spk_emb_dim, n_enc_channels,
                     filter_channels, filter_channels_dp, 
                     n_heads, n_enc_layers, enc_kernel, enc_dropout, window_size, 
                     n_feats, dec_dim, beta_min, beta_max, pe_scale, 
@@ -229,8 +230,30 @@ def run(rank, n_gpus):
 
 
     print('Initializing optimizer...')
-    optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
+    # 优化器 1：主要模型（encoder/decoder/acc head）
+    main_params = []
+    main_params += list(model.encoder.parameters())
+    main_params += list(model.decoder.parameters())
 
+    if hasattr(model, "spk_emb"):
+        main_params += list(model.spk_emb.parameters())
+
+    if hasattr(model, "acc_emb"):
+        main_params += list(model.acc_emb.parameters())
+
+    if hasattr(model, "accent_embedding"):
+        main_params += list(model.accent_embedding.parameters())
+
+    if hasattr(model, "gst") and hasattr(model.gst, "parameters"):
+        main_params += list(model.gst.parameters())
+
+    optimizer_main = torch.optim.Adam(params=main_params, lr=learning_rate)
+
+    # 优化器 2：说话人对抗分类器
+    optimizer_spk = torch.optim.Adam(model.spk_grl.parameters(), lr=learning_rate)
+
+    # optimizer_E = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
+    # optimizer_D = torch.optim.Adam(params=model.parameters(), lr=learning_rate)
     print('finish Initializing optimizer...')
     # net_d = DDP(net_d, device_ids=[rank],find_unused_parameters=True)
     # resume
@@ -326,47 +349,48 @@ def run(rank, n_gpus):
         
         gst_acc_losses = []
         gst_spk_losses = []
+
+        loss_spk_grl_Ds = []
+        loss_spk_grl_advs = []
         for i, batch in enumerate(loader):
                 # print(batch)
                 model.zero_grad()
+                # optimizer_main.zero_grad()
+                optimizer_spk.zero_grad()
+                # print(batch)
+                # print(batch['x'].shape, batch['y'].shape, batch['y_prompt'].shape, batch['x_lengths'].shape, batch['y_lengths'].shape)
                 x, x_lengths = batch['x'].cuda(rank), batch['x_lengths'].cuda(rank)
                 y, y_lengths = batch['y'].cuda(rank), batch['y_lengths'].cuda(rank)
                 y_prompt = batch['y_prompt'].cuda(rank)
                 spk = batch['spk'].cuda(rank)
                 acc = batch['acc'].cuda(rank)
                 file = batch['filepath']
-                # print(x.shape, y.shape)
-                if model.module.grl:
-                    dur_loss, prior_loss, diff_loss, acc_loss = model.module.compute_loss(x, x_lengths, # go gradtts compute loss
-                                                                        y_prompt, y, y_lengths,
-                                                                        spk=spk, acc=acc, out_size=out_size)
-                    loss = sum([dur_loss, prior_loss, diff_loss, acc_loss])
-                    # loss_domain = sum([spk_loss, acc_loss])
-                # print(file, x.shape, x_lengths, y.shape, y_lengths) # y: mel, y_lengths: even number (% 2 == 0)
-                else:
-                    
-                    dur_loss, prior_loss, diff_loss, gst_acc_loss, gst_spk_loss = model.module.compute_loss(x, x_lengths, # go gradtts compute loss
-                                                                        y_prompt, y, y_lengths,
-                                                                        spk=spk, acc=acc, out_size=out_size)
-                    loss = sum([dur_loss, prior_loss, diff_loss, gst_acc_loss, gst_spk_loss])
+                # print(x.shape, y.shape, y_prompt.shape, y_lengths)
+                dur_loss, prior_loss, diff_loss, gst_acc_loss, gst_spk_loss, loss_spk_grl_D, loss_spk_grl_adv, feats_acc_mean = model.module.compute_loss(
+                                        x, x_lengths, # go gradtts compute loss
+                                        y_prompt, y, y_lengths,
+                                        spk=spk, acc=acc, out_size=out_size)
+                feats_acc_mean_D = feats_acc_mean.clone().detach()
+                _, pred_spk_D = model.module.spk_grl(feats_acc_mean_D.squeeze(1))
+                loss_spk_grl_D = F.cross_entropy(pred_spk_D.squeeze(1), spk)
+                loss_spk_grl_D.backward()
+                optimizer_spk.step()
+
+                optimizer_main.zero_grad()
+                _, pred_spk_adv = model.module.spk_grl(feats_acc_mean.squeeze(1))
+                loss_spk_grl_adv = F.cross_entropy(pred_spk_adv.squeeze(1), spk)
+
+                loss = sum([dur_loss, prior_loss, diff_loss, gst_acc_loss, gst_spk_loss, loss_spk_grl_adv])
                 loss.backward()
 
                 enc_grad_norm = torch.nn.utils.clip_grad_norm_(model.module.encoder.parameters(), 
                                                             max_norm=0.25)
                 dec_grad_norm = torch.nn.utils.clip_grad_norm_(model.module.decoder.parameters(), 
                                                             max_norm=0.25) # 0.25 
-                # for name, param in model.named_parameters():
-                #     if param.grad is not None:
-                #         logger.add_histogram(f'{name}.grad', param.grad, epoch)
-        
-                optimizer.step()
+                 
+                optimizer_main.step()
                 
-                # train domain_classifier
-                # reset gradients
-                # if model.grl:
-                #     model.zero_grad()
-                #     loss_domain.backward()
-                #     optimizer.step()
+                 
                 if rank == 0:
                     logger.add_scalar('training/duration_loss', dur_loss,
                                     global_step=iteration)
@@ -382,18 +406,7 @@ def run(rank, n_gpus):
                                     global_step=iteration)
                     logger.add_scalar('training/decoder_grad_norm', dec_grad_norm,
                                     global_step=iteration)
-                    # logger.add_scalar('training/learning_rate', scheduler.get_learning_rate(),
-                    #                 global_step=iteration)
-                    if model.module.grl:
-                        # logger.add_scalar('training/spk_loss', spk_loss,
-                        #             global_step=iteration)
-                        logger.add_scalar('training/acc_loss', acc_loss,
-                                    global_step=iteration)
-
-                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, acc_loss: {acc_loss.item()}, gst_acc_loss: {gst_acc_loss.item()}, gst_spk_loss: {gst_spk_loss.item()}, acc: {acc}, spk: {spk}, lr: {learning_rate}, {file}'
-                    else:
-                        msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, gst_acc_loss: {gst_acc_loss.item()}, gst_spk_loss: {gst_spk_loss.item()}, lr: {learning_rate}, {file}'
-                    
+                    msg = f'Epoch: {epoch}, iteration: {iteration} | dur_loss: {dur_loss.item()}, prior_loss: {prior_loss.item()}, diff_loss: {diff_loss.item()}, gst_acc_loss: {gst_acc_loss.item()}, gst_spk_loss: {gst_spk_loss.item()}, loss_spk_grl_D: {loss_spk_grl_D.item()}, loss_spk_grl_adv: {loss_spk_grl_adv.item()}, lr: {learning_rate}, {file}'
                     
                     print(msg)
                 
@@ -403,12 +416,11 @@ def run(rank, n_gpus):
                 # gst_losses.append(gst_loss.item())
                 gst_acc_losses.append(gst_acc_loss.item())
                 gst_spk_losses.append(gst_spk_loss.item())
-
-                if model.module.grl:
-                    # spk_losses.append(spk_loss.item())
-                    acc_losses.append(acc_loss.item())
+                loss_spk_grl_Ds.append(loss_spk_grl_D.item())
+                loss_spk_grl_advs.append(loss_spk_grl_adv.item())
+                 
                 iteration += 1
-                # scheduler.step_and_update_lr()
+    
 
         if rank == 0:
             msg = 'Epoch %d: duration loss = %.3f ' % (epoch, np.mean(dur_losses))
@@ -416,10 +428,9 @@ def run(rank, n_gpus):
             msg += '| diffusion loss = %.3f\n' % np.mean(diff_losses)
             msg += '| gst acc loss = %.3f\n' % np.mean(gst_acc_losses)
             msg += '| gst spk loss = %.3f\n' % np.mean(gst_spk_losses)
-            if model.module.grl:
-                # msg += '| spk loss = %.3f' % np.mean(spk_losses)
-                msg += '| acc loss = %.3f\n' % np.mean(acc_losses)
-
+            msg += '| loss spk grl D = %.3f\n' % np.mean(loss_spk_grl_Ds)
+            msg += '| loss spk grl adv = %.3f\n' % np.mean(loss_spk_grl_advs)
+  
             with open(f'{log_dir}/train.log', 'a') as f:
                 f.write(msg)
 
@@ -429,7 +440,8 @@ def run(rank, n_gpus):
             ckpt = {
                 'epoch': epoch, 
                 'model': model.module.state_dict(),
-                'optim': optimizer.state_dict(),
+                'optim_spk': optimizer_spk.state_dict(),
+                'optim_main': optimizer_main.state_dict(),
             }
             torch.save(ckpt, f=f"{log_dir}/grad_{epoch}.pt")
 

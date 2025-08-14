@@ -21,8 +21,8 @@ from .tts_conformer_gstloss_grl import GradTTSConformerGSTGRL
 from .tts_ori import GradTTSORI
 from .tts_conformer_gstloss_grl_focalloss import GradTTSConformerGSTGRLFL
 from .tts_conformer_gstloss_whisper import GradTTSConformerGSTWhisper
-
-
+from .tts_conformer_gstloss_whisper2 import GradTTSConformerGSTWhisper2
+from .tts_conformer_gstloss_whisper3 import GradTTSConformerGSTWhisper3
 
 
 import hashlib

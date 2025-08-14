@@ -26,7 +26,9 @@ import torch
 import torch.nn as nn
 import torch.nn.init as init
 import torch.nn.functional as F
-# from model.classifier import ReversalClassifier
+from model.classifier import ReversalClassifier
+from whisper.model import AudioEncoder
+import whisper
 
 class ReferenceEncoder(nn.Module):
     '''
@@ -88,7 +90,7 @@ class STL(nn.Module):
     '''
     inputs --- [N, token_embedding_size//2]
     '''
-    def __init__(self, token_num=4, token_embedding_size=256, num_heads=8, ref_enc_gru_size=256):
+    def __init__(self, token_num=4, token_embedding_size=256, num_heads=8, ref_enc_gru_size=128):
         super().__init__()
         self.embed = nn.Parameter(torch.FloatTensor(token_num, token_embedding_size // num_heads))
         d_q = ref_enc_gru_size
@@ -105,67 +107,97 @@ class STL(nn.Module):
         N = inputs.size(0)
         query = inputs.unsqueeze(1) # 16,1,128
         keys = torch.tanh(self.embed).unsqueeze(0).expand(N, -1, -1)  # [N, token_num, token_embedding_size // num_heads]
-        # print(keys.shape, query.shape)
         style_embed = self.attention(query, keys) # keys (16,3,32) query (16,1,128)
         pred_style = self.proj(style_embed)
 
         return style_embed, pred_style
 
 
-class MultiHeadAttention(nn.Module):
-    '''
-    input:
-        query --- [N, T_q, query_dim]
-        key --- [N, T_k, key_dim]
-    output:
-        out --- [N, T_q, num_units]
-    '''
-    def __init__(self, query_dim, key_dim, num_units, num_heads):
+class PredHead(nn.Module): #Add commentMore actions
+    """Custom CTC head for ASR."""
+
+    def __init__(
+        self,
+        hidden_size: int = 768,
+        vocab_size: int = 280,
+        num_layers: int = 2,
+        use_layer_norm: bool = True,
+        use_gelu: bool = True,
+        feats_size: int = 256
+    ):
         super().__init__()
-        self.num_units = num_units
-        self.num_heads = num_heads
-        self.key_dim = key_dim
+        layers = []
+        for i in range(num_layers - 1):
+            if i == num_layers - 2:
+                layers.extend(
+                    [
+                        nn.Linear(hidden_size, feats_size),
+                        nn.GELU() if use_gelu else nn.ReLU(),
+                        nn.LayerNorm(feats_size) if use_layer_norm else nn.Identity(),
+                    ]
+                )
+            else:
+                layers.extend(
+                    [
+                        nn.Linear(hidden_size, hidden_size),
+                        nn.GELU() if use_gelu else nn.ReLU(),
+                        nn.LayerNorm(hidden_size) if use_layer_norm else nn.Identity(),
+                    ]
+                )
+        self.proj = nn.Linear(feats_size, vocab_size)
+        # layers.append(nn.Linear(hidden_size, vocab_size))
+        self.layers = nn.Sequential(*layers) #Add commentMore actions
 
-        self.W_query = nn.Linear(in_features=query_dim, out_features=num_units, bias=False)
-        self.W_key = nn.Linear(in_features=key_dim, out_features=num_units, bias=False)
-        self.W_value = nn.Linear(in_features=key_dim, out_features=num_units, bias=False)
+    def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
+        # print("hidden_states.shape", hidden_states.shape)
+        feats = self.layers(hidden_states)
+        logits = self.proj(feats)
+        return feats, logits
 
-    def forward(self, query, key):
-        querys = self.W_query(query)  # [N, T_q, num_units]
-        keys = self.W_key(key)  # [N, T_k, num_units]
-        values = self.W_value(key)
-
-        split_size = self.num_units // self.num_heads
-        querys = torch.stack(torch.split(querys, split_size, dim=2), dim=0)  # [h, N, T_q, num_units/h]
-        keys = torch.stack(torch.split(keys, split_size, dim=2), dim=0)  # [h, N, T_k, num_units/h]
-        values = torch.stack(torch.split(values, split_size, dim=2), dim=0)  # [h, N, T_k, num_units/h]
-
-        # score = softmax(QK^T / (d_k ** 0.5))
-        scores = torch.matmul(querys, keys.transpose(2, 3))  # [h, N, T_q, T_k]
-        scores = scores / (self.key_dim ** 0.5)
-        scores = F.softmax(scores, dim=3)
-
-        # out = score * V
-        out = torch.matmul(scores, values)  # [h, N, T_q, num_units/h]
-        out = torch.cat(torch.split(out, 1, dim=0), dim=3).squeeze(0)  # [N, T_q, num_units]
-
-        return out
-
-
-class GST(nn.Module):
-    def __init__(self):
+class GSTWhisper(nn.Module):
+    def __init__(self, n_mels, n_audio_ctx, n_audio_state, n_audio_head, n_audio_layer, acc_layers, spk_layers, n_acc, n_spk, model_name):
         super().__init__()
-        self.encoder = ReferenceEncoder()
-        self.stl = STL()
+        # self.encoder = ReferenceEncoder()
+        # self.encoder = AudioEncoder(
+        #     n_mels,
+        #     n_audio_ctx,
+        #     n_audio_state,
+        #     n_audio_head,
+        #     n_audio_layer
+        # )
+
+        self.model = self.load_pretrained_whisper(model_name)
+
+        for p in self.model.encoder.parameters():
+            p.requires_grad = False  # Freeze all encoder parameters
+        
+        del self.model.decoder
+
+        # self.stl = STL()
         # self.grl = ReversalClassifier(
         #                         128, # n_feats
         #                         256,
-        #                         4, # n_accents
+        #                         222, # n_accents
         #                         0.25) # reversal_gradient_clipping = 0.25
-        
-    def forward(self, inputs, input_lengths=None):
-        enc_out = self.encoder(inputs, input_lengths=input_lengths) # (N, 128) NO length information, 1 tensor for query
-        # pred_acc = self.grl(enc_out.transpose(1, 2))
-        style_embed, pred_style = self.stl(enc_out)
 
-        return style_embed, pred_style
+        self.acc_head = PredHead(vocab_size=n_acc, hidden_size=n_audio_state, num_layers=acc_layers, feats_size=256)
+        self.spk_head = PredHead(vocab_size=n_spk, hidden_size=n_audio_state, num_layers=spk_layers, feats_size=64)
+
+    def forward(self, inputs, input_lengths=None):
+        with torch.no_grad():
+            enc_out = self.model.encoder(inputs) # (N, 128) NO length information, 1 tensor for query
+        
+        feats_acc, logits_acc = self.acc_head(enc_out) # (N, n_acc)
+        feats_spk, logits_spk = self.spk_head(enc_out)
+        
+        # style_embed, pred_style = self.stl(enc_out)
+
+        return feats_acc, logits_acc, feats_spk, logits_spk #, style_embed, pred_style
+
+    def load_pretrained_whisper(self, model_name):
+    
+        whisper_model = whisper.load_model(model_name, device="cpu")  # Load the Whisper model without GPU
+        model = whisper.Whisper(whisper_model.dims)  # Use the same dimensions as the original model
+        model.load_state_dict(whisper_model.state_dict(), strict=False)
+
+        return model
